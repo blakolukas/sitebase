@@ -1,4 +1,4 @@
-# volto-siteplone
+# volto-poc-18
 
 ## Introduction
 

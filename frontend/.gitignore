@@ -93,4 +93,4 @@ src/addons/*
 !.yarn/sdks
 !.yarn/versions
 
-!src/addons/volto-siteplone
+!src/addons/volto-poc-18

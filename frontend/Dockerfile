@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:18-slim as base
+FROM node:20-slim as base
 FROM base as builder
 
 RUN <<EOT
@@ -25,8 +25,8 @@ EOT
 FROM base
 
 LABEL maintainer="Plone Foundation <collective@plone.org>" \
-      org.label-schema.name="siteplone-frontend" \
-      org.label-schema.description="SITEPLONE frontend image." \
+      org.label-schema.name="poc-18-frontend" \
+      org.label-schema.description="poc-18 frontend image." \
       org.label-schema.vendor="Plone Foundation"
 
 # Install busybox and wget

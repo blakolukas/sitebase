@@ -1,5 +1,2 @@
-src/addons/**/node_modules
-src/addons/**/cypress
-src/addons/**/build
 
-!src/addons/volto-siteplone
+!src/addons/volto-poc-18
