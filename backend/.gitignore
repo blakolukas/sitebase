@@ -6,8 +6,6 @@
 *.swp
 # dirs
 bin/
-!.s21/.bin/
-!.s21/.bin/*
 buildout-cache/
 data/*.json
 develop-eggs/
@@ -43,3 +41,6 @@ live.cfg
 inituser
 pip-wheel-metadata
 pyvenv.cfg
+
+# Add back
+!.s21/.bin/
