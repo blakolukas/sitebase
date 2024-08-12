@@ -6,6 +6,7 @@
 *.swp
 # dirs
 bin/
+!.s21/.bin/
 buildout-cache/
 data/*.json
 develop-eggs/
