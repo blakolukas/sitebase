@@ -43,4 +43,4 @@ pip-wheel-metadata
 pyvenv.cfg
 
 # Add back
-!.s21/.bin/
+!.s2i/.bin/
