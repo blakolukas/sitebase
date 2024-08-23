@@ -1,7 +1,7 @@
 from AccessControl.SecurityManagement import newSecurityManager
-from siteplone.interfaces import ISiteploneLayer
 from Products.CMFPlone.factory import _DEFAULT_PROFILE
 from Products.CMFPlone.factory import addPloneSite
+from siteplone.interfaces import ISiteploneLayer
 from Testing.makerequest import makerequest
 from zope.interface import directlyProvidedBy
 from zope.interface import directlyProvides
@@ -43,7 +43,7 @@ newSecurityManager(None, admin)
 
 site_id = "Plone"
 payload = {
-    "title": "SITEPLONE",
+    "title": "siteplone",
     "profile_id": _DEFAULT_PROFILE,
     "extension_ids": [
         "siteplone:default",

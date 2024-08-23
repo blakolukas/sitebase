@@ -6,7 +6,7 @@
   <!-- Example upgrade step
   <genericsetup:upgradeSteps
       profile="siteplone:default"
-      source="20240801001"
+      source="20240823001"
       destination="20230229001"
       >
     <genericsetup:upgradeDepends

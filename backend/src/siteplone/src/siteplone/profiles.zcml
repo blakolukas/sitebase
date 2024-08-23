@@ -6,7 +6,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="SITEPLONE: Install"
+      title="siteplone: Install"
       description="Policy package to install our site"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/default"
@@ -14,7 +14,7 @@
 
   <genericsetup:registerProfile
       name="initial"
-      title="SITEPLONE: Initial content"
+      title="siteplone: Initial content"
       description="Initial content for our website."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/initial"
@@ -23,8 +23,8 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="SITEPLONE: Uninstall"
-      description="Uninstall SITEPLONE setup."
+      title="siteplone: Uninstall"
+      description="Uninstall siteplone setup."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/uninstall"
       />

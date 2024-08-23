@@ -3,7 +3,7 @@
     {
       "email": "collective@plone.org",
       "properties": {
-        "fullname": "SITEPLONE",
+        "fullname": "siteplone",
         "location": "World"
       },
       "groups": [

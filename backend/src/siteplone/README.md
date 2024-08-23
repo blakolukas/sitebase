@@ -1,6 +1,6 @@
 # siteplone
 
-Site Plone
+A new project using Plone 6.
 
 ## Features
 

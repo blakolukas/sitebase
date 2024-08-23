@@ -2,7 +2,7 @@
   "blocks": {
     "94b9fb26-041d-438c-981a-671a89854cbe": {
       "@type": "slate",
-      "plaintext": "Welcome to SITEPLONE",
+      "plaintext": "Welcome to siteplone",
       "value": [
         {
           "children": [
@@ -12,7 +12,7 @@
             {
               "children": [
                 {
-                  "text": "Welcome to SITEPLONE"
+                  "text": "Welcome to siteplone"
                 }
               ],
               "type": "b"
@@ -68,5 +68,5 @@
       "1006adfe-d9b1-4e70-9b32-a9158310723d"
     ]
   },
-  "title": "SITEPLONE"
+  "title": "siteplone"
 }

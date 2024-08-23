@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 ARG PLONE_VERSION
-FROM plone/server-builder:${PLONE_VERSION:-6.0.11} as builder
+FROM plone/server-builder:${PLONE_VERSION:-6.0.12} as builder
 
 WORKDIR /app
 
@@ -19,11 +19,11 @@ RUN <<EOT
     rm -Rf src/
 EOT
 
-FROM plone/server-prod-config:${PLONE_VERSION:-6.0.11}
+FROM plone/server-prod-config:${PLONE_VERSION:-6.0.12}
 
 LABEL maintainer="Plone Foundation <collective@plone.org>" \
       org.label-schema.name="siteplone-backend" \
-      org.label-schema.description="SITEPLONE backend image." \
+      org.label-schema.description="siteplone backend image." \
       org.label-schema.vendor="Plone Foundation"
 
 # Copy /app from builder

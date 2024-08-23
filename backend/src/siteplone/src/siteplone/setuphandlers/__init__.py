@@ -1,8 +1,8 @@
 from plone import api
+from Products.CMFPlone.interfaces import INonInstallable
 from siteplone import logger
 from siteplone.setuphandlers import content
 from siteplone.setuphandlers import users
-from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
 
 

@@ -41,6 +41,3 @@ live.cfg
 inituser
 pip-wheel-metadata
 pyvenv.cfg
-
-# Add back
-!.s2i/.bin/

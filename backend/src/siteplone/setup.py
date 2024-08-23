@@ -14,7 +14,7 @@ long_description = f"""
 setup(
     name="siteplone",
     version="1.0.0a1",
-    description="SITEPLONE configuration package.",
+    description="siteplone configuration package.",
     long_description=long_description,
     classifiers=[
         "Environment :: Web Environment",

@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "description": "Site Plone",
+  "description": "A new project using Plone 6.",
   "license": "MIT",
   "version": "1.0.0",
   "scripts": {

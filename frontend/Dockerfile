@@ -26,7 +26,7 @@ FROM base
 
 LABEL maintainer="Plone Foundation <collective@plone.org>" \
       org.label-schema.name="siteplone-frontend" \
-      org.label-schema.description="SITEPLONE frontend image." \
+      org.label-schema.description="siteplone frontend image." \
       org.label-schema.vendor="Plone Foundation"
 
 # Install busybox and wget
