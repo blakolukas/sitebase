@@ -30,7 +30,8 @@
     "src/addons/volto-siteplone"
   ],
   "addons": [
-    "volto-siteplone"
+    "volto-siteplone",
+    "volto-gdpr-privacy"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -141,7 +142,8 @@
     "node": "^16 || ^18 || ^20"
   },
   "dependencies": {
-    "@plone/volto": "17.18.2"
+    "@plone/volto": "17.18.2",
+    "volto-gdpr-privacy": "*"
   },
   "devDependencies": {
     "@plone/scripts": "^3.3.2",
