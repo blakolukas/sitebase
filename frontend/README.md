@@ -70,3 +70,9 @@ In order to run localy (while developing) the project acceptance tests (Cypress)
 `test-acceptance`: Start Core Cypress Acceptance Tests in dev mode
 
 `full-test-acceptance`: Start the whole suite (backend + frontend + headless tests) Cypress Acceptance Tests in headless (CI) mode
+
+## kitconcept
+
+### `make install` 
+
+Dentro da pasta frontend
