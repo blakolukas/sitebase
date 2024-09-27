@@ -15,8 +15,8 @@ if [ $rc -eq 0 ]; then
 	echo "Starting custom S2I assembling"
 	
 	# Custom S2I assemble for plone.restapi
-	echo "Manual venv activation"
-	source .venv/bin/activate
+	#echo "Manual venv activation"
+	#source .venv/bin/activate
 	
 	make install
 	# TODO: Fix default S2I pip install. S2I already runs the pip install but have been disabled with DISABLE_SETUP_PY_PROCESSING and DISABLE_PYPROJECT_TOML_PROCESSING.
