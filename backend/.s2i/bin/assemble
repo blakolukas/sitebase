@@ -1,0 +1,34 @@
+#!/bin/bash
+
+echo "Creating python venv envrionment"
+python3.9 -m venv . || virtualenv --python=python3.9 .
+echo "Python venv executed and bin folder created"
+
+
+echo "Default S2I assemble script will begin"
+
+/usr/libexec/s2i/assemble
+rc=$?
+
+if [ $rc -eq 0 ]; then
+    echo "After successful default S2I assembling"
+	echo "Starting custom S2I assembling"
+	
+	# Custom S2I assemble for plone.restapi
+	make build-plone-6.0 
+	# TODO: Fix default S2I pip install. S2I already runs the pip install but have been disabled with DISABLE_SETUP_PY_PROCESSING and DISABLE_PYPROJECT_TOML_PROCESSING.
+	# Pip install on requirements.txt made the buildout command available. This is the missing step from the make command
+	# buildout -c plone-6.0.x.cfg
+
+	# set permissions for any installed artifacts
+	fix-permissions /opt/app-root -P
+	
+	# manually set permission to instance-wrapper
+	chmod +x ./instance-wrapper
+
+	echo "End of custom S2I assembling"
+else
+    echo "After failed S2I assembling"
+fi
+
+exit $rc
