@@ -9,7 +9,7 @@ Welcome to the DevOps operations guide for deploying your project using GitHub A
 ### Step 1: Create a New Environment
 
 1. Visit [GitHub](https://github.com/) and log in with your credentials.
-2. Go to your repository at [collective/siteplone](https://github.com/collective/siteplone).
+2. Go to your repository at [PROCERGS/siteplone](https://github.com/PROCERGS/siteplone).
 3. Click on `Settings` at the top-right corner.
 4. In the left sidebar, click on `Environments`.
 5. Press `New environment`.
@@ -48,14 +48,14 @@ This variable is referenced in the `.github/workflows/manual_deploy.yml` file.
 
 Ensure that both Backend and Frontend tests have been successfully executed:
 
-- [Backend Tests Workflow](https://github.com/collective/siteplone/actions/workflows/backend.yml)
-- [Frontend Tests Workflow](https://github.com/collective/siteplone/actions/workflows/frontend.yml)
+- [Backend Tests Workflow](https://github.com/PROCERGS/siteplone/actions/workflows/backend.yml)
+- [Frontend Tests Workflow](https://github.com/PROCERGS/siteplone/actions/workflows/frontend.yml)
 
-Upon successful completion of the tests, Docker images for the Backend (`ghcr.io/collective/siteplone-backend`) and Frontend (`ghcr.io/collective/siteplone-frontend`) will be available.
+Upon successful completion of the tests, Docker images for the Backend (`ghcr.io/PROCERGS/siteplone-backend`) and Frontend (`ghcr.io/PROCERGS/siteplone-frontend`) will be available.
 
 ### Initiating Manual Deployment
 
-1. Navigate to [Manual Deployment of siteplone.example.com](https://github.com/collective/siteplone/actions/workflows/manual-deploy.yml).
+1. Navigate to [Manual Deployment of siteplone.example.com](https://github.com/PROCERGS/siteplone/actions/workflows/manual-deploy.yml).
 2. Click on `Run workflow`.
 3. Select `Branch: main` under **Use workflow from**.
 4. Press `Run workflow`.

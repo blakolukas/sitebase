@@ -1,5 +1,4 @@
 ---
-version: '3.8'
 name: siteplone
 
 services:
@@ -54,6 +53,8 @@ services:
   frontend:
     build:
       context: ./frontend
+      args:
+        - VOLTO_VERSION=${VOLTO_VERSION}
     environment:
       RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
     depends_on:
@@ -78,8 +79,10 @@ services:
   backend:
     build:
       context: ./backend
+      args:
+        - PLONE_VERSION=${PLONE_VERSION}
     environment:
-      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_NAME:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-OfxjoPvBWrdF}' port='${DB_PORT:-5432}'"
+      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_NAME:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-dlAMkajipsbp}' port='${DB_PORT:-5432}'"
     depends_on:
       - db
     labels:
@@ -126,7 +129,7 @@ services:
     image: postgres:14
     environment:
       POSTGRES_USER: plone
-      POSTGRES_PASSWORD: OfxjoPvBWrdF
+      POSTGRES_PASSWORD: dlAMkajipsbp
       POSTGRES_DB: plone
     volumes:
       - vol-site-data:/var/lib/postgresql/data

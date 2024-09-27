@@ -55,7 +55,7 @@ services:
       - --providers.docker.network=siteplone-example-com_nw-internal
       - --entrypoints.http.address=:80
       - --entrypoints.https.address=:443
-      - --certificatesresolvers.le.acme.email=collective@plone.org
+      - --certificatesresolvers.le.acme.email=sites@procergs.rs.gov.br
       - --certificatesresolvers.le.acme.storage=/certificates/acme.json
       - --certificatesresolvers.le.acme.tlschallenge=true
       - --accesslog
@@ -82,7 +82,7 @@ services:
         order: start-first
 
   varnish:
-    image: ghcr.io/collective/siteplone-varnish:${STACK_PARAM:-latest}
+    image: ghcr.io/PROCERGS/siteplone-varnish:${STACK_PARAM:-latest}
     command:
       - '-p'
       - 'nuke_limit=2000'
@@ -117,7 +117,7 @@ services:
         - traefik.http.routers.rt-varnish-public.middlewares=gzip
 
   frontend:
-    image: ghcr.io/collective/siteplone-frontend:${STACK_PARAM:-latest}
+    image: ghcr.io/PROCERGS/siteplone-frontend:${STACK_PARAM:-latest}
     environment:
       RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
       RAZZLE_API_PATH: https://siteplone.example.com
@@ -143,9 +143,9 @@ services:
         - traefik.http.routers.rt-frontend.service=svc-frontend
 
   backend:
-    image: ghcr.io/collective/siteplone-backend:${STACK_PARAM:-latest}
+    image: ghcr.io/PROCERGS/siteplone-backend:${STACK_PARAM:-latest}
     environment:
-      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-OfxjoPvBWrdF}' port='${DB_PORT:-5432}'"
+      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-dlAMkajipsbp}' port='${DB_PORT:-5432}'"
     depends_on:
       - db
     networks:
@@ -192,7 +192,7 @@ services:
     image: postgres:14
     environment:
       POSTGRES_USER: plone
-      POSTGRES_PASSWORD: OfxjoPvBWrdF
+      POSTGRES_PASSWORD: dlAMkajipsbp
       POSTGRES_DB: plone
     deploy:
       replicas: 1

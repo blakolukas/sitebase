@@ -1,7 +1,8 @@
 from AccessControl.SecurityManagement import newSecurityManager
+from procergs.siteplone.interfaces import IBrowserLayer
 from Products.CMFPlone.factory import _DEFAULT_PROFILE
 from Products.CMFPlone.factory import addPloneSite
-from siteplone.interfaces import ISiteploneLayer
+from Products.GenericSetup.tool import SetupTool
 from Testing.makerequest import makerequest
 from zope.interface import directlyProvidedBy
 from zope.interface import directlyProvides
@@ -26,14 +27,15 @@ def asbool(s):
 
 
 DELETE_EXISTING = asbool(os.getenv("DELETE_EXISTING"))
+EXAMPLE_CONTENT = asbool(
+    os.getenv("EXAMPLE_CONTENT", "1")
+)  # Create example content by default
 
-app = makerequest(app)  # noQA
+app = makerequest(globals()["app"])
 
 request = app.REQUEST
 
-ifaces = [
-    ISiteploneLayer,
-] + list(directlyProvidedBy(request))
+ifaces = [IBrowserLayer] + list(directlyProvidedBy(request))
 
 directlyProvides(request, *ifaces)
 
@@ -43,15 +45,14 @@ newSecurityManager(None, admin)
 
 site_id = "Plone"
 payload = {
-    "title": "siteplone",
+    "title": "Site Plone",
     "profile_id": _DEFAULT_PROFILE,
     "extension_ids": [
-        "siteplone:default",
-        "siteplone:initial",
+        "procergs.siteplone:default",
     ],
     "setup_content": False,
     "default_language": "pt-br",
-    "portal_timezone": "America/Sao_Paulo",
+    "portal_timezone": "UTC",
 }
 
 if site_id in app.objectIds() and DELETE_EXISTING:
@@ -62,4 +63,8 @@ if site_id in app.objectIds() and DELETE_EXISTING:
 if site_id not in app.objectIds():
     site = addPloneSite(app, site_id, **payload)
     transaction.commit()
+    if EXAMPLE_CONTENT:
+        portal_setup: SetupTool = site.portal_setup
+        portal_setup.runAllImportStepsFromProfile("procergs.siteplone:initial")
+        transaction.commit()
     app._p_jar.sync()

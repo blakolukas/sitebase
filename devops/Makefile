@@ -71,7 +71,7 @@ setup: bin/pip ## Ansible: Install Ansible and dependencies
 .PHONY: docker-setup
 docker-setup:  ## Docker: Setup remote docker context
 	@echo "$(GREEN)==> Docker: Setup remote docker context named ${CONTEXT} $(RESET)"
-	${DOCKER} context create ${CONTEXT} --description "siteplone deployment" --docker "host=${CONTEXT_HOST}"
+	${DOCKER} context create ${CONTEXT} --description "Site Plone deployment" --docker "host=${CONTEXT_HOST}"
 
 .PHONY: docker-login
 docker-login:  ## Docker: Login
