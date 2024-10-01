@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "Default S2I assemble script will begin"
+
+# TODO: Analyze how to use the default assemble or remove the call below and do a manual script merge for a complete custom assemble
+/usr/libexec/s2i/assemble
+rc=$?
+
+if [ $rc -eq 0 ]; then
+    echo "After successful default S2I assembling"
+	echo "Starting custom S2I assembling"
+	
+	npm install -g pnpm
+	
+	make install
+	
+	# set permissions for any installed artifacts
+	fix-permissions ./
+	
+	# manually set permission to instance-wrapper
+	chmod +x ./instance-wrapper
+
+	echo "End of custom S2I assembling"
+else
+    echo "After failed S2I assembling"
+fi
+
+exit $rc
