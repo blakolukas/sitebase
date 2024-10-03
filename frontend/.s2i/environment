@@ -1,1 +1,2 @@
 NODE_CMD="make start"
+NODE_ENV="development"
