@@ -3,4 +3,4 @@ default_context:
     zcml_package_includes: 'procergs.siteplone'
 
     wsgi_listen: '0.0.0.0:8080'
-    cors:allow_origin: "*"
+    cors:cors_allow_origin: "*"
