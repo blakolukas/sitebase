@@ -1,1 +1,2 @@
 -c constraints.txt
+procergs.sitedemo @ git+https://github.com/PROCERGS/procergs.sitedemo
