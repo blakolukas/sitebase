@@ -13,3 +13,6 @@ yarn.lock
 /public
 
 !.s2i/bin/
+
+# Dev packages
+packages/volto-dsgvo-banner

@@ -5,5 +5,11 @@
     "url": "git@github.com:plone/volto.git",
     "https": "https://github.com/plone/volto.git",
     "tag": "18.0.0-alpha.43"
+  },
+  "volto-dsgvo-banner": {
+    "output": "./packages/",
+    "package": "@kitconcept/volto-dsgvo-banner",
+    "url": "git@github.com:PROCERGS/volto-dsgvo-banner.git",
+    "https": "https://github.com/PROCERGS/volto-dsgvo-banner"
   }
 }
