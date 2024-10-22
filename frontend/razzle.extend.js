@@ -1,25 +1,26 @@
 module.exports = {
-  modifyWebpackConfig({ env: { target, dev }, webpackConfig }) {
-    // Only apply this modification for development (dev) and client-side (web)
-    if (dev && target === 'web') {
-      // Override the devServer configuration
-      webpackConfig.devServer = {
-        ...webpackConfig.devServer, // Preserve existing configuration
-        port: 3000, // Force webpack-dev-server to use port 3000
-        host: '0.0.0.0', // Listen on all network interfaces
-        hot: true, // Enable hot module reloading
-        historyApiFallback: true, // SPA fallback for routing
-        client: {
-          overlay: {
-            warnings: false,
-            errors: true,
-          },
-        },
+  modifyWebpackConfig(opts) {
+    const config = opts.webpackConfig;
+
+    if (opts.env.dev) {
+      config.devServer = {
+        port: 3000,           // Set the port to 3000
+        host: "0.0.0.0",      // Make the server accessible externally
+        compress: true,       // Enable gzip compression
+        hot: true,            // Enable hot module replacement
+        historyApiFallback: true, // Ensure correct fallback for single-page apps
         headers: {
-          'Access-Control-Allow-Origin': '*', // Optional: CORS if necessary
+          "Access-Control-Allow-Origin": "*", // Set CORS headers if needed
+        },
+        static: {
+          directory: "/opt/app-root/src/core/packages/volto/public", // Serve static files
+        },
+        client: {
+          overlay: true, // Show overlay for errors
         },
       };
     }
-    return webpackConfig;
+
+    return config;
   },
 };
