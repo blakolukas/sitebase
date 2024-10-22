@@ -102,7 +102,7 @@ else
 	npm install -g pnpm
 
 	echo "---> Executing pnpm build"
-	pnpm build
+	make build
 	
 	# set permissions for any installed artifacts
 	fix-permissions ./
