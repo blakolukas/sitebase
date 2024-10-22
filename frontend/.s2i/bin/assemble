@@ -101,6 +101,9 @@ else
 	echo "---> Installing pnpm"
 	npm install -g pnpm
 
+	echo "---> Executing development installation process (build command won't work without this)"
+	make install
+
 	echo "---> Executing pnpm build"
 	make build
 	
