@@ -79,7 +79,6 @@ if [ -z "$NODE_ENV" ]; then
 fi
 
 if [ "$NODE_ENV" != "production" ]; then
-
 	echo "---> Building your Node application from source"
 	# npm install
 	
@@ -96,34 +95,50 @@ if [ "$NODE_ENV" != "production" ]; then
 	chmod +x ./instance-wrapper
 
 	echo "End of custom S2I assembling for development"
-
 else
+	echo "Starting custom S2I assembling for Production"
+	
+	echo "---> Installing pnpm"
+	npm install -g pnpm
 
-	echo "---> Installing all dependencies"
-	NODE_ENV=development npm install
+	echo "---> Executing pnpm build"
+	pnpm build
+	
+	# set permissions for any installed artifacts
+	fix-permissions ./
+	
+	# manually set permission to instance-wrapper
+	chmod +x ./instance-wrapper
 
-	#do not fail when there is no build script
-	echo "---> Building in production mode"
-	npm run ${NPM_BUILD:-build} --if-present
+	echo "End of custom S2I assembling for Production"
+	
+	#TODO: Evaluate future use of tmp, npm cache and development dependencies
+	
+	#echo "---> Installing all dependencies"
+	#NODE_ENV=development npm install
 
-	echo "---> Pruning the development dependencies"
-	npm prune
+	# #do not fail when there is no build script
+	#echo "---> Building in production mode"
+	#npm run ${NPM_BUILD:-build} --if-present
 
-	NPM_TMP=$(npm config get tmp)
-	if ! mountpoint $NPM_TMP; then
-		echo "---> Cleaning the $NPM_TMP/npm-*"
-		rm -rf $NPM_TMP/npm-*
-	fi
+	#echo "---> Pruning the development dependencies"
+	#npm prune
 
-	# Clear the npm's cache and tmp directories only if they are not a docker volumes
-	NPM_CACHE=$(npm config get cache)
-	if ! mountpoint $NPM_CACHE; then
-		echo "---> Cleaning the npm cache $NPM_CACHE"
-		#As of npm@5 even the 'npm cache clean --force' does not fully remove the cache directory
-		# instead of $NPM_CACHE* use $NPM_CACHE/*.
-		# We do not want to delete .npmrc file.
-		rm -rf "${NPM_CACHE:?}/"
-	fi
+	#NPM_TMP=$(npm config get tmp)
+	#if ! mountpoint $NPM_TMP; then
+		#echo "---> Cleaning the $NPM_TMP/npm-*"
+		#rm -rf $NPM_TMP/npm-*
+	#fi
+
+	# # Clear the npm's cache and tmp directories only if they are not a docker volumes
+	#NPM_CACHE=$(npm config get cache)
+	#if ! mountpoint $NPM_CACHE; then
+		#echo "---> Cleaning the npm cache $NPM_CACHE"
+		# #As of npm@5 even the 'npm cache clean --force' does not fully remove the cache directory
+		# # instead of $NPM_CACHE* use $NPM_CACHE/*.
+		# # We do not want to delete .npmrc file.
+		# rm -rf "${NPM_CACHE:?}/"
+	#fi
 fi
 
 # Fix source directory permissions

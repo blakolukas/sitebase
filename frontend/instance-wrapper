@@ -1,2 +1,15 @@
 #!/bin/bash
-make start
+
+if [ -z "$NODE_ENV" ]; then
+  if [ "$DEV_MODE" == true ]; then
+    export NODE_ENV=development
+  else
+    export NODE_ENV=production
+  fi
+fi
+
+if [ "$NODE_ENV" != "production" ]; then
+	make start
+else
+	pnpm start:prod
+fi
