@@ -9,7 +9,9 @@ if [ -z "$NODE_ENV" ]; then
 fi
 
 if [ "$NODE_ENV" != "production" ]; then
+	echo "-----> Starting in development mode"
 	make start
 else
+	echo "-----> Starting in production mode"
 	pnpm start:prod
 fi
