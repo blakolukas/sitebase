@@ -23,7 +23,7 @@ run_node() {
   elif [ -n "$NODE_CMD" ] && [ "$INIT_WRAPPER" == true ]; then
     echo "launching via init wrapper..."
     exec ${STI_SCRIPTS_PATH}/init-wrapper $NODE_CMD
-  elif [ -n "$NODE_CMD" ] && [ "$INIT_WRAPPER" == false ]; then
+  elif [ -n "$NODE_CMD" ] && ( [ "$INIT_WRAPPER" == false ] || [ -z "$INIT_WRAPPER" ] ); then
     echo "Launching via ${NODE_CMD}"
     exec $NODE_CMD
   elif [ ! -n "$NODE_CMD" ] && [ "$INIT_WRAPPER" == true ]; then
