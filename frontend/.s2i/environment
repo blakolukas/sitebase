@@ -1,1 +1,1 @@
-NODE_CMD=$HOME/instance-wrapper
+NODE_CMD=./instance-wrapper
