@@ -1,4 +1,4 @@
-const addons = ['volto-procergs-siteplone'];
+const addons = ['volto-procergs-siteplone','volto-sitedemo'];
 const theme = '';
 
 module.exports = {
