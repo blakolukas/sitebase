@@ -19,9 +19,32 @@ show_help() {
     exit 0
 }
 
+# Função para desligar ambientes locais que foram iniciados por este setup
+shutdown_local_environments() {
+    if [[ -f "backend.pid" ]]; then
+        kill -9 $(cat backend.pid) && rm backend.pid
+        echo "Backend encerrado."
+    else
+        echo "Backend já está desligado ou PID não encontrado."
+    fi
+
+    if [[ -f "frontend.pid" ]]; then
+        kill -9 $(cat frontend.pid) && rm frontend.pid
+        echo "Frontend encerrado."
+    else
+        echo "Frontend já está desligado ou PID não encontrado."
+    fi
+    exit 0
+}
+
 # Verifica se o usuário solicitou ajuda
 if [[ "$1" == "--help" ]]; then
     show_help
+fi
+
+# Verifica se o usuário solicitou shutdown
+if [[ "$1" == "--shutdown" ]]; then
+    shutdown_local_environments
 fi
 
 # Parâmetros obrigatórios para o repositório backend e frontend
@@ -82,24 +105,6 @@ clone_repo() {
 		cd $repo_ref
 		pwd
     fi
-}
-
-# Função para desligar ambientes locais que foram iniciados por este setup
-shutdown_local_environments() {
-    if [[ -f "backend.pid" ]]; then
-        kill -9 $(cat backend.pid) && rm backend.pid
-        echo "Backend encerrado."
-    else
-        echo "Backend já está desligado ou PID não encontrado."
-    fi
-
-    if [[ -f "frontend.pid" ]]; then
-        kill -9 $(cat frontend.pid) && rm frontend.pid
-        echo "Frontend encerrado."
-    else
-        echo "Frontend já está desligado ou PID não encontrado."
-    fi
-    exit 0
 }
 
 # Função para instalar prerequisitos 
