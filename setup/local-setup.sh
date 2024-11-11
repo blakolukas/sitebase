@@ -22,11 +22,12 @@ show_help() {
 # Função para desligar ambientes locais que foram iniciados por este setup
 shutdown_local_environments() {
     echo "Parando o backend..."
-    pkill -f "BACKEND_LOCAL_SERVER=backend"
+    fuser -k 8080/tcp
     echo "Backend parado."
 
     echo "Parando o frontend..."
-    pkill -f "FRONTEND_LOCAL_SERVER=frontend"
+    fuser -k 3000/tcp
+    fuser -k 3001/tcp
     echo "Frontend parado."
 	
     exit 0
@@ -161,8 +162,8 @@ else
 
     # Iniciar o backend em segundo plano
     echo "Iniciando o backend em modo detached..."
-    (BACKEND_LOCAL_SERVER=backend nohup make start > backend.log 2>&1 &)
-    echo "Backend iniciado com marcação 'BACKEND_ENV=backend'."
+    nohup make start > backend.log 2>&1 &
+    echo "Backend iniciado com PID $!"
     cd ..
 fi
 
@@ -211,11 +212,12 @@ else
 
     # Iniciar o frontend em segundo plano
     echo "Iniciando o frontend em modo detached..."
-    (FRONTEND_LOCAL_SERVER=frontend nohup make start > frontend.log 2>&1 &)
-    echo "Frontend iniciado com marcação 'FRONTEND_ENV=frontend'."
+    nohup make start > frontend.log 2>&1 &
+    echo "Frontend iniciado com PID $!"
 fi
 
-echo "Script concluído! Logs de backend e frontend estão em backend.log e frontend.log na raíz de cada projeto, caso tenham sido iniciados."
+echo "----- Script concluído! -----"
+echo "Logs de backend e frontend estão em backend.log e frontend.log na raíz de cada projeto, caso tenham sido iniciados."
 echo "É possível que o ambiente demore um pouco a ligar (especialmente o frontend). Acompanhe a execução pelos Logs."
 echo "Para DESLIGAR os ambientes execute: local-setup.sh --shutdown"
 echo "Para INICIAR futuramente sem instalar adicione o --skip-install no FINAL do comando."
