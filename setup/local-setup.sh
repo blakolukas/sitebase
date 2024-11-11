@@ -145,7 +145,8 @@ else
 		if ! command -v nvm &> /dev/null; then
             echo "NVM não encontrado. Instalando NVM..."
             # sudo apt update && sudo apt install -y python3
-            sudo apt install -y nvm
+			curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+            source ~/.bashrc
         else
             echo "NVM já está instalado."
         fi
