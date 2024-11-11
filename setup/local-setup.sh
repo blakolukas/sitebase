@@ -216,3 +216,7 @@ else
 fi
 
 echo "Script concluído! Logs de backend e frontend estão em backend.log e frontend.log na raíz de cada projeto, caso tenham sido iniciados."
+echo "É possível que o ambiente demore um pouco a ligar (especialmente o frontend). Acompanhe a execução pelos Logs."
+echo "Para DESLIGAR os ambientes execute: local-setup.sh --shutdown"
+echo "Para INICIAR futuramente sem instalar adicione o --skip-install no FINAL do comando."
+echo "Exemplo do --skip-install: local-setup.sh BACKEND_REPO_URL FRONTEND_REPO_URL [outros parametros opcionais aqui] --skip-install"
