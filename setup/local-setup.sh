@@ -66,6 +66,7 @@ clone_repo() {
     if [[ -d "$repo_ref" ]]; then
         echo "Repositório já clonado em $repo_ref. Pulando clone."
 		cd $repo_ref
+		pwd
 		
 		echo "Efetuando checkout da branch..."
 		git checkout "$repo_branch"
@@ -77,6 +78,7 @@ clone_repo() {
     else
         git clone -b "$repo_branch" "$repo_url" "$repo_ref"
 		cd $repo_ref
+		pwd
     fi
 }
 
