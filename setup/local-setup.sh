@@ -80,14 +80,14 @@ clone_repo() {
     fi
 }
 
-install_and_update_make() {
+install_and_update_prerequisites() {
 	echo "Verificando antes de iniciar a instalação..."
 	if ! command -v make &> /dev/null; then
-		echo "Make não encontrado. Iniciando Upgrade geral e Instalando Make..."
+		echo "Make não encontrado. Iniciando Upgrade geral e Instalando dependencias..."
 		
-		sudo apt update
-		sudo apt upgrade
-		sudo apt install make
+		sudo apt update -y
+		sudo apt upgrade -y
+		apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 	else
 		echo "Make já está instalado."
 	fi
@@ -104,7 +104,7 @@ else
 
     # Verificação e execução de instalação no backend, se necessário
     if [[ "$SKIP_INSTALL" = false ]]; then
-		install_and_update_make
+		install_and_update_prerequisites
         if ! command -v python3 &> /dev/null; then
             echo "Python 3 não encontrado. Instalando Python 3..."
             # sudo apt update && sudo apt install -y python3
@@ -115,9 +115,20 @@ else
 		if ! command -v pyenv &> /dev/null; then
             echo "Pyenv não encontrado. Instalando Pyenv..."
             # sudo apt update && sudo apt install -y python3
-            sudo apt install -y pyenv
+            curl https://pyenv.run | bash
+			echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+			echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+			echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
+			source ~/.bashrc
         else
             echo "Pyenv já está instalado."
+        fi
+		if ! command -v pipx &> /dev/null; then
+            echo "pipx não encontrado. Instalando pipx..."
+            # sudo apt update && sudo apt install -y python3
+            pip install pipx
+        else
+            echo "pipx já está instalado."
         fi
         make install
     fi
