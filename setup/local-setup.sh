@@ -21,19 +21,14 @@ show_help() {
 
 # Função para desligar ambientes locais que foram iniciados por este setup
 shutdown_local_environments() {
-    if [[ -f "backend.pid" ]]; then
-        kill -9 $(cat backend.pid) && rm backend.pid
-        echo "Backend encerrado."
-    else
-        echo "Backend já está desligado ou PID não encontrado."
-    fi
+    echo "Parando o backend..."
+    pkill -f "BACKEND_LOCAL_SERVER=backend"
+    echo "Backend parado."
 
-    if [[ -f "frontend.pid" ]]; then
-        kill -9 $(cat frontend.pid) && rm frontend.pid
-        echo "Frontend encerrado."
-    else
-        echo "Frontend já está desligado ou PID não encontrado."
-    fi
+    echo "Parando o frontend..."
+    pkill -f "FRONTEND_LOCAL_SERVER=frontend"
+    echo "Frontend parado."
+	
     exit 0
 }
 
@@ -166,8 +161,8 @@ else
 
     # Iniciar o backend em segundo plano
     echo "Iniciando o backend em modo detached..."
-    nohup make start > backend.log 2>&1 &
-	echo $! > backend.pid
+    (BACKEND_LOCAL_SERVER=backend nohup make start > backend.log 2>&1 &)
+    echo "Backend iniciado com marcação 'BACKEND_ENV=backend'."
     cd ..
 fi
 
@@ -216,8 +211,8 @@ else
 
     # Iniciar o frontend em segundo plano
     echo "Iniciando o frontend em modo detached..."
-    nohup make start > frontend.log 2>&1 &
-	echo $! > frontend.pid
+    (FRONTEND_LOCAL_SERVER=frontend nohup make start > frontend.log 2>&1 &)
+    echo "Frontend iniciado com marcação 'FRONTEND_ENV=frontend'."
 fi
 
 echo "Script concluído! Logs de backend e frontend estão em backend.log e frontend.log na raíz de cada projeto, caso tenham sido iniciados."
