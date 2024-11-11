@@ -13,7 +13,8 @@ show_help() {
     echo "  --frontend-ref PATH        Define o diretório de referência para o frontend (opcional)"
     echo "  --backend-branch BRANCH    Define a branch do repositório backend (padrão: main)"
     echo "  --frontend-branch BRANCH   Define a branch do repositório frontend (padrão: main)"
-    echo "  --skip-install             Ignora as etapas de instalação e executa diretamente make start e VS Code"
+    echo "  --skip-install             INICIA os ambientes ignorando as etapas de instalação, executando diretamente make start e VS Code"
+	echo "  --shutdown                 DESLIGA os ambientes caso eles tenham sido iniciados por este setup"
     echo "  --help                     Exibe esta ajuda"
     exit 0
 }
@@ -43,6 +44,7 @@ while [[ "$#" -gt 0 ]]; do
         --backend-branch) BACKEND_BRANCH="$2"; shift ;;
         --frontend-branch) FRONTEND_BRANCH="$2"; shift ;;
         --skip-install) SKIP_INSTALL=true ;;
+		--shutdown) shutdown_local_environments ;;
         --help) show_help ;;
         *) echo "Parâmetro desconhecido: $1"; exit 1 ;;
     esac
@@ -82,6 +84,25 @@ clone_repo() {
     fi
 }
 
+# Função para desligar ambientes locais que foram iniciados por este setup
+shutdown_local_environments() {
+    if [[ -f "backend.pid" ]]; then
+        kill -9 $(cat backend.pid) && rm backend.pid
+        echo "Backend encerrado."
+    else
+        echo "Backend já está desligado ou PID não encontrado."
+    fi
+
+    if [[ -f "frontend.pid" ]]; then
+        kill -9 $(cat frontend.pid) && rm frontend.pid
+        echo "Frontend encerrado."
+    else
+        echo "Frontend já está desligado ou PID não encontrado."
+    fi
+    exit 0
+}
+
+# Função para instalar prerequisitos 
 install_and_update_prerequisites() {
 	echo "Verificando antes de iniciar a instalação..."
 	if ! command -v make &> /dev/null; then
@@ -141,6 +162,7 @@ else
     # Iniciar o backend em segundo plano
     echo "Iniciando o backend em modo detached..."
     nohup make start > backend.log 2>&1 &
+	echo $! > backend.pid
     cd ..
 fi
 
@@ -190,6 +212,7 @@ else
     # Iniciar o frontend em segundo plano
     echo "Iniciando o frontend em modo detached..."
     nohup make start > frontend.log 2>&1 &
+	echo $! > frontend.pid
 fi
 
 echo "Script concluído! Logs de backend e frontend estão em backend.log e frontend.log na raíz de cada projeto, caso tenham sido iniciados."
