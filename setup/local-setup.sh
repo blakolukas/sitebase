@@ -78,6 +78,19 @@ clone_repo() {
     fi
 }
 
+install_and_update_make() {
+	echo "Verificando antes de iniciar a instalação..."
+	if ! command -v make &> /dev/null; then
+		echo "Make não encontrado. Iniciando Upgrade geral e Instalando Make..."
+		
+		sudo apt update
+		sudo apt upgrade
+		sudo apt install make
+	else
+		echo "Make já está instalado."
+	fi
+}
+
 # Verificar se o URL do repositório backend foi fornecido
 if [[ -z "$BACKEND_REPO_URL" ]]; then
     echo "Aviso: O parâmetro BACKEND_REPO_URL não foi fornecido. Pulando instalação e inicialização do backend. Adicione --help para ver a lista completa de parâmetros."
@@ -90,12 +103,20 @@ else
 
     # Verificação e execução de instalação no backend, se necessário
     if [[ "$SKIP_INSTALL" = false ]]; then
+		install_and_update_make
         if ! command -v python3 &> /dev/null; then
             echo "Python 3 não encontrado. Instalando Python 3..."
             # sudo apt update && sudo apt install -y python3
             sudo apt install -y python3
         else
             echo "Python 3 já está instalado."
+        fi
+		if ! command -v pyenv &> /dev/null; then
+            echo "Pyenv não encontrado. Instalando Pyenv..."
+            # sudo apt update && sudo apt install -y python3
+            sudo apt install -y pyenv
+        else
+            echo "Pyenv já está instalado."
         fi
         make install
     fi
