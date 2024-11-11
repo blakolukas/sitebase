@@ -65,6 +65,7 @@ clone_repo() {
 
     if [[ -d "$repo_ref" ]]; then
         echo "Repositório já clonado em $repo_ref. Pulando clone."
+		cd $repo_ref
 		
 		echo "Efetuando checkout da branch..."
 		git checkout "$repo_url"
@@ -75,6 +76,7 @@ clone_repo() {
 		checkErrors
     else
         git clone -b "$repo_branch" "$repo_url" "$repo_ref"
+		cd $repo_ref
     fi
 }
 
@@ -99,7 +101,6 @@ else
 	# Clone do repositório backend
     BACKEND_DIR=${BACKEND_REF:-$(basename "$BACKEND_REPO_URL" .git)}
     clone_repo "$BACKEND_REPO_URL" "$BACKEND_DIR" "$BACKEND_BRANCH"
-    cd "$BACKEND_DIR"
 
     # Verificação e execução de instalação no backend, se necessário
     if [[ "$SKIP_INSTALL" = false ]]; then
@@ -138,7 +139,6 @@ else
     # Clone do repositório frontend
     FRONTEND_DIR=${FRONTEND_REF:-$(basename "$FRONTEND_REPO_URL" .git)}
     clone_repo "$FRONTEND_REPO_URL" "$FRONTEND_DIR" "$FRONTEND_BRANCH"
-    cd "$FRONTEND_DIR"
 
     # Verificação e execução de instalação no frontend, se necessário
     if [[ "$SKIP_INSTALL" = false ]]; then
