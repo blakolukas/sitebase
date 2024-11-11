@@ -68,7 +68,7 @@ clone_repo() {
 		cd $repo_ref
 		
 		echo "Efetuando checkout da branch..."
-		git checkout "$repo_url"
+		git checkout "$repo_branch"
 		checkErrors
 		
 		echo "Efetuando Pull..."
