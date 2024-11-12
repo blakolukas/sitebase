@@ -1,4 +1,4 @@
-#!/bin/bash -i
+#!/usr/bin/env bash
 
 # Função para exibir ajuda
 show_help() {
