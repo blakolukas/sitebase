@@ -137,6 +137,11 @@ else
 			echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 			echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
 			source ~/.bashrc
+			export PYENV_ROOT="$HOME/.pyenv"
+			export PATH="$PYENV_ROOT/bin:$PATH"
+			if command -v pyenv 1>/dev/null 2>&1; then
+				eval "$(pyenv init -)"
+			fi
 			pyenv install 3.11
 			pyenv global 3.11
 			echo "Pyenv e Python 3.11 instalado via pyenv install 3.11"
