@@ -111,7 +111,7 @@ install_and_update_prerequisites() {
 		
 		sudo apt update -y
 		sudo apt upgrade -y
-		apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+		sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git
 	else
 		echo "Make já está instalado."
 	fi
@@ -129,14 +129,7 @@ else
     # Verificação e execução de instalação no backend, se necessário
     if [[ "$SKIP_INSTALL" = false ]]; then
 		install_and_update_prerequisites
-        if ! command -v python3 &> /dev/null; then
-            echo "Python 3 não encontrado. Instalando Python 3..."
-            # sudo apt update && sudo apt install -y python3
-            sudo apt install -y python3
-        else
-            echo "Python 3 já está instalado."
-        fi
-		if ! command -v pyenv &> /dev/null; then
+        if ! command -v pyenv &> /dev/null; then
             echo "Pyenv não encontrado. Instalando Pyenv..."
             # sudo apt update && sudo apt install -y python3
             curl https://pyenv.run | bash
@@ -147,10 +140,18 @@ else
         else
             echo "Pyenv já está instalado."
         fi
+		if ! command -v python3 &> /dev/null; then
+            echo "Python 3 não encontrado. Instalando Python 3..."
+            # sudo apt update && sudo apt install -y python3
+            pyenv install 3.11
+			pyenv global 3.11		
+        else
+            echo "Python 3 já está instalado."
+        fi
 		if ! command -v pipx &> /dev/null; then
             echo "pipx não encontrado. Instalando pipx..."
             # sudo apt update && sudo apt install -y python3
-            pip install pipx
+            pip install -U pipx
         else
             echo "pipx já está instalado."
         fi
