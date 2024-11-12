@@ -137,24 +137,22 @@ else
 			echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 			echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
 			source ~/.bashrc
+			pyenv install 3.11
+			pyenv global 3.11
+			echo "Pyenv e Python 3.11 instalado via pyenv install 3.11"
+			pip install -U pipx
+			echo "Executado instalação do pipx via pip install pipx"
         else
             echo "Pyenv já está instalado."
         fi
-		if ! command -v python3 &> /dev/null; then
-            echo "Python 3 não encontrado. Instalando Python 3..."
+		
+		# if ! command -v pipx &> /dev/null; then
+            # echo "pipx não encontrado. Instalando pipx..."
             # sudo apt update && sudo apt install -y python3
-            pyenv install 3.11
-			pyenv global 3.11		
-        else
-            echo "Python 3 já está instalado."
-        fi
-		if ! command -v pipx &> /dev/null; then
-            echo "pipx não encontrado. Instalando pipx..."
-            # sudo apt update && sudo apt install -y python3
-            pip install -U pipx
-        else
-            echo "pipx já está instalado."
-        fi
+            # pip install -U pipx
+        # else
+            # echo "pipx já está instalado."
+        # fi
         make install
     fi
 
