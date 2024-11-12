@@ -182,6 +182,8 @@ else
             # sudo apt update && sudo apt install -y python3
 			curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
             source ~/.bashrc
+			nvm install lts/iron
+			npm install -g pnpm
         else
             echo "NVM já está instalado."
         fi
