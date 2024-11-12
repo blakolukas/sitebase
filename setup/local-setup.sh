@@ -53,6 +53,7 @@ FRONTEND_REF=""
 BACKEND_BRANCH="main"
 FRONTEND_BRANCH="main"
 SKIP_INSTALL=false
+RUN_SOURCE=false
 
 # Parsing de parâmetros
 shift 2
@@ -137,6 +138,7 @@ else
 			echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 			echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
 			source ~/.bashrc
+			RUN_SOURCE=true
 			export PYENV_ROOT="$HOME/.pyenv"
 			export PATH="$PYENV_ROOT/bin:$PATH"
 			if command -v pyenv 1>/dev/null 2>&1; then
@@ -187,6 +189,7 @@ else
             # sudo apt update && sudo apt install -y python3
 			curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
             source ~/.bashrc
+			RUN_SOURCE=true
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -231,3 +234,7 @@ echo "É possível que o ambiente demore um pouco a ligar (especialmente o front
 echo "Para DESLIGAR os ambientes execute: local-setup.sh --shutdown"
 echo "Para INICIAR futuramente sem instalar adicione o --skip-install no FINAL do comando."
 echo "Exemplo do --skip-install: local-setup.sh BACKEND_REPO_URL FRONTEND_REPO_URL [outros parametros opcionais aqui] --skip-install"
+if [[ "$RUN_SOURCE" = true ]]; then
+	echo "-----> ATENÇÃO! Instalação inicial detectada! Favor executar manualmente o comando abaixo para persistir a instalação:"
+	echo "source ~/.bashrc"
+fi
