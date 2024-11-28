@@ -148,6 +148,7 @@ else
 			pyenv global 3.11
 			echo "Pyenv e Python 3.11 instalado via pyenv install 3.11"
 			pip install -U pipx
+			pipx ensurepath
 			echo "Executado instalação do pipx via pip install pipx"
         else
             echo "Pyenv já está instalado."
