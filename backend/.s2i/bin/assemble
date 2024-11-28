@@ -13,7 +13,7 @@ function update_requirements_txt() {
 
 	# Append each requirement to requirements.txt
 	for requirement in $requirements; do
-		echo "$requirement" >> ./backend/requirements.txt
+		echo "$requirement" >> ./requirements.txt
 	done
 }
 
