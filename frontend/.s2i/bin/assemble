@@ -123,6 +123,9 @@ handle_add_package() {
 # Function to handle ADD_MRSDEVELOPER
 handle_mrs_developer() {
         echo "Processing ADD_MRSDEVELOPER... Updating mrs.developer.json"
+		
+		echo "Below is the value sent by the platform to S2I:"
+		echo $ADD_MRSDEVELOPER
     
         # Extract the new developers
         new_developers=$(echo "$ADD_MRSDEVELOPER" | sed 's|^{||; s|}$||')
