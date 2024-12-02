@@ -102,8 +102,13 @@ handle_pnpm_workspace() {
 }
 
 # Function to handle ADD_PACKAGE
+# Example Input:
+# export ADD_PACKAGE=['"volto-sitedemo": "workspace:*"']
 handle_add_package() {
         echo "Processing ADD_PACKAGE... Updating dependencies in package.json"
+		
+        # TODO: This method is deprecated... Will update in a later date (when moving to "artifacts")
+		
         packages=$(echo "$ADD_PACKAGE" | sed "s|[][']||g") # Remove brackets and quotes
         IFS=',' read -ra package_array <<< "$packages"
 
@@ -151,14 +156,26 @@ check_custom_installation_configurations() {
 
     if [ -n "$FRONTEND_ADDONS" ]; then
         handle_frontend_addons
+		echo "Below is the value sent by the platform to S2I:"
+		echo $FRONTEND_ADDONS
+		echo "Below is the final result of FROTEND_ADDONS:"
+		cat volto.config.js
     fi
 
     if [ -n "$SET_THEME" ]; then
         handle_set_theme
+		echo "Below is the value sent by the platform to S2I:"
+		echo $SET_THEME
+		echo "Below is the final result of SET_THEME:"
+		cat volto.config.js
     fi
 
     if [ -n "$ADD_PNPM_WORKSPACE" ]; then
         handle_pnpm_workspace
+		echo "Below is the value sent by the platform to S2I:"
+		echo $ADD_PNPM_WORKSPACE
+		echo "Below is the final result of ADD_PNPM_WORKSPACE:"
+		cat pnpm-workspace.yaml
     fi
 
     if [ -n "$ADD_PACKAGE" ]; then
