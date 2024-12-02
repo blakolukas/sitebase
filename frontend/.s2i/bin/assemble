@@ -127,20 +127,20 @@ handle_mrs_developer() {
 		echo "Below is the value sent by the platform to S2I:"
 		echo $ADD_MRSDEVELOPER
     
-        # Extract the new developers
-        new_developers=$(echo "$ADD_MRSDEVELOPER" | sed 's|^{||; s|}$||')
+		# Extract the new developers
+		new_developers=$(echo "$ADD_MRSDEVELOPER" | sed 's|^{||; s|}$||')
 
-        # Read the original file content
-        original_content=$(cat mrs.developer.json)
+		# Read the original file content
+		original_content=$(cat mrs.developer.json)
 
-        # Remove the last closing brace and any trailing commas
-        original_content=$(echo "$original_content" | sed 's/},$/}/')
+		# Remove the last closing brace
+		original_content=$(echo "$original_content" | sed '$ d')
 
-        # Combine the content
-        updated_content=$(echo -e "${original_content%,}\n, ${new_developers}\n}")
+		# Combine the content
+		updated_content="${original_content},\n${new_developers}\n}"
 
-        # Close the JSON object
-        echo -e "${updated_content}}\n" > mrs.developer.json.tmp && mv mrs.developer.json.tmp mrs.developer.json
+		# Write to the temporary file
+		echo -e "$updated_content" > mrs.developer.json.tmp && mv mrs.developer.json.tmp mrs.developer.json
 		
 		echo "Below is the final result of MRSDEVELOPER:"
 		cat mrs.developer.json
