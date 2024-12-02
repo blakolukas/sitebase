@@ -141,6 +141,9 @@ handle_mrs_developer() {
 
         # Close the JSON object
         echo -e "${updated_content}}\n" > mrs.developer.json.tmp && mv mrs.developer.json.tmp mrs.developer.json
+		
+		echo "Below is the final result of MRSDEVELOPER:"
+		echo $ADD_MRSDEVELOPER
 }
 
 check_custom_installation_configurations() {
