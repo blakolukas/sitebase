@@ -123,21 +123,21 @@ handle_add_package() {
 # Function to handle ADD_MRSDEVELOPER
 handle_mrs_developer() {
         echo "Processing ADD_MRSDEVELOPER... Updating mrs.developer.json"
-        developers=$(echo "$ADD_MRSDEVELOPER" | sed "s|[][']||g") # Remove brackets and quotes
-        IFS=',' read -ra developer_array <<< "$developers"
+    
+        # Extract the new developers
+        new_developers=$(echo "$ADD_MRSDEVELOPER" | sed 's|^{||; s|}$||')
 
-        # Find the JSON end and insert new developers
-        awk -v developers="${developer_array[*]}" '
-        BEGIN {split(developers, devs, " ")}
-        /^{/ {print; next}
-        /}$/ {
-            for (dev in devs) {
-                print "  " devs[dev] ",";
-            }
-            print;
-            next
-        }
-        1' mrs.developer.json > mrs.developer.json.tmp && mv mrs.developer.json.tmp mrs.developer.json
+        # Read the original file content
+        original_content=$(cat mrs.developer.json)
+
+        # Remove the last closing brace and any trailing commas
+        original_content=$(echo "$original_content" | sed 's/},$/}/')
+
+        # Combine the content
+        updated_content=$(echo -e "${original_content%,}\n, ${new_developers}\n}")
+
+        # Close the JSON object
+        echo -e "${updated_content}}\n" > mrs.developer.json.tmp && mv mrs.developer.json.tmp mrs.developer.json
 }
 
 check_custom_installation_configurations() {
