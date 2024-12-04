@@ -11,5 +11,11 @@
     "package": "@kitconcept/volto-dsgvo-banner",
     "url": "git@github.com:PROCERGS/volto-dsgvo-banner.git",
     "https": "https://github.com/PROCERGS/volto-dsgvo-banner"
+  },
+  "volto-sitedemo": {
+    "output": "./packages/",
+    "package": "volto-sitedemo",
+    "url": "git@github.com:PROCERGS/volto-sitedemo.git",
+    "https": "https://github.com/PROCERGS/volto-sitedemo"
   }
 }

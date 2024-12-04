@@ -1,6 +1,7 @@
 const addons = [
   "@kitconcept/volto-light-theme",
   "@kitconcept/volto-dsgvo-banner",
+  'volto-sitedemo',
   'volto-procergs-siteplone'
 ];
 const theme = '@kitconcept/volto-light-theme';

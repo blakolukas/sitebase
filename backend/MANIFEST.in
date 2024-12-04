@@ -18,3 +18,6 @@ recursive-exclude frontend *
 exclude instance.yaml
 global-exclude *.pyc
 global-exclude .DS_Store
+exclude .s2i/bin/assemble
+exclude .s2i/environment
+exclude instance-wrapper

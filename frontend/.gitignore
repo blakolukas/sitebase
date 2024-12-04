@@ -12,7 +12,8 @@ results
 yarn.lock
 /public
 
-!.s2i/bin/
+.s2i/
 
 # Dev packages
 packages/volto-dsgvo-banner
+packages/volto-sitedemo
