@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM varnish:7.4
+FROM varnish:7.6
 
 LABEL maintainer="PROCERGS <sites@procergs.rs.gov.br>" \
       org.label-schema.name="siteplone-varnish" \

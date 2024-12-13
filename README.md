@@ -14,7 +14,7 @@ Projeto para site base
 Ensure you have the following installed:
 
 - Python 3.11 🐍
-- Node 20 🟩
+- Node 22 🟩
 - pnpm 🧶
 - Docker 🐳
 
@@ -107,4 +107,4 @@ make i18n
 
 ## Credits and Acknowledgements 🙏
 
-Crafted with care by **Generated using [Cookieplone (0.7.1)](https://github.com/plone/cookieplone) and [cookiecutter-plone (5b3a422)](https://github.com/plone/cookiecutter-plone/commit/5b3a42262f1008bd2ffcb15884df0ee7c79678a3) on 2024-09-27 15:22:43.585367**. A special thanks to all contributors and supporters!
+Crafted with care by **Generated using [Cookieplone (0.8.1)](https://github.com/plone/cookieplone) and [cookiecutter-plone (5df29b1)](https://github.com/plone/cookiecutter-plone/commit/5df29b17884fa57bcdc799084ac3d35a4b9b76c6) on 2024-12-11 16:46:05.735881**. A special thanks to all contributors and supporters!
