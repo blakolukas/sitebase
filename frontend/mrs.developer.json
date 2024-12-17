@@ -12,11 +12,5 @@
     "url": "git@github.com:procergs/volto-sitedemo",
     "https": "https://github.com/procergs/volto-sitedemo",
     "tag": "remove-tema"
-  },
-  "volto-dsgvo-banner": {
-    "output": "./packages/",
-    "package": "volto-dsgvo-banner",
-    "url": "git@github.com:procergs/volto-dsgvo-banner",
-    "https": "https://github.com/procergs/volto-dsgvo-banner"
   }
 }

@@ -1,5 +1,4 @@
 const addons = [
-  "@kitconcept/volto-dsgvo-banner",
   'volto-sitedemo',
   'volto-procergs-siteplone'
 ];
