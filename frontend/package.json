@@ -35,8 +35,7 @@
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "volto-procergs-siteplone": "workspace:*",
-    "@kitconcept/volto-light-theme": "*"
+    "volto-procergs-siteplone": "workspace:*"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
