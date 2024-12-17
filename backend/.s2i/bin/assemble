@@ -4,6 +4,18 @@ echo "Creating python venv envrionment"
 python3.9 -m venv . || virtualenv --python=python3.9 .
 echo "Python venv executed and bin folder created"
 
+# Update requirements.txt for additional backend addons
+function update_requirements_txt() {
+    echo "Processing ADD_REQUIREMENTS... Updating requirements.txt"
+    
+	# Convert JSON-like array string to newline-separated list
+	requirements=$(echo "$ADD_REQUIREMENTS" | sed "s|[][\"']||g" | tr ',' '\n')
+
+	# Append each requirement to requirements.txt
+	for requirement in $requirements; do
+		echo "$requirement" >> ./requirements.txt
+	done
+}
 
 echo "Default S2I assemble script will begin"
 
@@ -17,6 +29,12 @@ if [ $rc -eq 0 ]; then
 	# Custom S2I assemble for plone.restapi
 	#echo "Manual venv activation"
 	#source .venv/bin/activate
+
+    echo "Checking for custom installation requirements..."	
+	if [ -n "$ADD_REQUIREMENTS" ]; then
+        update_requirements_txt
+    fi
+	echo "Installation requirements check complete"
 	
 	make install
 	# TODO: Fix default S2I pip install. S2I already runs the pip install but have been disabled with DISABLE_SETUP_PY_PROCESSING and DISABLE_PYPROJECT_TOML_PROCESSING.

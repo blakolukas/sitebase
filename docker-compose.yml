@@ -3,7 +3,7 @@ name: siteplone
 
 services:
   traefik:
-    image: traefik:v2.10
+    image: traefik:v2.11
 
     ports:
       - 80:80
@@ -82,7 +82,7 @@ services:
       args:
         - PLONE_VERSION=${PLONE_VERSION}
     environment:
-      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_NAME:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-dlAMkajipsbp}' port='${DB_PORT:-5432}'"
+      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_NAME:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-NwUNXCDsHSsd}' port='${DB_PORT:-5432}'"
     depends_on:
       - db
     labels:
@@ -126,10 +126,10 @@ services:
       - traefik.http.routers.rt-backend-classic.middlewares=gzip,mw-backend-auth,mw-backend-vhm-classic
 
   db:
-    image: postgres:14
+    image: postgres:14.15
     environment:
       POSTGRES_USER: plone
-      POSTGRES_PASSWORD: dlAMkajipsbp
+      POSTGRES_PASSWORD: NwUNXCDsHSsd
       POSTGRES_DB: plone
     volumes:
       - vol-site-data:/var/lib/postgresql/data

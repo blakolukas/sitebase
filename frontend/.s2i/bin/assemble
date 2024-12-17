@@ -78,15 +78,129 @@ if [ -z "$NODE_ENV" ]; then
   fi
 fi
 
-if [ "$NODE_ENV" != "production" ]; then
+# Function to handle FRONTEND_ADDONS
+handle_frontend_addons() {
+        echo "Processing FRONTEND_ADDONS... Updating addons in volto.config.js"
+        addons=$(echo "$FRONTEND_ADDONS" | sed "s|[][']||g") # Remove brackets and quotes
+        sed -i "/^const addons = /c\const addons = [$addons];" volto.config.js
+}
 
-	echo "---> Building your Node application from source"
-	# npm install
+# Function to handle SET_THEME
+handle_set_theme() {
+        echo "Processing SET_THEME... Setting theme in volto.config.js"
+        sed -i "s|^const theme = .*|const theme = '$SET_THEME';|g" volto.config.js
+}
+
+# Function to handle ADD_PNPM_WORKSPACE
+handle_pnpm_workspace() {
+        echo "Processing ADD_PNPM_WORKSPACE... Updating pnpm-workspace.yaml"
+        workspaces=$(echo "$ADD_PNPM_WORKSPACE" | sed "s|[][']||g") # Remove brackets and quotes
+        IFS=',' read -ra workspace_array <<< "$workspaces"
+        for workspace in "${workspace_array[@]}"; do
+            echo "  - '$workspace'" >> pnpm-workspace.yaml
+        done
+}
+
+# Function to handle ADD_PACKAGE
+# Example Input:
+# export ADD_PACKAGE=['"volto-sitedemo": "workspace:*"']
+handle_add_package() {
+        echo "Processing ADD_PACKAGE... Updating dependencies in package.json"
+		
+        # TODO: This method is deprecated... Will update in a later date (when moving to "artifacts")
+		
+        packages=$(echo "$ADD_PACKAGE" | sed "s|[][']||g") # Remove brackets and quotes
+        IFS=',' read -ra package_array <<< "$packages"
+
+        # Find the dependencies block and add packages
+        awk -v packages="${package_array[*]}" '
+        BEGIN {split(packages, pkgs, " ")}
+        /"dependencies": {/ {
+            print; 
+            for (pkg in pkgs) {
+                print "    " pkgs[pkg] ",";
+            }
+            next
+        } 
+        1' package.json > package.json.tmp && mv package.json.tmp package.json
+}
+
+# Function to handle ADD_MRSDEVELOPER
+handle_mrs_developer() {
+        echo "Processing ADD_MRSDEVELOPER... Updating mrs.developer.json"
+		
+		echo "Below is the value sent by the platform to S2I:"
+		echo $ADD_MRSDEVELOPER
+    
+		# Extract the new developers
+		new_developers=$(echo "$ADD_MRSDEVELOPER" | sed 's|^{||; s|}$||')
+
+		# Read the original file content
+		original_content=$(cat mrs.developer.json)
+
+		# Remove the last closing brace
+		original_content=$(echo "$original_content" | sed '$ d')
+
+		# Combine the content
+		updated_content="${original_content},\n${new_developers}\n}"
+
+		# Write to the temporary file
+		echo -e "$updated_content" > mrs.developer.json.tmp && mv mrs.developer.json.tmp mrs.developer.json
+		
+		echo "Below is the final result of MRSDEVELOPER:"
+		cat mrs.developer.json
+}
+
+check_custom_installation_configurations() {
+    echo "---> Checking for custom installation variables..."
+
+    if [ -n "$FRONTEND_ADDONS" ]; then
+        handle_frontend_addons
+		echo "Below is the value sent by the platform to S2I:"
+		echo $FRONTEND_ADDONS
+		echo "Below is the final result of FROTEND_ADDONS:"
+		cat volto.config.js
+    fi
+
+    if [ -n "$SET_THEME" ]; then
+        handle_set_theme
+		echo "Below is the value sent by the platform to S2I:"
+		echo $SET_THEME
+		echo "Below is the final result of SET_THEME:"
+		cat volto.config.js
+    fi
+
+    if [ -n "$ADD_PNPM_WORKSPACE" ]; then
+        handle_pnpm_workspace
+		echo "Below is the value sent by the platform to S2I:"
+		echo $ADD_PNPM_WORKSPACE
+		echo "Below is the final result of ADD_PNPM_WORKSPACE:"
+		cat pnpm-workspace.yaml
+    fi
+
+    if [ -n "$ADD_PACKAGE" ]; then
+        handle_add_package
+    fi
+
+    if [ -n "$ADD_MRSDEVELOPER" ]; then
+        handle_mrs_developer
+    fi
 	
+	echo "Completed custom installation check"
+}
+
+if [ "$NODE_ENV" != "production" ]; then
 	echo "Starting custom S2I assembling for development"
 	
+	#echo "---> Building your Node application from source"
+	# npm install
+	
+	echo "---> Installing pnpm"
 	npm install -g pnpm
 	
+	check_custom_installation_configurations
+	
+	echo "---> Executing development installation process"
 	make install
 	
 	# set permissions for any installed artifacts
@@ -96,34 +210,55 @@ if [ "$NODE_ENV" != "production" ]; then
 	chmod +x ./instance-wrapper
 
 	echo "End of custom S2I assembling for development"
-
 else
+	echo "Starting custom S2I assembling for Production"
+	
+	echo "---> Installing pnpm"
+	npm install -g pnpm
+	
+	check_custom_installation_configurations
 
-	echo "---> Installing all dependencies"
-	NODE_ENV=development npm install
+	echo "---> Executing development installation process (build command won't work without this)"
+	NODE_ENV=development make install
 
-	#do not fail when there is no build script
-	echo "---> Building in production mode"
-	npm run ${NPM_BUILD:-build} --if-present
+	echo "---> Executing pnpm build"
+	make build
+	
+	# set permissions for any installed artifacts
+	fix-permissions ./
+	
+	# manually set permission to instance-wrapper
+	chmod +x ./instance-wrapper
 
-	echo "---> Pruning the development dependencies"
-	npm prune
+	echo "End of custom S2I assembling for Production"
+	
+	#TODO: Evaluate future use of tmp, npm cache and development dependencies
+	
+	#echo "---> Installing all dependencies"
+	#NODE_ENV=development npm install
 
-	NPM_TMP=$(npm config get tmp)
-	if ! mountpoint $NPM_TMP; then
-		echo "---> Cleaning the $NPM_TMP/npm-*"
-		rm -rf $NPM_TMP/npm-*
-	fi
+	# #do not fail when there is no build script
+	#echo "---> Building in production mode"
+	#npm run ${NPM_BUILD:-build} --if-present
 
-	# Clear the npm's cache and tmp directories only if they are not a docker volumes
-	NPM_CACHE=$(npm config get cache)
-	if ! mountpoint $NPM_CACHE; then
-		echo "---> Cleaning the npm cache $NPM_CACHE"
-		#As of npm@5 even the 'npm cache clean --force' does not fully remove the cache directory
-		# instead of $NPM_CACHE* use $NPM_CACHE/*.
-		# We do not want to delete .npmrc file.
-		rm -rf "${NPM_CACHE:?}/"
-	fi
+	#echo "---> Pruning the development dependencies"
+	#npm prune
+
+	#NPM_TMP=$(npm config get tmp)
+	#if ! mountpoint $NPM_TMP; then
+		#echo "---> Cleaning the $NPM_TMP/npm-*"
+		#rm -rf $NPM_TMP/npm-*
+	#fi
+
+	# # Clear the npm's cache and tmp directories only if they are not a docker volumes
+	#NPM_CACHE=$(npm config get cache)
+	#if ! mountpoint $NPM_CACHE; then
+		#echo "---> Cleaning the npm cache $NPM_CACHE"
+		# #As of npm@5 even the 'npm cache clean --force' does not fully remove the cache directory
+		# # instead of $NPM_CACHE* use $NPM_CACHE/*.
+		# # We do not want to delete .npmrc file.
+		# rm -rf "${NPM_CACHE:?}/"
+	#fi
 fi
 
 # Fix source directory permissions

@@ -1,4 +1,4 @@
 ---
 swarm:
   advertise_addr: "{{ ansible_default_ipv4.address }}"
-  public_network: "nw-internal"
+  public_network: "nw-public"
