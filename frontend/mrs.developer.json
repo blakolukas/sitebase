@@ -9,8 +9,8 @@
   "volto-sitedemo": {
     "output": "./packages/",
     "package": "volto-sitedemo",
-    "url": "git@github.com:procergs/volto-sitedemo",
-    "https": "https://github.com/procergs/volto-sitedemo",
-    "tag": "remove-tema"
+    "url": "git@github.com:procergs/volto-demo-tema",
+    "https": "https://github.com/procergs/volto-demo-tema",
+    "tag": "main"
   }
 }

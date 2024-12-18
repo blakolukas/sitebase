@@ -1,5 +1,5 @@
 const addons = [
-  'volto-sitedemo',
+  'volto-demo-tema',
   'volto-procergs-siteplone'
 ];
 const theme = '';
