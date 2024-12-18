@@ -19,7 +19,7 @@ FROM plone/frontend-prod-config:${VOLTO_VERSION}
 
 LABEL maintainer="PROCERGS <sites@procergs.rs.gov.br>" \
       org.label-schema.name="siteplone-frontend" \
-      org.label-schema.description="Project Title frontend image." \
+      org.label-schema.description="Site Plone frontend image." \
       org.label-schema.vendor="PROCERGS"
 
 COPY --from=builder /app/ /app/

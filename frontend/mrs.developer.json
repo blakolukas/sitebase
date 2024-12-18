@@ -6,9 +6,9 @@
     "https": "https://github.com/plone/volto.git",
     "tag": "18.4.0"
   },
-  "volto-sitedemo": {
+  "volto-demo-tema": {
     "output": "./packages/",
-    "package": "volto-sitedemo",
+    "package": "volto-demo-tema",
     "url": "git@github.com:procergs/volto-demo-tema",
     "https": "https://github.com/procergs/volto-demo-tema",
     "tag": "main"
