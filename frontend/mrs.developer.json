@@ -4,6 +4,13 @@
     "package": "@plone/volto",
     "url": "git@github.com:plone/volto.git",
     "https": "https://github.com/plone/volto.git",
-    "tag": "18.1.2"
+    "tag": "18.4.0"
+  },
+  "volto-sitedemo": {
+    "output": "./packages/",
+    "package": "volto-sitedemo",
+    "url": "git@github.com:procergs/volto-sitedemo",
+    "https": "https://github.com/procergs/volto-sitedemo",
+    "tag": "remove-tema"
   }
 }
