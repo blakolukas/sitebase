@@ -67,6 +67,7 @@ config: instance/etc/zope.ini
 .PHONY: build-dev
 build-dev: config ## Install Plone packages
 	@echo "$(GREEN)==> Setup Build$(RESET)"
+	source $(BIN_FOLDER)/activate
 	$(BIN_FOLDER)/mxdev -c mx.ini
 	$(BIN_FOLDER)/uv pip install -r requirements-mxdev.txt
 
