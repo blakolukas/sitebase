@@ -1,6 +1,5 @@
 ---
 project_folders:
-  # Path to store siteplone.example.com postgres data
   - path: "/srv/siteplone/data"
     owner: 999
     group: 999

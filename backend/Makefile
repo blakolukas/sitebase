@@ -67,7 +67,6 @@ config: instance/etc/zope.ini
 .PHONY: build-dev
 build-dev: config ## Install Plone packages
 	@echo "$(GREEN)==> Setup Build$(RESET)"
-	source $(BIN_FOLDER)/activate
 	$(BIN_FOLDER)/mxdev -c mx.ini
 	$(BIN_FOLDER)/uv pip install -r requirements-mxdev.txt
 
@@ -80,7 +79,12 @@ build: build-dev ## Install Plone
 .PHONY: clean
 clean: ## Clean environment
 	@echo "$(RED)==> Cleaning environment and build$(RESET)"
-	rm -rf $(VENV_FOLDER) pyvenv.cfg .installed.cfg instance .tox .venv .pytest_cache
+	rm -rf $(VENV_FOLDER) pyvenv.cfg .installed.cfg instance/etc .tox .venv .pytest_cache
+
+.PHONY: remove-data
+remove-data: ## Remove all content
+	@echo "$(RED)==> Removing all content$(RESET)"
+	rm -rf $(VENV_FOLDER) instance/var
 
 .PHONY: start
 start: ## Start a Plone instance on localhost:8080
@@ -133,8 +137,13 @@ build-image:  ## Build Docker Images
 # Acceptance tests
 .PHONY: acceptance-backend-start
 acceptance-backend-start: ## Start backend acceptance server
-	ZSERVER_HOST=0.0.0.0 ZSERVER_PORT=55001 LISTEN_PORT=55001 APPLY_PROFILES="procergs/siteplone:default" CONFIGURE_PACKAGES="plone.restapi,plone.volto,plone.volto.cors,procergs/siteplone" $(BIN_FOLDER)/robot-server plone.app.robotframework.testing.VOLTO_ROBOT_TESTING
+	ZSERVER_HOST=0.0.0.0 ZSERVER_PORT=55001 LISTEN_PORT=55001 APPLY_PROFILES="procergs.siteplone:default" CONFIGURE_PACKAGES="plone.restapi,plone.volto,plone.volto.cors,procergs.siteplone" $(BIN_FOLDER)/robot-server plone.app.robotframework.testing.VOLTO_ROBOT_TESTING
 
 .PHONY: acceptance-image-build
 acceptance-image-build:  ## Build Docker Images
 	@DOCKER_BUILDKIT=1 docker build . -t $(IMAGE_NAME_PREFIX)-backend-acceptance:$(IMAGE_TAG) -f Dockerfile.acceptance --build-arg PLONE_VERSION=$(PLONE_VERSION)
+
+## Add bobtemplates features (check bobtemplates.plone's documentation to get the list of available features)
+add: $(BIN_FOLDER)/pipx
+	$(BIN_FOLDER)/pipx run plonecli add -b .mrbob.ini $(filter-out $@,$(MAKECMDGOALS))
+

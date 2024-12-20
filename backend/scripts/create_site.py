@@ -47,9 +47,6 @@ site_id = "Plone"
 payload = {
     "title": "Site Plone",
     "profile_id": _DEFAULT_PROFILE,
-    "extension_ids": [
-        "procergs.siteplone:default",
-    ],
     "setup_content": False,
     "default_language": "pt-br",
     "portal_timezone": "UTC",
@@ -63,8 +60,12 @@ if site_id in app.objectIds() and DELETE_EXISTING:
 if site_id not in app.objectIds():
     site = addPloneSite(app, site_id, **payload)
     transaction.commit()
+
+    portal_setup: SetupTool = site.portal_setup
+    portal_setup.runAllImportStepsFromProfile("profile-procergs.siteplone:default")
+    transaction.commit()
+
     if EXAMPLE_CONTENT:
-        portal_setup: SetupTool = site.portal_setup
-        portal_setup.runAllImportStepsFromProfile("procergs.siteplone:initial")
+        portal_setup.runAllImportStepsFromProfile("profile-procergs.siteplone:initial")
         transaction.commit()
     app._p_jar.sync()

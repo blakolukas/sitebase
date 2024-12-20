@@ -1,6 +1,6 @@
-# DevOps Operations for Site Plone 🚀
+# DevOps Operations for Project Title 🚀
 
-Welcome to the DevOps documentation for Site Plone! In this guide, we'll walk you through the setup and deployment process, ensuring a smooth and efficient development workflow. We leverage the power of [Ansible](https://www.ansible.com/), [Docker](https://www.docker.com/), and [Docker Swarm](https://docs.docker.com/engine/swarm/) to automate, containerize, and orchestrate application deployment. 🛠️🐳🌐
+Welcome to the DevOps documentation for Project Title! In this guide, we'll walk you through the setup and deployment process, ensuring a smooth and efficient development workflow. We leverage the power of [Ansible](https://www.ansible.com/), [Docker](https://www.docker.com/), and [Docker Swarm](https://docs.docker.com/engine/swarm/) to automate, containerize, and orchestrate application deployment. 🛠️🐳🌐
 
 - **Ansible** empowers us to automate tasks like software provisioning, configuration management, and application deployment. It's like having a robot assistant that takes care of the repetitive tasks, freeing you to focus on more strategic activities! 🤖✨
 
@@ -41,6 +41,7 @@ cp .env_dist .env
 Edit the `.env` file to suit your environment. For example:
 
 ```
+ANSIBLE_REMOTE_PORT=22
 DEPLOY_ENV=prod
 DEPLOY_HOST=siteplone.example.com
 DEPLOY_PORT=22
@@ -50,6 +51,12 @@ STACK_NAME=siteplone-example-com
 ```
 
 Note: The `.env` file is included in `.gitignore`, ensuring environment-specific configurations aren't pushed to the repository.
+
+
+### Server installation
+
+You need either a Ubuntu or Debian based system for siteplone.example.com, enable SSH, and install a supported version of Python 3 on that system.
+
 
 ### Ansible Installation
 
