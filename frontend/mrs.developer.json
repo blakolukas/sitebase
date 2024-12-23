@@ -9,8 +9,22 @@
   "volto-sitedemo": {
     "output": "./packages/",
     "package": "volto-sitedemo",
+    "url": "git@github.com:procergs/volto-sitedemo",
+    "https": "https://github.com/procergs/volto-sitedemo",
+    "tag": "main"
+  },
+  "volto-demo-tema": {
+    "output": "./packages/",
+    "package": "volto-demo-tema",
     "url": "git@github.com:procergs/volto-demo-tema",
     "https": "https://github.com/procergs/volto-demo-tema",
+    "tag": "main"
+  },
+  "volto-dsgvo-banner": {
+    "output": "./packages/",
+    "package": "@kitconcept/volto-dsgvo-banner",
+    "url": "git@github.com:procergs/volto-dsgvo-banner",
+    "https": "https://github.com/procergs/volto-dsgvo-banner",
     "tag": "main"
   }
 }

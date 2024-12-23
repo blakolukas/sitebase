@@ -1,8 +1,11 @@
 const addons = [
+  '@kitconcept/volto-light-theme',
+  '@kitconcept/volto-dsgvo-banner',
+  'volto-sitedemo',
   'volto-demo-tema',
   'volto-procergs-siteplone'
 ];
-const theme = '';
+const theme = '@kitconcept/volto-light-theme';
 
 module.exports = {
   addons,
