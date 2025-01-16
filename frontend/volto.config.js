@@ -1,4 +1,7 @@
-const addons = ['volto-procergs-siteplone'];
+const addons = [
+  '@plone-collective/volto-authomatic',
+  'volto-procergs-siteplone'
+];
 const theme = '';
 
 module.exports = {

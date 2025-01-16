@@ -1,0 +1,1 @@
+Adiciona autenticação com volto-authomatic (@samoel-silva)
