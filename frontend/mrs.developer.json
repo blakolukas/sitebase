@@ -7,24 +7,24 @@
     "tag": "18.1.2"
   },
   "volto-sitedemo": {
-    "output": "./packages/",
+    "url": "git@github.com:PROCERGS/volto-sitedemo.git",
     "package": "volto-sitedemo",
-    "url": "git@github.com:procergs/volto-sitedemo",
-    "https": "https://github.com/procergs/volto-sitedemo",
-    "tag": "main"
-  },
-  "volto-demo-tema": {
-    "output": "./packages/",
-    "package": "volto-demo-tema",
-    "url": "git@github.com:procergs/volto-demo-tema",
-    "https": "https://github.com/procergs/volto-demo-tema",
-    "tag": "main"
-  },
-  "volto-dsgvo-banner": {
-    "output": "./packages/",
-    "package": "@kitconcept/volto-dsgvo-banner",
-    "url": "git@github.com:procergs/volto-dsgvo-banner",
-    "https": "https://github.com/procergs/volto-dsgvo-banner",
-    "tag": "main"
+    "https": "https://github.com/PROCERGS/volto-sitedemo.git",     
+    "branch": "main",     
+    "output": "./packages/"
+  },   
+  "volto-demo-tema": {     
+    "url": "git@github.com:PROCERGS/volto-demo-tema.git",     
+    "package": "volto-demo-tema",     
+    "https": "https://github.com/PROCERGS/volto-demo-tema.git",     
+    "branch": "main",     
+    "output": "./packages/"   
+  },   
+  "volto-dsgvo-banner": {     
+    "url": "git@github.com:PROCERGS/volto-dsgvo-banner.git",     
+    "package": "@kitconcept/volto-dsgvo-banner",     
+    "https": "https://github.com/PROCERGS/volto-dsgvo-banner.git",     
+    "branch": "main",     
+    "output": "./packages/"   
   }
 }
