@@ -1,4 +1,5 @@
 const addons = [
+  '@plone-collective/volto-authomatic',
   '@kitconcept/volto-light-theme',
   '@kitconcept/volto-dsgvo-banner',
   'volto-sitedemo',

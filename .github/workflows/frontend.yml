@@ -10,7 +10,7 @@ on:
 env:
   IMAGE_NAME_PREFIX: ghcr.io/PROCERGS/siteplone
   IMAGE_NAME_SUFFIX: frontend
-  NODE_VERSION: 20.x
+  NODE_VERSION: 22.x
 
 defaults:
   run:

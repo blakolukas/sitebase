@@ -1,0 +1,1 @@
+Adiciona autenticação com pas.plugins.authomatic (@samoel-silva)

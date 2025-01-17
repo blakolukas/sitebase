@@ -26,7 +26,10 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@eeacms/volto-eea-website-theme": "^3.5.2",
+    "@plone-collective/volto-authomatic": "^2.0.1"
+  },
   "peerDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
