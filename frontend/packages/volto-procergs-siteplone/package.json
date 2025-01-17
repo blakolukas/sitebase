@@ -27,7 +27,6 @@
     "release-alpha": "release-it --preRelease=alpha"
   },
   "dependencies": {
-    "@eeacms/volto-eea-website-theme": "^3.5.2",
     "@plone-collective/volto-authomatic": "^2.0.1"
   },
   "peerDependencies": {
