@@ -14,10 +14,10 @@ importers:
     dependencies:
       '@plone/registry':
         specifier: workspace:*
-        version: link:core/packages/registry
+        version: link:packages/volto-sitedemo/core/packages/registry
       '@plone/volto':
         specifier: workspace:*
-        version: link:core/packages/volto
+        version: link:packages/volto-sitedemo/core/packages/volto
       volto-procergs-siteplone:
         specifier: workspace:*
         version: link:packages/volto-procergs-siteplone
@@ -37,10 +37,10 @@ importers:
     devDependencies:
       '@plone/registry':
         specifier: workspace:*
-        version: link:../registry
+        version: link:../../../packages/volto-sitedemo/core/packages/registry
       '@plone/types':
         specifier: workspace:*
-        version: link:../types
+        version: link:../../../packages/volto-sitedemo/core/packages/types
       '@types/react':
         specifier: ^18
         version: 18.2.27
@@ -52,7 +52,7 @@ importers:
         version: 17.1.1(typescript@5.7.3)
       tsconfig:
         specifier: workspace:*
-        version: link:../tsconfig
+        version: link:../../../packages/volto-sitedemo/core/packages/tsconfig
       typescript:
         specifier: ^5.6.3
         version: 5.7.3
@@ -64,7 +64,7 @@ importers:
     dependencies:
       '@tanstack/react-query':
         specifier: ^5.59.0
-        version: 5.64.1(react@18.2.0)
+        version: 5.64.2(react@18.2.0)
       axios:
         specifier: ^1.6.7
         version: 1.7.9(debug@4.3.4)
@@ -83,7 +83,7 @@ importers:
         version: 0.16.4
       '@plone/types':
         specifier: 'workspace: *'
-        version: link:../types
+        version: link:../../../packages/volto-sitedemo/core/packages/types
       '@testing-library/jest-dom':
         specifier: 5.16.5
         version: 5.16.5
@@ -104,7 +104,7 @@ importers:
         version: 9.0.8
       '@vitejs/plugin-react':
         specifier: ^4.1.0
-        version: 4.3.4(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+        version: 4.3.4(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
       '@vitest/coverage-v8':
         specifier: ^1.3.1
         version: 1.6.0(vitest@2.1.8(@types/node@20.17.14)(jsdom@21.1.2)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
@@ -134,10 +134,10 @@ importers:
         version: 9.0.1
       vite:
         specifier: ^5.4.8
-        version: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+        version: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
       vite-plugin-dts:
         specifier: ^3.7.3
-        version: 3.9.1(@types/node@20.17.14)(rollup@4.30.1)(typescript@5.7.3)(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+        version: 3.9.1(@types/node@20.17.14)(rollup@4.31.0)(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
       vitest:
         specifier: ^2.1.3
         version: 2.1.8(@types/node@20.17.14)(jsdom@21.1.2)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
@@ -174,7 +174,7 @@ importers:
         version: 0.16.4
       '@plone/types':
         specifier: 'workspace: *'
-        version: link:../types
+        version: link:../../../packages/volto-sitedemo/core/packages/types
       '@react-types/shared':
         specifier: ^3.22.0
         version: 3.27.0(react@18.2.0)
@@ -201,7 +201,7 @@ importers:
         version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)
       '@storybook/react-vite':
         specifier: ^8.0.4
-        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.30.1)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.31.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
       '@storybook/theming':
         specifier: ^8.0.4
         version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
@@ -222,7 +222,7 @@ importers:
         version: 18.2.12
       '@vitejs/plugin-react':
         specifier: ^4.1.0
-        version: 4.3.4(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+        version: 4.3.4(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
       '@vitest/coverage-v8':
         specifier: ^1.3.1
         version: 1.6.0(vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
@@ -258,7 +258,7 @@ importers:
         version: 5.7.3
       vite:
         specifier: ^5.4.8
-        version: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+        version: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
       vitest:
         specifier: ^2.1.3
         version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
@@ -286,10 +286,10 @@ importers:
     devDependencies:
       '@plone/registry':
         specifier: workspace:*
-        version: link:../registry
+        version: link:../../../packages/volto-sitedemo/core/packages/registry
       '@plone/types':
         specifier: workspace:*
-        version: link:../types
+        version: link:../../../packages/volto-sitedemo/core/packages/types
       '@types/react':
         specifier: ^18
         version: 18.2.27
@@ -375,6 +375,2831 @@ importers:
     devDependencies:
       '@plone/types':
         specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/tsconfig
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  core/packages/providers:
+    dependencies:
+      '@plone/client':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/client
+      '@plone/components':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/components
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/registry
+      '@tanstack/react-query':
+        specifier: ^5.59.0
+        version: 5.64.2(react@18.2.0)
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-aria-components:
+        specifier: ^1.5.0
+        version: 1.6.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@arethetypeswrong/cli':
+        specifier: ^0.16.4
+        version: 0.16.4
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/tsconfig
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  core/packages/registry:
+    dependencies:
+      auto-config-loader:
+        specifier: ^1.7.7
+        version: 1.7.8
+      crypto-random-string:
+        specifier: 3.2.0
+        version: 3.2.0
+      debug:
+        specifier: 4.3.2
+        version: 4.3.2
+      dependency-graph:
+        specifier: 0.10.0
+        version: 0.10.0
+      glob:
+        specifier: ^10.4.5
+        version: 10.4.5
+      tmp:
+        specifier: 0.2.1
+        version: 0.2.1
+    devDependencies:
+      '@arethetypeswrong/cli':
+        specifier: ^0.16.4
+        version: 0.16.4
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/types
+      '@types/debug':
+        specifier: ^4.1.12
+        version: 4.1.12
+      '@types/glob':
+        specifier: ^8.1.0
+        version: 8.1.0
+      '@types/node':
+        specifier: ^20
+        version: 20.17.14
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      '@types/tmp':
+        specifier: ^0.2.6
+        version: 0.2.6
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      release-it:
+        specifier: 16.2.1
+        version: 16.2.1(encoding@0.1.13)(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/tsconfig
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  core/packages/scripts:
+    dependencies:
+      '@babel/core':
+        specifier: ^7.0.0
+        version: 7.26.0
+      babel-plugin-react-intl:
+        specifier: 5.1.17
+        version: 5.1.17
+      babel-preset-razzle:
+        specifier: 4.2.17
+        version: 4.2.17
+      chalk:
+        specifier: '4'
+        version: 4.1.2
+      commander:
+        specifier: 8.2.0
+        version: 8.2.0
+      comment-json:
+        specifier: ^4.2.3
+        version: 4.2.5
+      execa:
+        specifier: 0.6.3
+        version: 0.6.3
+      find-parent-dir:
+        specifier: ^0.3.1
+        version: 0.3.1
+      fs-extra:
+        specifier: 10.1.0
+        version: 10.1.0
+      git-url-parse:
+        specifier: ^13.1.0
+        version: 13.1.1
+      glob:
+        specifier: 7.1.6
+        version: 7.1.6
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+      mrs-developer:
+        specifier: ^2.1.1
+        version: 2.3.0
+      pofile:
+        specifier: 1.0.10
+        version: 1.0.10
+      wait-on:
+        specifier: ^7.2.0
+        version: 7.2.0(debug@4.3.2)
+    devDependencies:
+      release-it:
+        specifier: ^16.1.3
+        version: 16.2.1(encoding@0.1.13)(typescript@5.7.3)
+
+  core/packages/slots:
+    dependencies:
+      '@plone/providers':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/providers
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/registry
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/tsconfig
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  core/packages/tsconfig: {}
+
+  core/packages/types:
+    devDependencies:
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      history:
+        specifier: ^5.3.0
+        version: 5.3.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-intl:
+        specifier: 3.12.1
+        version: 3.12.1(react@18.2.0)
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/tsconfig
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+
+  core/packages/volto:
+    dependencies:
+      '@loadable/component':
+        specifier: 5.14.1
+        version: 5.14.1(react@18.2.0)
+      '@loadable/server':
+        specifier: 5.14.0
+        version: 5.14.0(@loadable/component@5.14.1(react@18.2.0))(react@18.2.0)
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/registry
+      '@plone/scripts':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/scripts
+      '@plone/volto-slate':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/volto-slate
+      '@redux-devtools/extension':
+        specifier: ^3.3.0
+        version: 3.3.0(redux@4.2.1)
+      classnames:
+        specifier: 2.2.6
+        version: 2.2.6
+      connected-react-router:
+        specifier: 6.8.0
+        version: 6.8.0(history@4.10.1)(immutable@3.8.2)(react-redux@8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router@5.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1)(seamless-immutable@7.1.4)
+      debug:
+        specifier: 4.3.2
+        version: 4.3.2
+      decorate-component-with-props:
+        specifier: 1.2.1
+        version: 1.2.1(react@18.2.0)
+      dependency-graph:
+        specifier: 0.10.0
+        version: 0.10.0
+      detect-browser:
+        specifier: 5.1.0
+        version: 5.1.0
+      diff:
+        specifier: 3.5.0
+        version: 3.5.0
+      express:
+        specifier: 4.19.2
+        version: 4.19.2
+      filesize:
+        specifier: '6'
+        version: 6.4.0
+      github-slugger:
+        specifier: 1.4.0
+        version: 1.4.0
+      history:
+        specifier: 4.10.1
+        version: 4.10.1
+      hoist-non-react-statics:
+        specifier: 3.3.2
+        version: 3.3.2
+      http-proxy-middleware:
+        specifier: 2.0.1
+        version: 2.0.1(debug@4.3.2)
+      image-extensions:
+        specifier: 1.1.0
+        version: 1.1.0
+      immutable:
+        specifier: '3'
+        version: 3.8.2
+      is-hotkey:
+        specifier: 0.2.0
+        version: 0.2.0
+      is-url:
+        specifier: 1.2.4
+        version: 1.2.4
+      jotai:
+        specifier: 2.0.3
+        version: 2.0.3(react@18.2.0)
+      jwt-decode:
+        specifier: 2.2.0
+        version: 2.2.0
+      linkify-it:
+        specifier: 3.0.2
+        version: 3.0.2
+      locale:
+        specifier: 0.1.0
+        version: 0.1.0
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+      lodash-move:
+        specifier: 1.1.1
+        version: 1.1.1
+      moment:
+        specifier: 2.29.4
+        version: 2.29.4
+      object-assign:
+        specifier: 4.1.1
+        version: 4.1.1
+      prepend-http:
+        specifier: '2'
+        version: 2.0.0
+      pretty-bytes:
+        specifier: 5.3.0
+        version: 5.3.0
+      prismjs:
+        specifier: 1.27.0
+        version: 1.27.0
+      process:
+        specifier: ^0.11.10
+        version: 0.11.10
+      promise-file-reader:
+        specifier: 1.0.2
+        version: 1.0.2
+      prop-types:
+        specifier: 15.7.2
+        version: 15.7.2
+      query-string:
+        specifier: 7.1.0
+        version: 7.1.0
+      rc-time-picker:
+        specifier: 3.7.3
+        version: 3.7.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-anchor-link-smooth-scroll:
+        specifier: 1.0.12
+        version: 1.0.12
+      react-animate-height:
+        specifier: 2.0.17
+        version: 2.0.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-beautiful-dnd:
+        specifier: 13.0.0
+        version: 13.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-cookie:
+        specifier: 4.1.1
+        version: 4.1.1(react@18.2.0)
+      react-dates:
+        specifier: 21.5.1
+        version: 21.5.1(@babel/runtime@7.20.6)(moment@2.29.4)(react-dom@18.2.0(react@18.2.0))(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
+      react-detect-click-outside:
+        specifier: 1.1.1
+        version: 1.1.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-dnd:
+        specifier: 5.0.0
+        version: 5.0.0(react@18.2.0)
+      react-dnd-html5-backend:
+        specifier: 5.0.1
+        version: 5.0.1
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-dropzone:
+        specifier: 11.1.0
+        version: 11.1.0(react@18.2.0)
+      react-fast-compare:
+        specifier: 2.0.4
+        version: 2.0.4
+      react-image-gallery:
+        specifier: 1.2.7
+        version: 1.2.7(react@18.2.0)
+      react-intersection-observer:
+        specifier: 9.1.0
+        version: 9.1.0(react@18.2.0)
+      react-intl:
+        specifier: 3.12.1
+        version: 3.12.1(react@18.2.0)
+      react-intl-redux:
+        specifier: 2.3.0
+        version: 2.3.0(@babel/runtime@7.20.6)(prop-types@15.7.2)(react-intl@3.12.1(react@18.2.0))(react-redux@8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react@18.2.0)
+      react-medium-image-zoom:
+        specifier: 3.0.15
+        version: 3.0.15(prop-types@15.7.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-popper:
+        specifier: ^2.3.0
+        version: 2.3.0(@popperjs/core@2.11.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-redux:
+        specifier: 8.1.2
+        version: 8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1)
+      react-router:
+        specifier: 5.2.0
+        version: 5.2.0(react@18.2.0)
+      react-router-config:
+        specifier: 5.1.1
+        version: 5.1.1(react-router@5.2.0(react@18.2.0))(react@18.2.0)
+      react-router-dom:
+        specifier: 5.2.0
+        version: 5.2.0(react@18.2.0)
+      react-router-hash-link:
+        specifier: 2.4.3
+        version: 2.4.3(react-router-dom@5.2.0(react@18.2.0))(react@18.2.0)
+      react-select:
+        specifier: 4.3.1
+        version: 4.3.1(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-select-async-paginate:
+        specifier: 0.5.3
+        version: 0.5.3(react-dom@18.2.0(react@18.2.0))(react-select@4.3.1(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
+      react-side-effect:
+        specifier: 2.1.2
+        version: 2.1.2(react@18.2.0)
+      react-simple-code-editor:
+        specifier: 0.7.1
+        version: 0.7.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-sortable-hoc:
+        specifier: 2.0.0
+        version: 2.0.0(prop-types@15.7.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-test-renderer:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-toastify:
+        specifier: 5.5.0
+        version: 5.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-transition-group:
+        specifier: 4.4.5
+        version: 4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-virtualized:
+        specifier: 9.22.3
+        version: 9.22.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      redux:
+        specifier: 4.2.1
+        version: 4.2.1
+      redux-actions:
+        specifier: 3.0.0
+        version: 3.0.0
+      redux-connect:
+        specifier: 10.0.0
+        version: 10.0.0(prop-types@15.7.2)(react-redux@8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router-config@5.1.1(react-router@5.2.0(react@18.2.0))(react@18.2.0))(react-router-dom@5.2.0(react@18.2.0))(react-router@5.2.0(react@18.2.0))(react@18.2.0)(redux-actions@3.0.0)
+      redux-localstorage-simple:
+        specifier: 2.5.1
+        version: 2.5.1
+      redux-mock-store:
+        specifier: 1.5.4
+        version: 1.5.4
+      redux-thunk:
+        specifier: 2.4.2
+        version: 2.4.2(redux@4.2.1)
+      rrule:
+        specifier: 2.7.1
+        version: 2.7.1
+      semantic-ui-less:
+        specifier: 2.4.1
+        version: 2.4.1
+      semantic-ui-react:
+        specifier: 2.1.5
+        version: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      serialize-javascript:
+        specifier: 3.1.0
+        version: 3.1.0
+      slate:
+        specifier: 0.100.0
+        version: 0.100.0
+      slate-hyperscript:
+        specifier: 0.100.0
+        version: 0.100.0(slate@0.100.0)
+      slate-react:
+        specifier: 0.98.4
+        version: 0.98.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.100.0)
+      superagent:
+        specifier: 3.8.2
+        version: 3.8.2
+      tlds:
+        specifier: 1.203.1
+        version: 1.203.1
+      undoo:
+        specifier: 0.5.0
+        version: 0.5.0
+      universal-cookie:
+        specifier: 4.0.4
+        version: 4.0.4
+      universal-cookie-express:
+        specifier: 4.0.3
+        version: 4.0.3
+      url:
+        specifier: ^0.11.3
+        version: 0.11.4
+      use-deep-compare-effect:
+        specifier: 1.8.1
+        version: 1.8.1(react@18.2.0)
+      uuid:
+        specifier: ^8.3.2
+        version: 8.3.2
+    devDependencies:
+      '@babel/core':
+        specifier: ^7.0.0
+        version: 7.26.0
+      '@babel/eslint-parser':
+        specifier: 7.22.15
+        version: 7.22.15(@babel/core@7.26.0)(eslint@8.57.1)
+      '@babel/plugin-proposal-export-default-from':
+        specifier: 7.18.10
+        version: 7.18.10(@babel/core@7.26.0)
+      '@babel/plugin-proposal-export-namespace-from':
+        specifier: 7.18.9
+        version: 7.18.9(@babel/core@7.26.0)
+      '@babel/plugin-proposal-json-strings':
+        specifier: 7.18.6
+        version: 7.18.6(@babel/core@7.26.0)
+      '@babel/plugin-proposal-nullish-coalescing-operator':
+        specifier: 7.18.6
+        version: 7.18.6(@babel/core@7.26.0)
+      '@babel/plugin-proposal-throw-expressions':
+        specifier: 7.18.6
+        version: 7.18.6(@babel/core@7.26.0)
+      '@babel/plugin-syntax-export-namespace-from':
+        specifier: 7.8.3
+        version: 7.8.3(@babel/core@7.26.0)
+      '@babel/runtime':
+        specifier: 7.20.6
+        version: 7.20.6
+      '@babel/types':
+        specifier: 7.20.5
+        version: 7.20.5
+      '@dnd-kit/core':
+        specifier: 6.0.8
+        version: 6.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@dnd-kit/sortable':
+        specifier: 7.0.2
+        version: 7.0.2(@dnd-kit/core@6.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
+      '@dnd-kit/utilities':
+        specifier: 3.2.2
+        version: 3.2.2(react@18.2.0)
+      '@fiverr/afterbuild-webpack-plugin':
+        specifier: ^1.0.0
+        version: 1.0.0
+      '@jest/globals':
+        specifier: ^29.7.0
+        version: 29.7.0
+      '@loadable/babel-plugin':
+        specifier: 5.13.2
+        version: 5.13.2(@babel/core@7.26.0)
+      '@loadable/webpack-plugin':
+        specifier: 5.15.2
+        version: 5.15.2(webpack@5.90.1)
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/types
+      '@plone/volto-coresandbox':
+        specifier: workspace:*
+        version: link:../../../packages/volto-sitedemo/core/packages/coresandbox
+      '@sinonjs/fake-timers':
+        specifier: ^6.0.1
+        version: 6.0.1
+      '@storybook/addon-actions':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-controls':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-docs':
+        specifier: ^8.0.4
+        version: 8.5.0(@types/react@18.2.27)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-essentials':
+        specifier: ^8.0.4
+        version: 8.5.0(@types/react@18.2.27)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-links':
+        specifier: ^8.0.4
+        version: 8.5.0(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-webpack5-compiler-babel':
+        specifier: ^3.0.3
+        version: 3.0.5(webpack@5.90.1)
+      '@storybook/react':
+        specifier: ^8.0.4
+        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)
+      '@storybook/react-webpack5':
+        specifier: ^8.0.4
+        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)
+      '@storybook/theming':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@testing-library/cypress':
+        specifier: 10.0.1
+        version: 10.0.1(cypress@13.13.2)
+      '@testing-library/jest-dom':
+        specifier: 6.4.2
+        version: 6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.14)(jest@26.6.3)(vitest@2.1.8(@types/node@20.17.14)(jsdom@16.7.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@testing-library/react':
+        specifier: 14.2.0
+        version: 14.2.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@testing-library/react-hooks':
+        specifier: 8.0.1
+        version: 8.0.1(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react-test-renderer@18.2.0(react@18.2.0))(react@18.2.0)
+      '@types/history':
+        specifier: ^4.7.11
+        version: 4.7.11
+      '@types/jest':
+        specifier: ^29.5.8
+        version: 29.5.14
+      '@types/loadable__component':
+        specifier: ^5.13.9
+        version: 5.13.9
+      '@types/lodash':
+        specifier: ^4.14.201
+        version: 4.17.14
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      '@types/react-router-dom':
+        specifier: ^5.3.3
+        version: 5.3.3
+      '@types/react-test-renderer':
+        specifier: 18.0.7
+        version: 18.0.7
+      '@types/uuid':
+        specifier: ^9.0.2
+        version: 9.0.8
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.7.0
+        version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.7.3))(eslint@8.57.1)(typescript@5.7.3)
+      '@typescript-eslint/parser':
+        specifier: ^7.7.0
+        version: 7.18.0(eslint@8.57.1)(typescript@5.7.3)
+      autoprefixer:
+        specifier: 10.4.8
+        version: 10.4.8(postcss@8.4.31)
+      axe-core:
+        specifier: 4.4.2
+        version: 4.4.2
+      babel-loader:
+        specifier: 9.1.0
+        version: 9.1.0(@babel/core@7.26.0)(webpack@5.90.1)
+      babel-plugin-add-module-exports:
+        specifier: 0.2.1
+        version: 0.2.1
+      babel-plugin-lodash:
+        specifier: 3.3.4
+        version: 3.3.4
+      babel-plugin-react-intl:
+        specifier: 5.1.17
+        version: 5.1.17
+      babel-plugin-root-import:
+        specifier: 6.1.0
+        version: 6.1.0
+      babel-preset-razzle:
+        specifier: 4.2.18
+        version: 4.2.18
+      bundlewatch:
+        specifier: 0.3.3
+        version: 0.3.3(debug@4.3.2)
+      circular-dependency-plugin:
+        specifier: 5.2.2
+        version: 5.2.2(webpack@5.90.1)
+      css-loader:
+        specifier: 5.2.7
+        version: 5.2.7(webpack@5.90.1)
+      cypress:
+        specifier: 13.13.2
+        version: 13.13.2
+      cypress-axe:
+        specifier: 1.5.0
+        version: 1.5.0(axe-core@4.4.2)(cypress@13.13.2)
+      cypress-file-upload:
+        specifier: 5.0.8
+        version: 5.0.8(cypress@13.13.2)
+      deep-freeze:
+        specifier: 0.0.1
+        version: 0.0.1
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-config-react-app:
+        specifier: ^7.0.1
+        version: 7.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.26.0))(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1)(jest@26.6.3)(typescript@5.7.3)
+      eslint-import-resolver-alias:
+        specifier: ^1.1.2
+        version: 1.1.2(eslint-plugin-import@2.31.0)
+      eslint-import-resolver-babel-plugin-root-import:
+        specifier: ^1.1.1
+        version: 1.1.1(babel-plugin-root-import@6.1.0)(eslint-plugin-import@2.31.0)
+      eslint-import-resolver-typescript:
+        specifier: ^3.6.1
+        version: 3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.1)
+      eslint-plugin-import:
+        specifier: ^2.29.1
+        version: 2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.7.3))(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1)
+      eslint-plugin-jsx-a11y:
+        specifier: ^6.7.1
+        version: 6.10.2(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.1.3
+        version: 5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.2.5)
+      eslint-plugin-react:
+        specifier: ^7.34.1
+        version: 7.37.4(eslint@8.57.1)
+      eslint-plugin-react-hooks:
+        specifier: ^4.6.0
+        version: 4.6.2(eslint@8.57.1)
+      full-icu:
+        specifier: 1.4.0
+        version: 1.4.0
+      html-webpack-plugin:
+        specifier: 5.5.0
+        version: 5.5.0(webpack@5.90.1)
+      identity-obj-proxy:
+        specifier: 3.0.0
+        version: 3.0.0
+      jest:
+        specifier: 26.6.3
+        version: 26.6.3
+      jest-environment-jsdom:
+        specifier: ^26
+        version: 26.6.2
+      jest-file:
+        specifier: 1.0.0
+        version: 1.0.0
+      jsdom:
+        specifier: ^16.7.0
+        version: 16.7.0
+      jsonwebtoken:
+        specifier: 9.0.0
+        version: 9.0.0
+      less:
+        specifier: 3.11.1
+        version: 3.11.1
+      less-loader:
+        specifier: 11.1.0
+        version: 11.1.0(less@3.11.1)(webpack@5.90.1)
+      lodash-webpack-plugin:
+        specifier: 0.11.6
+        version: 0.11.6(webpack@5.90.1)
+      mini-css-extract-plugin:
+        specifier: 2.7.2
+        version: 2.7.2(webpack@5.90.1)
+      moment-locales-webpack-plugin:
+        specifier: 1.2.0
+        version: 1.2.0(moment@2.29.4)(webpack@5.90.1)
+      postcss:
+        specifier: 8.4.31
+        version: 8.4.31
+      postcss-flexbugs-fixes:
+        specifier: 5.0.2
+        version: 5.0.2(postcss@8.4.31)
+      postcss-less:
+        specifier: 6.0.0
+        version: 6.0.0(postcss@8.4.31)
+      postcss-load-config:
+        specifier: 3.1.4
+        version: 3.1.4(postcss@8.4.31)
+      postcss-loader:
+        specifier: 7.0.2
+        version: 7.0.2(postcss@8.4.31)(webpack@5.90.1)
+      postcss-overrides:
+        specifier: 3.1.4
+        version: 3.1.4
+      postcss-scss:
+        specifier: 4.0.6
+        version: 4.0.6(postcss@8.4.31)
+      prettier:
+        specifier: 3.2.5
+        version: 3.2.5
+      razzle:
+        specifier: 4.2.18
+        version: 4.2.18(@babel/core@7.26.0)(babel-preset-razzle@4.2.18)(eslint@8.57.1)(html-webpack-plugin@5.5.0(webpack@5.90.1))(mini-css-extract-plugin@2.7.2(webpack@5.90.1))(razzle-dev-utils@4.2.18(eslint@8.57.1)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack@5.90.1))(sockjs-client@1.4.0)(type-fest@2.19.0)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack-hot-middleware@2.26.1)(webpack@5.90.1)
+      razzle-dev-utils:
+        specifier: 4.2.18
+        version: 4.2.18(eslint@8.57.1)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack@5.90.1)
+      razzle-plugin-scss:
+        specifier: 4.2.18
+        version: 4.2.18(mini-css-extract-plugin@2.7.2(webpack@5.90.1))(postcss@8.4.31)(razzle-dev-utils@4.2.18(eslint@8.57.1)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack@5.90.1))(razzle@4.2.18(@babel/core@7.26.0)(babel-preset-razzle@4.2.18)(eslint@8.57.1)(html-webpack-plugin@5.5.0(webpack@5.90.1))(mini-css-extract-plugin@2.7.2(webpack@5.90.1))(razzle-dev-utils@4.2.18(eslint@8.57.1)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack@5.90.1))(sockjs-client@1.4.0)(type-fest@2.19.0)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack-hot-middleware@2.26.1)(webpack@5.90.1))(webpack@5.90.1)
+      react-docgen-typescript-plugin:
+        specifier: ^1.0.5
+        version: 1.0.8(typescript@5.7.3)(webpack@5.90.1)
+      react-error-overlay:
+        specifier: 6.0.9
+        version: 6.0.9
+      react-is:
+        specifier: ^18.2.0
+        version: 18.3.1
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      semver:
+        specifier: ^7.5.4
+        version: 7.6.3
+      start-server-and-test:
+        specifier: 1.14.0
+        version: 1.14.0
+      storybook:
+        specifier: ^8.0.4
+        version: 8.5.0(prettier@3.2.5)
+      style-loader:
+        specifier: 3.3.1
+        version: 3.3.1(webpack@5.90.1)
+      stylelint:
+        specifier: ^16.3.1
+        version: 16.13.2(typescript@5.7.3)
+      stylelint-config-idiomatic-order:
+        specifier: 10.0.0
+        version: 10.0.0(stylelint@16.13.2(typescript@5.7.3))
+      stylelint-prettier:
+        specifier: 5.0.0
+        version: 5.0.0(prettier@3.2.5)(stylelint@16.13.2(typescript@5.7.3))
+      svg-loader:
+        specifier: 0.0.2
+        version: 0.0.2
+      svgo-loader:
+        specifier: 3.0.3
+        version: 3.0.3
+      terser-webpack-plugin:
+        specifier: 5.3.6
+        version: 5.3.6(webpack@5.90.1)
+      tmp:
+        specifier: 0.2.1
+        version: 0.2.1
+      ts-jest:
+        specifier: ^26.4.2
+        version: 26.5.6(jest@26.6.3)(typescript@5.7.3)
+      ts-loader:
+        specifier: 9.4.4
+        version: 9.4.4(typescript@5.7.3)(webpack@5.90.1)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      use-trace-update:
+        specifier: 1.3.2
+        version: 1.3.2
+      wait-on:
+        specifier: 6.0.0
+        version: 6.0.0(debug@4.3.2)
+      webpack:
+        specifier: 5.90.1
+        version: 5.90.1
+      webpack-bundle-analyzer:
+        specifier: 4.10.1
+        version: 4.10.1
+      webpack-dev-server:
+        specifier: 4.11.1
+        version: 4.11.1(debug@4.3.2)(webpack@5.90.1)
+      webpack-node-externals:
+        specifier: 3.0.0
+        version: 3.0.0
+      why:
+        specifier: 0.6.2
+        version: 0.6.2
+
+  core/packages/volto-guillotina:
+    dependencies:
+      '@plone/scripts':
+        specifier: '*'
+        version: 3.8.1
+
+  core/packages/volto-slate:
+    dependencies:
+      classnames:
+        specifier: 2.2.6
+        version: 2.2.6
+      github-slugger:
+        specifier: 1.4.0
+        version: 1.4.0
+      image-extensions:
+        specifier: 1.1.0
+        version: 1.1.0
+      is-hotkey:
+        specifier: 0.2.0
+        version: 0.2.0
+      is-url:
+        specifier: 1.2.4
+        version: 1.2.4
+      jsdom:
+        specifier: ^16.6.0
+        version: 16.7.0
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-intersection-observer:
+        specifier: 9.1.0
+        version: 9.1.0(react@18.2.0)
+      react-intl:
+        specifier: 3.12.1
+        version: 3.12.1(react@18.2.0)
+      react-redux:
+        specifier: 8.1.2
+        version: 8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1)
+      react-router-dom:
+        specifier: 5.2.0
+        version: 5.2.0(react@18.2.0)
+      react-toastify:
+        specifier: 5.5.0
+        version: 5.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      redux-mock-store:
+        specifier: 1.5.4
+        version: 1.5.4
+      semantic-ui-react:
+        specifier: 2.1.5
+        version: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      slate:
+        specifier: 0.100.0
+        version: 0.100.0
+      slate-history:
+        specifier: 0.100.0
+        version: 0.100.0(slate@0.100.0)
+      slate-hyperscript:
+        specifier: 0.100.0
+        version: 0.100.0(slate@0.100.0)
+      slate-react:
+        specifier: 0.98.4
+        version: 0.98.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.100.0)
+      uuid:
+        specifier: ^9.0.1
+        version: 9.0.1
+      weak-key:
+        specifier: ^1.0.2
+        version: 1.0.3
+    devDependencies:
+      '@testing-library/react':
+        specifier: 9.5.0
+        version: 9.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      babel-plugin-transform-class-properties:
+        specifier: ^6.24.1
+        version: 6.24.1
+      release-it:
+        specifier: ^17.0.0
+        version: 17.1.1(typescript@5.7.3)
+
+  core/packages/volto-testing:
+    dependencies:
+      '@testing-library/cypress':
+        specifier: 10.0.1
+        version: 10.0.1(cypress@13.13.2)
+      '@testing-library/jest-dom':
+        specifier: 6.4.2
+        version: 6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.14)(vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@testing-library/react':
+        specifier: 12.1.5
+        version: 12.1.5(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      axe-core:
+        specifier: 4.8.4
+        version: 4.8.4
+      cypress:
+        specifier: 13.13.2
+        version: 13.13.2
+      cypress-axe:
+        specifier: 1.5.0
+        version: 1.5.0(axe-core@4.8.4)(cypress@13.13.2)
+      cypress-file-upload:
+        specifier: 5.0.8
+        version: 5.0.8(cypress@13.13.2)
+    devDependencies:
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+
+  packages/volto-demo-tema:
+    dependencies:
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../volto-sitedemo/core/packages/registry
+      '@plone/volto':
+        specifier: workspace:*
+        version: link:../volto-sitedemo/core/packages/volto
+      volto-demo-tema:
+        specifier: workspace:*
+        version: link:packages/volto-demo-tema
+    devDependencies:
+      mrs-developer:
+        specifier: ^2.2.0
+        version: 2.3.0
+
+  packages/volto-demo-tema/core/packages/blocks:
+    dependencies:
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/registry
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/tsconfig
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  packages/volto-demo-tema/core/packages/client:
+    dependencies:
+      '@tanstack/react-query':
+        specifier: ^5.59.0
+        version: 5.64.2(react@18.2.0)
+      axios:
+        specifier: ^1.6.7
+        version: 1.7.9(debug@4.3.4)
+      debug:
+        specifier: 4.3.4
+        version: 4.3.4(supports-color@8.1.1)
+      query-string:
+        specifier: ^9.0.0
+        version: 9.1.1
+      zod:
+        specifier: ^3.22.4
+        version: 3.24.1
+    devDependencies:
+      '@arethetypeswrong/cli':
+        specifier: ^0.16.4
+        version: 0.16.4
+      '@plone/types':
+        specifier: 'workspace: *'
+        version: link:../../../../volto-sitedemo/core/packages/types
+      '@testing-library/jest-dom':
+        specifier: 5.16.5
+        version: 5.16.5
+      '@testing-library/react':
+        specifier: 13.4.0
+        version: 13.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@types/debug':
+        specifier: ^4.1.12
+        version: 4.1.12
+      '@types/react':
+        specifier: 18.2.27
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: 18.2.12
+        version: 18.2.12
+      '@types/uuid':
+        specifier: ^9.0.2
+        version: 9.0.8
+      '@vitejs/plugin-react':
+        specifier: ^4.1.0
+        version: 4.3.4(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@vitest/coverage-v8':
+        specifier: ^1.3.1
+        version: 1.6.0(vitest@2.1.8(@types/node@20.17.14)(jsdom@21.1.2)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      glob:
+        specifier: 7.1.6
+        version: 7.1.6
+      jsdom:
+        specifier: ^21.1.1
+        version: 21.1.2
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      uuid:
+        specifier: ^9.0.1
+        version: 9.0.1
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite-plugin-dts:
+        specifier: ^3.7.3
+        version: 3.9.1(@types/node@20.17.14)(rollup@4.31.0)(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@21.1.2)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      wait-on:
+        specifier: ^7.2.0
+        version: 7.2.0(debug@4.3.4)
+
+  packages/volto-demo-tema/core/packages/components:
+    dependencies:
+      '@react-aria/utils':
+        specifier: ^3.26.0
+        version: 3.27.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@react-spectrum/utils':
+        specifier: ^3.12.0
+        version: 3.12.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@storybook/test':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-aria-components:
+        specifier: ^1.5.0
+        version: 1.6.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@arethetypeswrong/cli':
+        specifier: ^0.16.4
+        version: 0.16.4
+      '@plone/types':
+        specifier: 'workspace: *'
+        version: link:../../../../volto-sitedemo/core/packages/types
+      '@react-types/shared':
+        specifier: ^3.22.0
+        version: 3.27.0(react@18.2.0)
+      '@storybook/addon-essentials':
+        specifier: ^8.0.4
+        version: 8.5.0(@types/react@18.2.27)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-interactions':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-links':
+        specifier: ^8.0.4
+        version: 8.5.0(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-mdx-gfm':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/blocks':
+        specifier: ^8.0.4
+        version: 8.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/manager-api':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/react':
+        specifier: ^8.0.4
+        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)
+      '@storybook/react-vite':
+        specifier: ^8.0.4
+        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.31.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@storybook/theming':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@testing-library/jest-dom':
+        specifier: 6.4.2
+        version: 6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.14)(vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@testing-library/react':
+        specifier: 14.2.1
+        version: 14.2.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@types/jest-axe':
+        specifier: ^3.5.7
+        version: 3.5.9
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      '@vitejs/plugin-react':
+        specifier: ^4.1.0
+        version: 4.3.4(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@vitest/coverage-v8':
+        specifier: ^1.3.1
+        version: 1.6.0(vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      browserslist:
+        specifier: ^4.23.0
+        version: 4.24.4
+      eslint-plugin-storybook:
+        specifier: ^0.8.0
+        version: 0.8.0(eslint@8.57.1)(typescript@5.7.3)
+      jest-axe:
+        specifier: ^8.0.0
+        version: 8.0.0
+      jsdom:
+        specifier: ^22.1.0
+        version: 22.1.0
+      lightningcss:
+        specifier: ^1.24.0
+        version: 1.29.1
+      lightningcss-cli:
+        specifier: ^1.24.0
+        version: 1.29.1
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      storybook:
+        specifier: ^8.0.4
+        version: 8.5.0(prettier@3.2.5)
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vitest-axe:
+        specifier: ^0.1.0
+        version: 0.1.0(vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+
+  packages/volto-demo-tema/core/packages/coresandbox:
+    dependencies:
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-intl:
+        specifier: 3.12.1
+        version: 3.12.1(react@18.2.0)
+      react-redux:
+        specifier: 8.1.2
+        version: 8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1)
+      semantic-ui-react:
+        specifier: 2.1.5
+        version: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+    devDependencies:
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/registry
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      '@types/react-redux':
+        specifier: ^7.1.33
+        version: 7.1.34
+
+  packages/volto-demo-tema/core/packages/generator-volto:
+    dependencies:
+      ansi-escapes:
+        specifier: 2.0.0
+        version: 2.0.0
+      chalk:
+        specifier: ^2.1.0
+        version: 2.4.2
+      commander:
+        specifier: 2.9.0
+        version: 2.9.0
+      cross-spawn:
+        specifier: 5.1.0
+        version: 5.1.0
+      execa:
+        specifier: 0.6.3
+        version: 0.6.3
+      fs-extra:
+        specifier: 3.0.0
+        version: 3.0.0
+      gitly:
+        specifier: 2.0.3
+        version: 2.0.3
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+      mkdirp-then:
+        specifier: 1.2.0
+        version: 1.2.0
+      mz:
+        specifier: 2.6.0
+        version: 2.6.0
+      ora:
+        specifier: 1.2.0
+        version: 1.2.0
+      promise:
+        specifier: 7.1.1
+        version: 7.1.1
+      semver:
+        specifier: ^7.5.4
+        version: 7.6.3
+      update-notifier:
+        specifier: ^5.0.1
+        version: 5.1.0
+      yeoman-generator:
+        specifier: 5.10.0
+        version: 5.10.0(encoding@0.1.13)(mem-fs@2.3.0)(yeoman-environment@3.19.3)
+    devDependencies:
+      coveralls:
+        specifier: ^3.0.7
+        version: 3.1.1
+      jest:
+        specifier: ^26.6.3
+        version: 26.6.3
+      release-it:
+        specifier: ^16.1.3
+        version: 16.2.1(encoding@0.1.13)(typescript@5.7.3)
+      yeoman-assert:
+        specifier: ^3.1.0
+        version: 3.1.1
+      yeoman-test:
+        specifier: ^6.1.0
+        version: 6.3.0(mem-fs@2.3.0)(yeoman-environment@3.19.3)(yeoman-generator@5.10.0(encoding@0.1.13)(mem-fs@2.3.0)(yeoman-environment@3.19.3))
+
+  packages/volto-demo-tema/core/packages/helpers:
+    dependencies:
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/tsconfig
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  packages/volto-demo-tema/core/packages/providers:
+    dependencies:
+      '@plone/client':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/client
+      '@plone/components':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/components
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/registry
+      '@tanstack/react-query':
+        specifier: ^5.59.0
+        version: 5.64.2(react@18.2.0)
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-aria-components:
+        specifier: ^1.5.0
+        version: 1.6.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@arethetypeswrong/cli':
+        specifier: ^0.16.4
+        version: 0.16.4
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/tsconfig
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  packages/volto-demo-tema/core/packages/registry:
+    dependencies:
+      auto-config-loader:
+        specifier: ^1.7.7
+        version: 1.7.8
+      crypto-random-string:
+        specifier: 3.2.0
+        version: 3.2.0
+      debug:
+        specifier: 4.3.2
+        version: 4.3.2
+      dependency-graph:
+        specifier: 0.10.0
+        version: 0.10.0
+      glob:
+        specifier: ^10.4.5
+        version: 10.4.5
+      tmp:
+        specifier: 0.2.1
+        version: 0.2.1
+    devDependencies:
+      '@arethetypeswrong/cli':
+        specifier: ^0.16.4
+        version: 0.16.4
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/types
+      '@types/debug':
+        specifier: ^4.1.12
+        version: 4.1.12
+      '@types/glob':
+        specifier: ^8.1.0
+        version: 8.1.0
+      '@types/node':
+        specifier: ^20
+        version: 20.17.14
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      '@types/tmp':
+        specifier: ^0.2.6
+        version: 0.2.6
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      release-it:
+        specifier: 16.2.1
+        version: 16.2.1(encoding@0.1.13)(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/tsconfig
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  packages/volto-demo-tema/core/packages/scripts:
+    dependencies:
+      '@babel/core':
+        specifier: ^7.0.0
+        version: 7.26.0
+      babel-plugin-react-intl:
+        specifier: 5.1.17
+        version: 5.1.17
+      babel-preset-razzle:
+        specifier: 4.2.17
+        version: 4.2.17
+      chalk:
+        specifier: '4'
+        version: 4.1.2
+      commander:
+        specifier: 8.2.0
+        version: 8.2.0
+      comment-json:
+        specifier: ^4.2.3
+        version: 4.2.5
+      execa:
+        specifier: 0.6.3
+        version: 0.6.3
+      find-parent-dir:
+        specifier: ^0.3.1
+        version: 0.3.1
+      fs-extra:
+        specifier: 10.1.0
+        version: 10.1.0
+      git-url-parse:
+        specifier: ^13.1.0
+        version: 13.1.1
+      glob:
+        specifier: 7.1.6
+        version: 7.1.6
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+      mrs-developer:
+        specifier: ^2.1.1
+        version: 2.3.0
+      pofile:
+        specifier: 1.0.10
+        version: 1.0.10
+      wait-on:
+        specifier: ^7.2.0
+        version: 7.2.0(debug@4.3.2)
+    devDependencies:
+      release-it:
+        specifier: ^16.1.3
+        version: 16.2.1(encoding@0.1.13)(typescript@5.7.3)
+
+  packages/volto-demo-tema/core/packages/slots:
+    dependencies:
+      '@plone/providers':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/providers
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/registry
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/tsconfig
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  packages/volto-demo-tema/core/packages/tsconfig: {}
+
+  packages/volto-demo-tema/core/packages/types:
+    devDependencies:
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      history:
+        specifier: ^5.3.0
+        version: 5.3.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-intl:
+        specifier: 3.12.1
+        version: 3.12.1(react@18.2.0)
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/tsconfig
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+
+  packages/volto-demo-tema/core/packages/volto:
+    dependencies:
+      '@loadable/component':
+        specifier: 5.14.1
+        version: 5.14.1(react@18.2.0)
+      '@loadable/server':
+        specifier: 5.14.0
+        version: 5.14.0(@loadable/component@5.14.1(react@18.2.0))(react@18.2.0)
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/registry
+      '@plone/scripts':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/scripts
+      '@plone/volto-slate':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/volto-slate
+      '@redux-devtools/extension':
+        specifier: ^3.3.0
+        version: 3.3.0(redux@4.2.1)
+      classnames:
+        specifier: 2.2.6
+        version: 2.2.6
+      connected-react-router:
+        specifier: 6.8.0
+        version: 6.8.0(history@4.10.1)(immutable@3.8.2)(react-redux@8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router@5.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1)(seamless-immutable@7.1.4)
+      debug:
+        specifier: 4.3.2
+        version: 4.3.2
+      decorate-component-with-props:
+        specifier: 1.2.1
+        version: 1.2.1(react@18.2.0)
+      dependency-graph:
+        specifier: 0.10.0
+        version: 0.10.0
+      detect-browser:
+        specifier: 5.1.0
+        version: 5.1.0
+      diff:
+        specifier: 3.5.0
+        version: 3.5.0
+      express:
+        specifier: 4.19.2
+        version: 4.19.2
+      filesize:
+        specifier: '6'
+        version: 6.4.0
+      github-slugger:
+        specifier: 1.4.0
+        version: 1.4.0
+      history:
+        specifier: 4.10.1
+        version: 4.10.1
+      hoist-non-react-statics:
+        specifier: 3.3.2
+        version: 3.3.2
+      http-proxy-middleware:
+        specifier: 2.0.1
+        version: 2.0.1(debug@4.3.2)
+      image-extensions:
+        specifier: 1.1.0
+        version: 1.1.0
+      immutable:
+        specifier: '3'
+        version: 3.8.2
+      is-hotkey:
+        specifier: 0.2.0
+        version: 0.2.0
+      is-url:
+        specifier: 1.2.4
+        version: 1.2.4
+      jotai:
+        specifier: 2.0.3
+        version: 2.0.3(react@18.2.0)
+      jwt-decode:
+        specifier: 2.2.0
+        version: 2.2.0
+      linkify-it:
+        specifier: 3.0.2
+        version: 3.0.2
+      locale:
+        specifier: 0.1.0
+        version: 0.1.0
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+      lodash-move:
+        specifier: 1.1.1
+        version: 1.1.1
+      moment:
+        specifier: 2.29.4
+        version: 2.29.4
+      object-assign:
+        specifier: 4.1.1
+        version: 4.1.1
+      prepend-http:
+        specifier: '2'
+        version: 2.0.0
+      pretty-bytes:
+        specifier: 5.3.0
+        version: 5.3.0
+      prismjs:
+        specifier: 1.27.0
+        version: 1.27.0
+      process:
+        specifier: ^0.11.10
+        version: 0.11.10
+      promise-file-reader:
+        specifier: 1.0.2
+        version: 1.0.2
+      prop-types:
+        specifier: 15.7.2
+        version: 15.7.2
+      query-string:
+        specifier: 7.1.0
+        version: 7.1.0
+      rc-time-picker:
+        specifier: 3.7.3
+        version: 3.7.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-anchor-link-smooth-scroll:
+        specifier: 1.0.12
+        version: 1.0.12
+      react-animate-height:
+        specifier: 2.0.17
+        version: 2.0.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-beautiful-dnd:
+        specifier: 13.0.0
+        version: 13.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-cookie:
+        specifier: 4.1.1
+        version: 4.1.1(react@18.2.0)
+      react-dates:
+        specifier: 21.5.1
+        version: 21.5.1(@babel/runtime@7.20.6)(moment@2.29.4)(react-dom@18.2.0(react@18.2.0))(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
+      react-detect-click-outside:
+        specifier: 1.1.1
+        version: 1.1.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-dnd:
+        specifier: 5.0.0
+        version: 5.0.0(react@18.2.0)
+      react-dnd-html5-backend:
+        specifier: 5.0.1
+        version: 5.0.1
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-dropzone:
+        specifier: 11.1.0
+        version: 11.1.0(react@18.2.0)
+      react-fast-compare:
+        specifier: 2.0.4
+        version: 2.0.4
+      react-image-gallery:
+        specifier: 1.2.7
+        version: 1.2.7(react@18.2.0)
+      react-intersection-observer:
+        specifier: 9.1.0
+        version: 9.1.0(react@18.2.0)
+      react-intl:
+        specifier: 3.12.1
+        version: 3.12.1(react@18.2.0)
+      react-intl-redux:
+        specifier: 2.3.0
+        version: 2.3.0(@babel/runtime@7.20.6)(prop-types@15.7.2)(react-intl@3.12.1(react@18.2.0))(react-redux@8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react@18.2.0)
+      react-medium-image-zoom:
+        specifier: 3.0.15
+        version: 3.0.15(prop-types@15.7.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-popper:
+        specifier: ^2.3.0
+        version: 2.3.0(@popperjs/core@2.11.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-redux:
+        specifier: 8.1.2
+        version: 8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1)
+      react-router:
+        specifier: 5.2.0
+        version: 5.2.0(react@18.2.0)
+      react-router-config:
+        specifier: 5.1.1
+        version: 5.1.1(react-router@5.2.0(react@18.2.0))(react@18.2.0)
+      react-router-dom:
+        specifier: 5.2.0
+        version: 5.2.0(react@18.2.0)
+      react-router-hash-link:
+        specifier: 2.4.3
+        version: 2.4.3(react-router-dom@5.2.0(react@18.2.0))(react@18.2.0)
+      react-select:
+        specifier: 4.3.1
+        version: 4.3.1(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-select-async-paginate:
+        specifier: 0.5.3
+        version: 0.5.3(react-dom@18.2.0(react@18.2.0))(react-select@4.3.1(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
+      react-side-effect:
+        specifier: 2.1.2
+        version: 2.1.2(react@18.2.0)
+      react-simple-code-editor:
+        specifier: 0.7.1
+        version: 0.7.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-sortable-hoc:
+        specifier: 2.0.0
+        version: 2.0.0(prop-types@15.7.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-test-renderer:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-toastify:
+        specifier: 5.5.0
+        version: 5.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-transition-group:
+        specifier: 4.4.5
+        version: 4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-virtualized:
+        specifier: 9.22.3
+        version: 9.22.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      redux:
+        specifier: 4.2.1
+        version: 4.2.1
+      redux-actions:
+        specifier: 3.0.0
+        version: 3.0.0
+      redux-connect:
+        specifier: 10.0.0
+        version: 10.0.0(prop-types@15.7.2)(react-redux@8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router-config@5.1.1(react-router@5.2.0(react@18.2.0))(react@18.2.0))(react-router-dom@5.2.0(react@18.2.0))(react-router@5.2.0(react@18.2.0))(react@18.2.0)(redux-actions@3.0.0)
+      redux-localstorage-simple:
+        specifier: 2.5.1
+        version: 2.5.1
+      redux-mock-store:
+        specifier: 1.5.4
+        version: 1.5.4
+      redux-thunk:
+        specifier: 2.4.2
+        version: 2.4.2(redux@4.2.1)
+      rrule:
+        specifier: 2.7.1
+        version: 2.7.1
+      semantic-ui-less:
+        specifier: 2.4.1
+        version: 2.4.1
+      semantic-ui-react:
+        specifier: 2.1.5
+        version: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      serialize-javascript:
+        specifier: 3.1.0
+        version: 3.1.0
+      slate:
+        specifier: 0.100.0
+        version: 0.100.0
+      slate-hyperscript:
+        specifier: 0.100.0
+        version: 0.100.0(slate@0.100.0)
+      slate-react:
+        specifier: 0.98.4
+        version: 0.98.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.100.0)
+      superagent:
+        specifier: 3.8.2
+        version: 3.8.2
+      tlds:
+        specifier: 1.203.1
+        version: 1.203.1
+      undoo:
+        specifier: 0.5.0
+        version: 0.5.0
+      universal-cookie:
+        specifier: 4.0.4
+        version: 4.0.4
+      universal-cookie-express:
+        specifier: 4.0.3
+        version: 4.0.3
+      url:
+        specifier: ^0.11.3
+        version: 0.11.4
+      use-deep-compare-effect:
+        specifier: 1.8.1
+        version: 1.8.1(react@18.2.0)
+      uuid:
+        specifier: ^8.3.2
+        version: 8.3.2
+    devDependencies:
+      '@babel/core':
+        specifier: ^7.0.0
+        version: 7.26.0
+      '@babel/eslint-parser':
+        specifier: 7.22.15
+        version: 7.22.15(@babel/core@7.26.0)(eslint@8.57.1)
+      '@babel/plugin-proposal-export-default-from':
+        specifier: 7.18.10
+        version: 7.18.10(@babel/core@7.26.0)
+      '@babel/plugin-proposal-export-namespace-from':
+        specifier: 7.18.9
+        version: 7.18.9(@babel/core@7.26.0)
+      '@babel/plugin-proposal-json-strings':
+        specifier: 7.18.6
+        version: 7.18.6(@babel/core@7.26.0)
+      '@babel/plugin-proposal-nullish-coalescing-operator':
+        specifier: 7.18.6
+        version: 7.18.6(@babel/core@7.26.0)
+      '@babel/plugin-proposal-throw-expressions':
+        specifier: 7.18.6
+        version: 7.18.6(@babel/core@7.26.0)
+      '@babel/plugin-syntax-export-namespace-from':
+        specifier: 7.8.3
+        version: 7.8.3(@babel/core@7.26.0)
+      '@babel/runtime':
+        specifier: 7.20.6
+        version: 7.20.6
+      '@babel/types':
+        specifier: 7.20.5
+        version: 7.20.5
+      '@dnd-kit/core':
+        specifier: 6.0.8
+        version: 6.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@dnd-kit/sortable':
+        specifier: 7.0.2
+        version: 7.0.2(@dnd-kit/core@6.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
+      '@dnd-kit/utilities':
+        specifier: 3.2.2
+        version: 3.2.2(react@18.2.0)
+      '@fiverr/afterbuild-webpack-plugin':
+        specifier: ^1.0.0
+        version: 1.0.0
+      '@jest/globals':
+        specifier: ^29.7.0
+        version: 29.7.0
+      '@loadable/babel-plugin':
+        specifier: 5.13.2
+        version: 5.13.2(@babel/core@7.26.0)
+      '@loadable/webpack-plugin':
+        specifier: 5.15.2
+        version: 5.15.2(webpack@5.90.1)
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/types
+      '@plone/volto-coresandbox':
+        specifier: workspace:*
+        version: link:../../../../volto-sitedemo/core/packages/coresandbox
+      '@sinonjs/fake-timers':
+        specifier: ^6.0.1
+        version: 6.0.1
+      '@storybook/addon-actions':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-controls':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-docs':
+        specifier: ^8.0.4
+        version: 8.5.0(@types/react@18.2.27)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-essentials':
+        specifier: ^8.0.4
+        version: 8.5.0(@types/react@18.2.27)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-links':
+        specifier: ^8.0.4
+        version: 8.5.0(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-webpack5-compiler-babel':
+        specifier: ^3.0.3
+        version: 3.0.5(webpack@5.90.1)
+      '@storybook/react':
+        specifier: ^8.0.4
+        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)
+      '@storybook/react-webpack5':
+        specifier: ^8.0.4
+        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)
+      '@storybook/theming':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@testing-library/cypress':
+        specifier: 10.0.1
+        version: 10.0.1(cypress@13.13.2)
+      '@testing-library/jest-dom':
+        specifier: 6.4.2
+        version: 6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.14)(jest@26.6.3)(vitest@2.1.8(@types/node@20.17.14)(jsdom@16.7.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@testing-library/react':
+        specifier: 14.2.0
+        version: 14.2.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@testing-library/react-hooks':
+        specifier: 8.0.1
+        version: 8.0.1(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react-test-renderer@18.2.0(react@18.2.0))(react@18.2.0)
+      '@types/history':
+        specifier: ^4.7.11
+        version: 4.7.11
+      '@types/jest':
+        specifier: ^29.5.8
+        version: 29.5.14
+      '@types/loadable__component':
+        specifier: ^5.13.9
+        version: 5.13.9
+      '@types/lodash':
+        specifier: ^4.14.201
+        version: 4.17.14
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      '@types/react-router-dom':
+        specifier: ^5.3.3
+        version: 5.3.3
+      '@types/react-test-renderer':
+        specifier: 18.0.7
+        version: 18.0.7
+      '@types/uuid':
+        specifier: ^9.0.2
+        version: 9.0.8
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.7.0
+        version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.7.3))(eslint@8.57.1)(typescript@5.7.3)
+      '@typescript-eslint/parser':
+        specifier: ^7.7.0
+        version: 7.18.0(eslint@8.57.1)(typescript@5.7.3)
+      autoprefixer:
+        specifier: 10.4.8
+        version: 10.4.8(postcss@8.4.31)
+      axe-core:
+        specifier: 4.4.2
+        version: 4.4.2
+      babel-loader:
+        specifier: 9.1.0
+        version: 9.1.0(@babel/core@7.26.0)(webpack@5.90.1)
+      babel-plugin-add-module-exports:
+        specifier: 0.2.1
+        version: 0.2.1
+      babel-plugin-lodash:
+        specifier: 3.3.4
+        version: 3.3.4
+      babel-plugin-react-intl:
+        specifier: 5.1.17
+        version: 5.1.17
+      babel-plugin-root-import:
+        specifier: 6.1.0
+        version: 6.1.0
+      babel-preset-razzle:
+        specifier: 4.2.18
+        version: 4.2.18
+      bundlewatch:
+        specifier: 0.3.3
+        version: 0.3.3(debug@4.3.2)
+      circular-dependency-plugin:
+        specifier: 5.2.2
+        version: 5.2.2(webpack@5.90.1)
+      css-loader:
+        specifier: 5.2.7
+        version: 5.2.7(webpack@5.90.1)
+      cypress:
+        specifier: 13.13.2
+        version: 13.13.2
+      cypress-axe:
+        specifier: 1.5.0
+        version: 1.5.0(axe-core@4.4.2)(cypress@13.13.2)
+      cypress-file-upload:
+        specifier: 5.0.8
+        version: 5.0.8(cypress@13.13.2)
+      deep-freeze:
+        specifier: 0.0.1
+        version: 0.0.1
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-config-react-app:
+        specifier: ^7.0.1
+        version: 7.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.26.0))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.26.0))(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1)(jest@26.6.3)(typescript@5.7.3)
+      eslint-import-resolver-alias:
+        specifier: ^1.1.2
+        version: 1.1.2(eslint-plugin-import@2.31.0)
+      eslint-import-resolver-babel-plugin-root-import:
+        specifier: ^1.1.1
+        version: 1.1.1(babel-plugin-root-import@6.1.0)(eslint-plugin-import@2.31.0)
+      eslint-import-resolver-typescript:
+        specifier: ^3.6.1
+        version: 3.7.0(eslint-plugin-import@2.31.0)(eslint@8.57.1)
+      eslint-plugin-import:
+        specifier: ^2.29.1
+        version: 2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.7.3))(eslint-import-resolver-typescript@3.7.0)(eslint@8.57.1)
+      eslint-plugin-jsx-a11y:
+        specifier: ^6.7.1
+        version: 6.10.2(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.1.3
+        version: 5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.2.5)
+      eslint-plugin-react:
+        specifier: ^7.34.1
+        version: 7.37.4(eslint@8.57.1)
+      eslint-plugin-react-hooks:
+        specifier: ^4.6.0
+        version: 4.6.2(eslint@8.57.1)
+      full-icu:
+        specifier: 1.4.0
+        version: 1.4.0
+      html-webpack-plugin:
+        specifier: 5.5.0
+        version: 5.5.0(webpack@5.90.1)
+      identity-obj-proxy:
+        specifier: 3.0.0
+        version: 3.0.0
+      jest:
+        specifier: 26.6.3
+        version: 26.6.3
+      jest-environment-jsdom:
+        specifier: ^26
+        version: 26.6.2
+      jest-file:
+        specifier: 1.0.0
+        version: 1.0.0
+      jsdom:
+        specifier: ^16.7.0
+        version: 16.7.0
+      jsonwebtoken:
+        specifier: 9.0.0
+        version: 9.0.0
+      less:
+        specifier: 3.11.1
+        version: 3.11.1
+      less-loader:
+        specifier: 11.1.0
+        version: 11.1.0(less@3.11.1)(webpack@5.90.1)
+      lodash-webpack-plugin:
+        specifier: 0.11.6
+        version: 0.11.6(webpack@5.90.1)
+      mini-css-extract-plugin:
+        specifier: 2.7.2
+        version: 2.7.2(webpack@5.90.1)
+      moment-locales-webpack-plugin:
+        specifier: 1.2.0
+        version: 1.2.0(moment@2.29.4)(webpack@5.90.1)
+      postcss:
+        specifier: 8.4.31
+        version: 8.4.31
+      postcss-flexbugs-fixes:
+        specifier: 5.0.2
+        version: 5.0.2(postcss@8.4.31)
+      postcss-less:
+        specifier: 6.0.0
+        version: 6.0.0(postcss@8.4.31)
+      postcss-load-config:
+        specifier: 3.1.4
+        version: 3.1.4(postcss@8.4.31)
+      postcss-loader:
+        specifier: 7.0.2
+        version: 7.0.2(postcss@8.4.31)(webpack@5.90.1)
+      postcss-overrides:
+        specifier: 3.1.4
+        version: 3.1.4
+      postcss-scss:
+        specifier: 4.0.6
+        version: 4.0.6(postcss@8.4.31)
+      prettier:
+        specifier: 3.2.5
+        version: 3.2.5
+      razzle:
+        specifier: 4.2.18
+        version: 4.2.18(@babel/core@7.26.0)(babel-preset-razzle@4.2.18)(eslint@8.57.1)(html-webpack-plugin@5.5.0(webpack@5.90.1))(mini-css-extract-plugin@2.7.2(webpack@5.90.1))(razzle-dev-utils@4.2.18(eslint@8.57.1)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack@5.90.1))(sockjs-client@1.4.0)(type-fest@2.19.0)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack-hot-middleware@2.26.1)(webpack@5.90.1)
+      razzle-dev-utils:
+        specifier: 4.2.18
+        version: 4.2.18(eslint@8.57.1)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack@5.90.1)
+      razzle-plugin-scss:
+        specifier: 4.2.18
+        version: 4.2.18(mini-css-extract-plugin@2.7.2(webpack@5.90.1))(postcss@8.4.31)(razzle-dev-utils@4.2.18(eslint@8.57.1)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack@5.90.1))(razzle@4.2.18(@babel/core@7.26.0)(babel-preset-razzle@4.2.18)(eslint@8.57.1)(html-webpack-plugin@5.5.0(webpack@5.90.1))(mini-css-extract-plugin@2.7.2(webpack@5.90.1))(razzle-dev-utils@4.2.18(eslint@8.57.1)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack@5.90.1))(sockjs-client@1.4.0)(type-fest@2.19.0)(typescript@5.7.3)(vue-template-compiler@2.7.16)(webpack-dev-server@4.11.1(debug@4.3.2)(webpack@5.90.1))(webpack-hot-middleware@2.26.1)(webpack@5.90.1))(webpack@5.90.1)
+      react-docgen-typescript-plugin:
+        specifier: ^1.0.5
+        version: 1.0.8(typescript@5.7.3)(webpack@5.90.1)
+      react-error-overlay:
+        specifier: 6.0.9
+        version: 6.0.9
+      react-is:
+        specifier: ^18.2.0
+        version: 18.3.1
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      semver:
+        specifier: ^7.5.4
+        version: 7.6.3
+      start-server-and-test:
+        specifier: 1.14.0
+        version: 1.14.0
+      storybook:
+        specifier: ^8.0.4
+        version: 8.5.0(prettier@3.2.5)
+      style-loader:
+        specifier: 3.3.1
+        version: 3.3.1(webpack@5.90.1)
+      stylelint:
+        specifier: ^16.3.1
+        version: 16.13.2(typescript@5.7.3)
+      stylelint-config-idiomatic-order:
+        specifier: 10.0.0
+        version: 10.0.0(stylelint@16.13.2(typescript@5.7.3))
+      stylelint-prettier:
+        specifier: 5.0.0
+        version: 5.0.0(prettier@3.2.5)(stylelint@16.13.2(typescript@5.7.3))
+      svg-loader:
+        specifier: 0.0.2
+        version: 0.0.2
+      svgo-loader:
+        specifier: 3.0.3
+        version: 3.0.3
+      terser-webpack-plugin:
+        specifier: 5.3.6
+        version: 5.3.6(webpack@5.90.1)
+      tmp:
+        specifier: 0.2.1
+        version: 0.2.1
+      ts-jest:
+        specifier: ^26.4.2
+        version: 26.5.6(jest@26.6.3)(typescript@5.7.3)
+      ts-loader:
+        specifier: 9.4.4
+        version: 9.4.4(typescript@5.7.3)(webpack@5.90.1)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      use-trace-update:
+        specifier: 1.3.2
+        version: 1.3.2
+      wait-on:
+        specifier: 6.0.0
+        version: 6.0.0(debug@4.3.2)
+      webpack:
+        specifier: 5.90.1
+        version: 5.90.1
+      webpack-bundle-analyzer:
+        specifier: 4.10.1
+        version: 4.10.1
+      webpack-dev-server:
+        specifier: 4.11.1
+        version: 4.11.1(debug@4.3.2)(webpack@5.90.1)
+      webpack-node-externals:
+        specifier: 3.0.0
+        version: 3.0.0
+      why:
+        specifier: 0.6.2
+        version: 0.6.2
+
+  packages/volto-demo-tema/core/packages/volto-guillotina:
+    dependencies:
+      '@plone/scripts':
+        specifier: '*'
+        version: 3.8.1
+
+  packages/volto-demo-tema/core/packages/volto-slate:
+    dependencies:
+      classnames:
+        specifier: 2.2.6
+        version: 2.2.6
+      github-slugger:
+        specifier: 1.4.0
+        version: 1.4.0
+      image-extensions:
+        specifier: 1.1.0
+        version: 1.1.0
+      is-hotkey:
+        specifier: 0.2.0
+        version: 0.2.0
+      is-url:
+        specifier: 1.2.4
+        version: 1.2.4
+      jsdom:
+        specifier: ^16.6.0
+        version: 16.7.0
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-intersection-observer:
+        specifier: 9.1.0
+        version: 9.1.0(react@18.2.0)
+      react-intl:
+        specifier: 3.12.1
+        version: 3.12.1(react@18.2.0)
+      react-redux:
+        specifier: 8.1.2
+        version: 8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1)
+      react-router-dom:
+        specifier: 5.2.0
+        version: 5.2.0(react@18.2.0)
+      react-toastify:
+        specifier: 5.5.0
+        version: 5.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      redux-mock-store:
+        specifier: 1.5.4
+        version: 1.5.4
+      semantic-ui-react:
+        specifier: 2.1.5
+        version: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      slate:
+        specifier: 0.100.0
+        version: 0.100.0
+      slate-history:
+        specifier: 0.100.0
+        version: 0.100.0(slate@0.100.0)
+      slate-hyperscript:
+        specifier: 0.100.0
+        version: 0.100.0(slate@0.100.0)
+      slate-react:
+        specifier: 0.98.4
+        version: 0.98.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.100.0)
+      uuid:
+        specifier: ^9.0.1
+        version: 9.0.1
+      weak-key:
+        specifier: ^1.0.2
+        version: 1.0.3
+    devDependencies:
+      '@testing-library/react':
+        specifier: 9.5.0
+        version: 9.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      babel-plugin-transform-class-properties:
+        specifier: ^6.24.1
+        version: 6.24.1
+      release-it:
+        specifier: ^17.0.0
+        version: 17.1.1(typescript@5.7.3)
+
+  packages/volto-demo-tema/core/packages/volto-testing:
+    dependencies:
+      '@testing-library/cypress':
+        specifier: 10.0.1
+        version: 10.0.1(cypress@13.13.2)
+      '@testing-library/jest-dom':
+        specifier: 6.4.2
+        version: 6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.14)(vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@testing-library/react':
+        specifier: 12.1.5
+        version: 12.1.5(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      axe-core:
+        specifier: 4.8.4
+        version: 4.8.4
+      cypress:
+        specifier: 13.13.2
+        version: 13.13.2
+      cypress-axe:
+        specifier: 1.5.0
+        version: 1.5.0(axe-core@4.8.4)(cypress@13.13.2)
+      cypress-file-upload:
+        specifier: 5.0.8
+        version: 5.0.8(cypress@13.13.2)
+    devDependencies:
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+
+  packages/volto-demo-tema/packages/volto-demo-tema:
+    dependencies:
+      '@fortawesome/free-solid-svg-icons':
+        specifier: '*'
+        version: 6.7.2
+      '@fortawesome/react-fontawesome':
+        specifier: '*'
+        version: 0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@18.2.0)
+      '@kitconcept/volto-light-theme':
+        specifier: ^6.0.0-alpha.9
+        version: 6.0.0-alpha.10(x3faclxeypnv7dtakut5ur4gvy)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@plone/scripts':
+        specifier: ^3.6.1
+        version: 3.8.1
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+
+  packages/volto-dsgvo-banner:
+    dependencies:
+      '@datapunt/matomo-tracker-js':
+        specifier: 0.5.1
+        version: 0.5.1
+      react-ga4:
+        specifier: ^2.1.0
+        version: 2.1.0
+    devDependencies:
+      '@plone/scripts':
+        specifier: ^3.0.0
+        version: 3.8.1
+      release-it:
+        specifier: ^16.1.3
+        version: 16.2.1(encoding@0.1.13)(typescript@5.7.3)
+
+  packages/volto-procergs-siteplone:
+    dependencies:
+      '@eeacms/volto-eea-website-theme':
+        specifier: ^3.5.2
+        version: 3.5.2(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(jquery@3.7.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@plone-collective/volto-authomatic':
+        specifier: ^2.0.1
+        version: 2.0.1(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@plone/scripts':
+        specifier: ^3.6.1
+        version: 3.8.1
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.7.3)
+
+  packages/volto-sitedemo:
+    dependencies:
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:core/packages/registry
+      '@plone/volto':
+        specifier: workspace:*
+        version: link:core/packages/volto
+      volto-sitedemo:
+        specifier: workspace:*
+        version: link:packages/volto-sitedemo
+    devDependencies:
+      mrs-developer:
+        specifier: ^2.2.0
+        version: 2.3.0
+
+  packages/volto-sitedemo/core/packages/blocks:
+    dependencies:
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../registry
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+
+  packages/volto-sitedemo/core/packages/client:
+    dependencies:
+      '@tanstack/react-query':
+        specifier: ^5.59.0
+        version: 5.64.2(react@18.2.0)
+      axios:
+        specifier: ^1.6.7
+        version: 1.7.9(debug@4.3.4)
+      debug:
+        specifier: 4.3.4
+        version: 4.3.4(supports-color@8.1.1)
+      query-string:
+        specifier: ^9.0.0
+        version: 9.1.1
+      zod:
+        specifier: ^3.22.4
+        version: 3.24.1
+    devDependencies:
+      '@arethetypeswrong/cli':
+        specifier: ^0.16.4
+        version: 0.16.4
+      '@plone/types':
+        specifier: 'workspace: *'
+        version: link:../types
+      '@testing-library/jest-dom':
+        specifier: 5.16.5
+        version: 5.16.5
+      '@testing-library/react':
+        specifier: 13.4.0
+        version: 13.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@types/debug':
+        specifier: ^4.1.12
+        version: 4.1.12
+      '@types/react':
+        specifier: 18.2.27
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: 18.2.12
+        version: 18.2.12
+      '@types/uuid':
+        specifier: ^9.0.2
+        version: 9.0.8
+      '@vitejs/plugin-react':
+        specifier: ^4.1.0
+        version: 4.3.4(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@vitest/coverage-v8':
+        specifier: ^1.3.1
+        version: 1.6.0(vitest@2.1.8(@types/node@20.17.14)(jsdom@21.1.2)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      glob:
+        specifier: 7.1.6
+        version: 7.1.6
+      jsdom:
+        specifier: ^21.1.1
+        version: 21.1.2
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      uuid:
+        specifier: ^9.0.1
+        version: 9.0.1
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite-plugin-dts:
+        specifier: ^3.7.3
+        version: 3.9.1(@types/node@20.17.14)(rollup@4.31.0)(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@21.1.2)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      wait-on:
+        specifier: ^7.2.0
+        version: 7.2.0(debug@4.3.4)
+
+  packages/volto-sitedemo/core/packages/components:
+    dependencies:
+      '@react-aria/utils':
+        specifier: ^3.26.0
+        version: 3.27.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@react-spectrum/utils':
+        specifier: ^3.12.0
+        version: 3.12.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@storybook/test':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-aria-components:
+        specifier: ^1.5.0
+        version: 1.6.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@arethetypeswrong/cli':
+        specifier: ^0.16.4
+        version: 0.16.4
+      '@plone/types':
+        specifier: 'workspace: *'
+        version: link:../types
+      '@react-types/shared':
+        specifier: ^3.22.0
+        version: 3.27.0(react@18.2.0)
+      '@storybook/addon-essentials':
+        specifier: ^8.0.4
+        version: 8.5.0(@types/react@18.2.27)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-interactions':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-links':
+        specifier: ^8.0.4
+        version: 8.5.0(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/addon-mdx-gfm':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/blocks':
+        specifier: ^8.0.4
+        version: 8.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/manager-api':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@storybook/react':
+        specifier: ^8.0.4
+        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)
+      '@storybook/react-vite':
+        specifier: ^8.0.4
+        version: 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.31.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@storybook/theming':
+        specifier: ^8.0.4
+        version: 8.5.0(storybook@8.5.0(prettier@3.2.5))
+      '@testing-library/jest-dom':
+        specifier: 6.4.2
+        version: 6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.14)(vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@testing-library/react':
+        specifier: 14.2.1
+        version: 14.2.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@types/jest-axe':
+        specifier: ^3.5.7
+        version: 3.5.9
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      '@vitejs/plugin-react':
+        specifier: ^4.1.0
+        version: 4.3.4(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@vitest/coverage-v8':
+        specifier: ^1.3.1
+        version: 1.6.0(vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      browserslist:
+        specifier: ^4.23.0
+        version: 4.24.4
+      eslint-plugin-storybook:
+        specifier: ^0.8.0
+        version: 0.8.0(eslint@8.57.1)(typescript@5.7.3)
+      jest-axe:
+        specifier: ^8.0.0
+        version: 8.0.0
+      jsdom:
+        specifier: ^22.1.0
+        version: 22.1.0
+      lightningcss:
+        specifier: ^1.24.0
+        version: 1.29.1
+      lightningcss-cli:
+        specifier: ^1.24.0
+        version: 1.29.1
+      release-it:
+        specifier: 17.1.1
+        version: 17.1.1(typescript@5.7.3)
+      storybook:
+        specifier: ^8.0.4
+        version: 8.5.0(prettier@3.2.5)
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(@microsoft/api-extractor@7.43.0(@types/node@20.17.14))(jiti@1.21.7)(postcss@8.5.1)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.7.3
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vitest-axe:
+        specifier: ^0.1.0
+        version: 0.1.0(vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+
+  packages/volto-sitedemo/core/packages/coresandbox:
+    dependencies:
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-intl:
+        specifier: 3.12.1
+        version: 3.12.1(react@18.2.0)
+      react-redux:
+        specifier: 8.1.2
+        version: 8.1.2(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1)
+      semantic-ui-react:
+        specifier: 2.1.5
+        version: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+    devDependencies:
+      '@plone/registry':
+        specifier: workspace:*
+        version: link:../registry
+      '@plone/types':
+        specifier: workspace:*
+        version: link:../types
+      '@types/react':
+        specifier: ^18
+        version: 18.2.27
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.12
+      '@types/react-redux':
+        specifier: ^7.1.33
+        version: 7.1.34
+
+  packages/volto-sitedemo/core/packages/generator-volto:
+    dependencies:
+      ansi-escapes:
+        specifier: 2.0.0
+        version: 2.0.0
+      chalk:
+        specifier: ^2.1.0
+        version: 2.4.2
+      commander:
+        specifier: 2.9.0
+        version: 2.9.0
+      cross-spawn:
+        specifier: 5.1.0
+        version: 5.1.0
+      execa:
+        specifier: 0.6.3
+        version: 0.6.3
+      fs-extra:
+        specifier: 3.0.0
+        version: 3.0.0
+      gitly:
+        specifier: 2.0.3
+        version: 2.0.3
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+      mkdirp-then:
+        specifier: 1.2.0
+        version: 1.2.0
+      mz:
+        specifier: 2.6.0
+        version: 2.6.0
+      ora:
+        specifier: 1.2.0
+        version: 1.2.0
+      promise:
+        specifier: 7.1.1
+        version: 7.1.1
+      semver:
+        specifier: ^7.5.4
+        version: 7.6.3
+      update-notifier:
+        specifier: ^5.0.1
+        version: 5.1.0
+      yeoman-generator:
+        specifier: 5.10.0
+        version: 5.10.0(encoding@0.1.13)(mem-fs@2.3.0)(yeoman-environment@3.19.3)
+    devDependencies:
+      coveralls:
+        specifier: ^3.0.7
+        version: 3.1.1
+      jest:
+        specifier: ^26.6.3
+        version: 26.6.3
+      release-it:
+        specifier: ^16.1.3
+        version: 16.2.1(encoding@0.1.13)(typescript@5.7.3)
+      yeoman-assert:
+        specifier: ^3.1.0
+        version: 3.1.1
+      yeoman-test:
+        specifier: ^6.1.0
+        version: 6.3.0(mem-fs@2.3.0)(yeoman-environment@3.19.3)(yeoman-generator@5.10.0(encoding@0.1.13)(mem-fs@2.3.0)(yeoman-environment@3.19.3))
+
+  packages/volto-sitedemo/core/packages/helpers:
+    dependencies:
+      react:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@plone/types':
+        specifier: workspace:*
         version: link:../types
       '@types/react':
         specifier: ^18
@@ -398,7 +3223,7 @@ importers:
         specifier: ^2.1.3
         version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
 
-  core/packages/providers:
+  packages/volto-sitedemo/core/packages/providers:
     dependencies:
       '@plone/client':
         specifier: workspace:*
@@ -411,7 +3236,7 @@ importers:
         version: link:../registry
       '@tanstack/react-query':
         specifier: ^5.59.0
-        version: 5.64.1(react@18.2.0)
+        version: 5.64.2(react@18.2.0)
       react:
         specifier: ^16.8.0 || ^17.0.0 || ^18.0.0
         version: 18.2.0
@@ -450,7 +3275,7 @@ importers:
         specifier: ^2.1.3
         version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
 
-  core/packages/registry:
+  packages/volto-sitedemo/core/packages/registry:
     dependencies:
       auto-config-loader:
         specifier: ^1.7.7
@@ -515,12 +3340,12 @@ importers:
         version: 5.7.3
       vite:
         specifier: ^5.4.8
-        version: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+        version: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
       vitest:
         specifier: ^2.1.3
         version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
 
-  core/packages/scripts:
+  packages/volto-sitedemo/core/packages/scripts:
     dependencies:
       '@babel/core':
         specifier: ^7.0.0
@@ -572,7 +3397,7 @@ importers:
         specifier: ^16.1.3
         version: 16.2.1(encoding@0.1.13)(typescript@5.7.3)
 
-  core/packages/slots:
+  packages/volto-sitedemo/core/packages/slots:
     dependencies:
       '@plone/providers':
         specifier: workspace:*
@@ -609,9 +3434,9 @@ importers:
         specifier: ^2.1.3
         version: 2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
 
-  core/packages/tsconfig: {}
+  packages/volto-sitedemo/core/packages/tsconfig: {}
 
-  core/packages/types:
+  packages/volto-sitedemo/core/packages/types:
     devDependencies:
       '@types/react':
         specifier: ^18
@@ -641,7 +3466,7 @@ importers:
         specifier: ^5.6.3
         version: 5.7.3
 
-  core/packages/volto:
+  packages/volto-sitedemo/core/packages/volto:
     dependencies:
       '@loadable/component':
         specifier: 5.14.1
@@ -1123,7 +3948,7 @@ importers:
         version: 6.10.2(eslint@8.57.1)
       eslint-plugin-prettier:
         specifier: ^5.1.3
-        version: 5.2.2(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.2.5)
+        version: 5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.2.5)
       eslint-plugin-react:
         specifier: ^7.34.1
         version: 7.37.4(eslint@8.57.1)
@@ -1278,13 +4103,13 @@ importers:
         specifier: 0.6.2
         version: 0.6.2
 
-  core/packages/volto-guillotina:
+  packages/volto-sitedemo/core/packages/volto-guillotina:
     dependencies:
       '@plone/scripts':
         specifier: '*'
         version: 3.8.1
 
-  core/packages/volto-slate:
+  packages/volto-sitedemo/core/packages/volto-slate:
     dependencies:
       classnames:
         specifier: 2.2.6
@@ -1363,7 +4188,7 @@ importers:
         specifier: ^17.0.0
         version: 17.1.1(typescript@5.7.3)
 
-  core/packages/volto-testing:
+  packages/volto-sitedemo/core/packages/volto-testing:
     dependencies:
       '@testing-library/cypress':
         specifier: 10.0.1
@@ -1391,130 +4216,17 @@ importers:
         specifier: ^17.1.1
         version: 17.1.1(typescript@5.7.3)
 
-  packages/volto-demo-tema:
-    dependencies:
-      '@plone/registry':
-        specifier: workspace:*
-        version: link:../../core/packages/registry
-      '@plone/volto':
-        specifier: workspace:*
-        version: link:../../core/packages/volto
-      volto-demo-tema:
-        specifier: workspace:*
-        version: link:packages/volto-demo-tema
-    devDependencies:
-      mrs-developer:
-        specifier: ^2.2.0
-        version: 2.3.0
-
-  packages/volto-demo-tema/packages/volto-demo-tema:
-    dependencies:
-      '@fortawesome/free-solid-svg-icons':
-        specifier: '*'
-        version: 6.7.2
-      '@fortawesome/react-fontawesome':
-        specifier: '*'
-        version: 0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@18.2.0)
-      '@kitconcept/volto-light-theme':
-        specifier: ^6.0.0-alpha.9
-        version: 6.0.0-alpha.10(5jt5bhyfz2g5vgs4tvafmn52uy)
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@plone/scripts':
-        specifier: ^3.6.1
-        version: 3.8.1
-      release-it:
-        specifier: ^17.1.1
-        version: 17.1.1(typescript@5.7.3)
-
-  packages/volto-dsgvo-banner:
-    dependencies:
-      '@datapunt/matomo-tracker-js':
-        specifier: 0.5.1
-        version: 0.5.1
-      react-ga4:
-        specifier: ^2.1.0
-        version: 2.1.0
-    devDependencies:
-      '@plone/scripts':
-        specifier: ^3.0.0
-        version: 3.8.1
-      release-it:
-        specifier: ^16.1.3
-        version: 16.2.1(encoding@0.1.13)(typescript@5.7.3)
-
-  packages/volto-procergs-siteplone:
-    dependencies:
-      '@eeacms/volto-eea-website-theme':
-        specifier: ^3.5.2
-        version: 3.5.2(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(jquery@3.7.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@plone-collective/volto-authomatic':
-        specifier: ^2.0.1
-        version: 2.0.1(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@plone/scripts':
-        specifier: ^3.6.1
-        version: 3.8.1
-      release-it:
-        specifier: ^17.1.1
-        version: 17.1.1(typescript@5.7.3)
-
-  packages/volto-sitedemo:
-    dependencies:
-      '@plone/registry':
-        specifier: workspace:*
-        version: link:../../core/packages/registry
-      '@plone/volto':
-        specifier: workspace:*
-        version: link:../../core/packages/volto
-      volto-sitedemo:
-        specifier: workspace:*
-        version: link:packages/volto-sitedemo
-    devDependencies:
-      mrs-developer:
-        specifier: ^2.2.0
-        version: 2.3.0
-
   packages/volto-sitedemo/packages/volto-sitedemo:
     dependencies:
       '@codesyntax/volto-listingadvanced-variation':
         specifier: '*'
         version: 0.13.0(encoding@0.1.13)
-      '@eeacms/volto-accordion-block':
-        specifier: '*'
-        version: 11.0.3
       '@fortawesome/free-solid-svg-icons':
         specifier: '*'
         version: 6.7.2
       '@fortawesome/react-fontawesome':
         specifier: '*'
         version: 0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@18.2.0)
-      '@kitconcept/volto-button-block':
-        specifier: '*'
-        version: 3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)
-      '@kitconcept/volto-heading-block':
-        specifier: '*'
-        version: 2.4.0(react@18.2.0)
-      '@kitconcept/volto-introduction-block':
-        specifier: '*'
-        version: 1.0.0
-      '@kitconcept/volto-separator-block':
-        specifier: '*'
-        version: 4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))
-      '@kitconcept/volto-slider-block':
-        specifier: '*'
-        version: 6.3.1(@plone/volto@18.1.2(@babel/runtime@7.26.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.2)(react@18.2.0)
       '@react-google-maps/api':
         specifier: '*'
         version: 2.20.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -2412,8 +5124,8 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
-  '@eeacms/volto-accordion-block@11.0.3':
-    resolution: {integrity: sha512-/L4lOtiqgl+vHpwuO0x8SVgNvEQR23iiiFjK20weK/YfIfEaFaX02ss6WFawsnUwF2gmX5yEKpMvUcpblDhz2w==}
+  '@eeacms/volto-accordion-block@10.4.6':
+    resolution: {integrity: sha512-IZfAg8By1dZA2SSr4MNu2gFCs0F67/ZMAlpdqkevSMvkBREjny97cEFtMjkhGyOc3MBTp1vd0TtqvL3cN1GehQ==}
 
   '@eeacms/volto-block-style@7.2.1':
     resolution: {integrity: sha512-4ENeyvBUvzkNXRXooPS0+7FA0sTvWvIDZFo1Yw+bPViEP3L1GzWGzpawCfFpwn70C6ccLVYjW2tp4OLbT9R4QQ==}
@@ -2811,8 +5523,8 @@ packages:
   '@formatjs/fast-memoize@2.2.6':
     resolution: {integrity: sha512-luIXeE2LJbQnnzotY1f2U2m7xuQNj2DA8Vq4ce1BY9ebRZaoPB1+8eZ6nXpLzsxuW5spQxr7LdCg+CApZwkqkw==}
 
-  '@formatjs/icu-messageformat-parser@2.10.0':
-    resolution: {integrity: sha512-PDeky6nDAyHYEtmSi2X1PG9YpqE+2BRTJT7JvPix8K8JX1wBWQNao6KcPtmZpttQHUHmzMcd/rne7lFesSzUKQ==}
+  '@formatjs/icu-messageformat-parser@2.11.0':
+    resolution: {integrity: sha512-Hp81uTjjdTk3FLh/dggU5NK7EIsVWc5/ZDWrIldmf2rBuPejuZ13CZ/wpVE2SToyi4EiroPTQ1XJcJuZFIxTtw==}
 
   '@formatjs/icu-skeleton-parser@1.8.12':
     resolution: {integrity: sha512-QRAY2jC1BomFQHYDMcZtClqHR55EEnB96V7Xbk/UiBodsuFc5kujybzt87+qj1KqmJozFhk6n4KiT1HKwAkcfg==}
@@ -4172,98 +6884,98 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/rollup-android-arm-eabi@4.30.1':
-    resolution: {integrity: sha512-pSWY+EVt3rJ9fQ3IqlrEUtXh3cGqGtPDH1FQlNZehO2yYxCHEX1SPsz1M//NXwYfbTlcKr9WObLnJX9FsS9K1Q==}
+  '@rollup/rollup-android-arm-eabi@4.31.0':
+    resolution: {integrity: sha512-9NrR4033uCbUBRgvLcBrJofa2KY9DzxL2UKZ1/4xA/mnTNyhZCWBuD8X3tPm1n4KxcgaraOYgrFKSgwjASfmlA==}
     cpu: [arm]
     os: [android]
 
-  '@rollup/rollup-android-arm64@4.30.1':
-    resolution: {integrity: sha512-/NA2qXxE3D/BRjOJM8wQblmArQq1YoBVJjrjoTSBS09jgUisq7bqxNHJ8kjCHeV21W/9WDGwJEWSN0KQ2mtD/w==}
+  '@rollup/rollup-android-arm64@4.31.0':
+    resolution: {integrity: sha512-iBbODqT86YBFHajxxF8ebj2hwKm1k8PTBQSojSt3d1FFt1gN+xf4CowE47iN0vOSdnd+5ierMHBbu/rHc7nq5g==}
     cpu: [arm64]
     os: [android]
 
-  '@rollup/rollup-darwin-arm64@4.30.1':
-    resolution: {integrity: sha512-r7FQIXD7gB0WJ5mokTUgUWPl0eYIH0wnxqeSAhuIwvnnpjdVB8cRRClyKLQr7lgzjctkbp5KmswWszlwYln03Q==}
+  '@rollup/rollup-darwin-arm64@4.31.0':
+    resolution: {integrity: sha512-WHIZfXgVBX30SWuTMhlHPXTyN20AXrLH4TEeH/D0Bolvx9PjgZnn4H677PlSGvU6MKNsjCQJYczkpvBbrBnG6g==}
     cpu: [arm64]
     os: [darwin]
 
-  '@rollup/rollup-darwin-x64@4.30.1':
-    resolution: {integrity: sha512-x78BavIwSH6sqfP2xeI1hd1GpHL8J4W2BXcVM/5KYKoAD3nNsfitQhvWSw+TFtQTLZ9OmlF+FEInEHyubut2OA==}
+  '@rollup/rollup-darwin-x64@4.31.0':
+    resolution: {integrity: sha512-hrWL7uQacTEF8gdrQAqcDy9xllQ0w0zuL1wk1HV8wKGSGbKPVjVUv/DEwT2+Asabf8Dh/As+IvfdU+H8hhzrQQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@rollup/rollup-freebsd-arm64@4.30.1':
-    resolution: {integrity: sha512-HYTlUAjbO1z8ywxsDFWADfTRfTIIy/oUlfIDmlHYmjUP2QRDTzBuWXc9O4CXM+bo9qfiCclmHk1x4ogBjOUpUQ==}
+  '@rollup/rollup-freebsd-arm64@4.31.0':
+    resolution: {integrity: sha512-S2oCsZ4hJviG1QjPY1h6sVJLBI6ekBeAEssYKad1soRFv3SocsQCzX6cwnk6fID6UQQACTjeIMB+hyYrFacRew==}
     cpu: [arm64]
     os: [freebsd]
 
-  '@rollup/rollup-freebsd-x64@4.30.1':
-    resolution: {integrity: sha512-1MEdGqogQLccphhX5myCJqeGNYTNcmTyaic9S7CG3JhwuIByJ7J05vGbZxsizQthP1xpVx7kd3o31eOogfEirw==}
+  '@rollup/rollup-freebsd-x64@4.31.0':
+    resolution: {integrity: sha512-pCANqpynRS4Jirn4IKZH4tnm2+2CqCNLKD7gAdEjzdLGbH1iO0zouHz4mxqg0uEMpO030ejJ0aA6e1PJo2xrPA==}
     cpu: [x64]
     os: [freebsd]
 
-  '@rollup/rollup-linux-arm-gnueabihf@4.30.1':
-    resolution: {integrity: sha512-PaMRNBSqCx7K3Wc9QZkFx5+CX27WFpAMxJNiYGAXfmMIKC7jstlr32UhTgK6T07OtqR+wYlWm9IxzennjnvdJg==}
+  '@rollup/rollup-linux-arm-gnueabihf@4.31.0':
+    resolution: {integrity: sha512-0O8ViX+QcBd3ZmGlcFTnYXZKGbFu09EhgD27tgTdGnkcYXLat4KIsBBQeKLR2xZDCXdIBAlWLkiXE1+rJpCxFw==}
     cpu: [arm]
     os: [linux]
 
-  '@rollup/rollup-linux-arm-musleabihf@4.30.1':
-    resolution: {integrity: sha512-B8Rcyj9AV7ZlEFqvB5BubG5iO6ANDsRKlhIxySXcF1axXYUyqwBok+XZPgIYGBgs7LDXfWfifxhw0Ik57T0Yug==}
+  '@rollup/rollup-linux-arm-musleabihf@4.31.0':
+    resolution: {integrity: sha512-w5IzG0wTVv7B0/SwDnMYmbr2uERQp999q8FMkKG1I+j8hpPX2BYFjWe69xbhbP6J9h2gId/7ogesl9hwblFwwg==}
     cpu: [arm]
     os: [linux]
 
-  '@rollup/rollup-linux-arm64-gnu@4.30.1':
-    resolution: {integrity: sha512-hqVyueGxAj3cBKrAI4aFHLV+h0Lv5VgWZs9CUGqr1z0fZtlADVV1YPOij6AhcK5An33EXaxnDLmJdQikcn5NEw==}
+  '@rollup/rollup-linux-arm64-gnu@4.31.0':
+    resolution: {integrity: sha512-JyFFshbN5xwy6fulZ8B/8qOqENRmDdEkcIMF0Zz+RsfamEW+Zabl5jAb0IozP/8UKnJ7g2FtZZPEUIAlUSX8cA==}
     cpu: [arm64]
     os: [linux]
 
-  '@rollup/rollup-linux-arm64-musl@4.30.1':
-    resolution: {integrity: sha512-i4Ab2vnvS1AE1PyOIGp2kXni69gU2DAUVt6FSXeIqUCPIR3ZlheMW3oP2JkukDfu3PsexYRbOiJrY+yVNSk9oA==}
+  '@rollup/rollup-linux-arm64-musl@4.31.0':
+    resolution: {integrity: sha512-kpQXQ0UPFeMPmPYksiBL9WS/BDiQEjRGMfklVIsA0Sng347H8W2iexch+IEwaR7OVSKtr2ZFxggt11zVIlZ25g==}
     cpu: [arm64]
     os: [linux]
 
-  '@rollup/rollup-linux-loongarch64-gnu@4.30.1':
-    resolution: {integrity: sha512-fARcF5g296snX0oLGkVxPmysetwUk2zmHcca+e9ObOovBR++9ZPOhqFUM61UUZ2EYpXVPN1redgqVoBB34nTpQ==}
+  '@rollup/rollup-linux-loongarch64-gnu@4.31.0':
+    resolution: {integrity: sha512-pMlxLjt60iQTzt9iBb3jZphFIl55a70wexvo8p+vVFK+7ifTRookdoXX3bOsRdmfD+OKnMozKO6XM4zR0sHRrQ==}
     cpu: [loong64]
     os: [linux]
 
-  '@rollup/rollup-linux-powerpc64le-gnu@4.30.1':
-    resolution: {integrity: sha512-GLrZraoO3wVT4uFXh67ElpwQY0DIygxdv0BNW9Hkm3X34wu+BkqrDrkcsIapAY+N2ATEbvak0XQ9gxZtCIA5Rw==}
+  '@rollup/rollup-linux-powerpc64le-gnu@4.31.0':
+    resolution: {integrity: sha512-D7TXT7I/uKEuWiRkEFbed1UUYZwcJDU4vZQdPTcepK7ecPhzKOYk4Er2YR4uHKme4qDeIh6N3XrLfpuM7vzRWQ==}
     cpu: [ppc64]
     os: [linux]
 
-  '@rollup/rollup-linux-riscv64-gnu@4.30.1':
-    resolution: {integrity: sha512-0WKLaAUUHKBtll0wvOmh6yh3S0wSU9+yas923JIChfxOaaBarmb/lBKPF0w/+jTVozFnOXJeRGZ8NvOxvk/jcw==}
+  '@rollup/rollup-linux-riscv64-gnu@4.31.0':
+    resolution: {integrity: sha512-wal2Tc8O5lMBtoePLBYRKj2CImUCJ4UNGJlLwspx7QApYny7K1cUYlzQ/4IGQBLmm+y0RS7dwc3TDO/pmcneTw==}
     cpu: [riscv64]
     os: [linux]
 
-  '@rollup/rollup-linux-s390x-gnu@4.30.1':
-    resolution: {integrity: sha512-GWFs97Ruxo5Bt+cvVTQkOJ6TIx0xJDD/bMAOXWJg8TCSTEK8RnFeOeiFTxKniTc4vMIaWvCplMAFBt9miGxgkA==}
+  '@rollup/rollup-linux-s390x-gnu@4.31.0':
+    resolution: {integrity: sha512-O1o5EUI0+RRMkK9wiTVpk2tyzXdXefHtRTIjBbmFREmNMy7pFeYXCFGbhKFwISA3UOExlo5GGUuuj3oMKdK6JQ==}
     cpu: [s390x]
     os: [linux]
 
-  '@rollup/rollup-linux-x64-gnu@4.30.1':
-    resolution: {integrity: sha512-UtgGb7QGgXDIO+tqqJ5oZRGHsDLO8SlpE4MhqpY9Llpzi5rJMvrK6ZGhsRCST2abZdBqIBeXW6WPD5fGK5SDwg==}
+  '@rollup/rollup-linux-x64-gnu@4.31.0':
+    resolution: {integrity: sha512-zSoHl356vKnNxwOWnLd60ixHNPRBglxpv2g7q0Cd3Pmr561gf0HiAcUBRL3S1vPqRC17Zo2CX/9cPkqTIiai1g==}
     cpu: [x64]
     os: [linux]
 
-  '@rollup/rollup-linux-x64-musl@4.30.1':
-    resolution: {integrity: sha512-V9U8Ey2UqmQsBT+xTOeMzPzwDzyXmnAoO4edZhL7INkwQcaW1Ckv3WJX3qrrp/VHaDkEWIBWhRwP47r8cdrOow==}
+  '@rollup/rollup-linux-x64-musl@4.31.0':
+    resolution: {integrity: sha512-ypB/HMtcSGhKUQNiFwqgdclWNRrAYDH8iMYH4etw/ZlGwiTVxBz2tDrGRrPlfZu6QjXwtd+C3Zib5pFqID97ZA==}
     cpu: [x64]
     os: [linux]
 
-  '@rollup/rollup-win32-arm64-msvc@4.30.1':
-    resolution: {integrity: sha512-WabtHWiPaFF47W3PkHnjbmWawnX/aE57K47ZDT1BXTS5GgrBUEpvOzq0FI0V/UYzQJgdb8XlhVNH8/fwV8xDjw==}
+  '@rollup/rollup-win32-arm64-msvc@4.31.0':
+    resolution: {integrity: sha512-JuhN2xdI/m8Hr+aVO3vspO7OQfUFO6bKLIRTAy0U15vmWjnZDLrEgCZ2s6+scAYaQVpYSh9tZtRijApw9IXyMw==}
     cpu: [arm64]
     os: [win32]
 
-  '@rollup/rollup-win32-ia32-msvc@4.30.1':
-    resolution: {integrity: sha512-pxHAU+Zv39hLUTdQQHUVHf4P+0C47y/ZloorHpzs2SXMRqeAWmGghzAhfOlzFHHwjvgokdFAhC4V+6kC1lRRfw==}
+  '@rollup/rollup-win32-ia32-msvc@4.31.0':
+    resolution: {integrity: sha512-U1xZZXYkvdf5MIWmftU8wrM5PPXzyaY1nGCI4KI4BFfoZxHamsIe+BtnPLIvvPykvQWlVbqUXdLa4aJUuilwLQ==}
     cpu: [ia32]
     os: [win32]
 
-  '@rollup/rollup-win32-x64-msvc@4.30.1':
-    resolution: {integrity: sha512-D6qjsXGcvhTjv0kI4fU8tUuBDF/Ueee4SVX79VfNDXZa64TfCW1Slkb6Z7O1p7vflqZjcmOVdZlqf8gvJxc6og==}
+  '@rollup/rollup-win32-x64-msvc@4.31.0':
+    resolution: {integrity: sha512-ul8rnCsUumNln5YWwz0ted2ZHFhzhRRnkpBZ+YRuHoRAlUji9KChpOUOndY7uykrPEPXVbHLlsdo6v5yXo/TXw==}
     cpu: [x64]
     os: [win32]
 
@@ -4615,11 +7327,11 @@ packages:
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
     engines: {node: '>=14.16'}
 
-  '@tanstack/query-core@5.64.1':
-    resolution: {integrity: sha512-978Wx4Wl4UJZbmvU/rkaM9cQtXXrbhK0lsz/UZhYIbyKYA8E4LdomTwyh2GHZ4oU0BKKoDH4YlKk2VscCUgNmg==}
+  '@tanstack/query-core@5.64.2':
+    resolution: {integrity: sha512-hdO8SZpWXoADNTWXV9We8CwTkXU88OVWRBcsiFrk7xJQnhm6WRlweDzMD+uH+GnuieTBVSML6xFa17C2cNV8+g==}
 
-  '@tanstack/react-query@5.64.1':
-    resolution: {integrity: sha512-vW5ggHpIO2Yjj44b4sB+Fd3cdnlMJppXRBJkEHvld6FXh3j5dwWJoQo7mGtKI2RbSFyiyu/PhGAy0+Vv5ev9Eg==}
+  '@tanstack/react-query@5.64.2':
+    resolution: {integrity: sha512-3pakNscZNm8KJkxmovvtZ4RaXLyiYYobwleTMvpIGUoKRa8j8VlrQKNl5W8VUEfVfZKkikvXVddLuWMbcSCA1Q==}
     peerDependencies:
       react: ^18 || ^19
 
@@ -6095,8 +8807,8 @@ packages:
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
 
-  caniuse-lite@1.0.30001692:
-    resolution: {integrity: sha512-A95VKan0kdtrsnMubMKxEKUKImOPSuCpYgxSQBo036P5YYgVIcOYJEgt/txJWqObiRQeISNCfef9nvlQ0vbV7A==}
+  caniuse-lite@1.0.30001695:
+    resolution: {integrity: sha512-vHyLade6wTgI2u1ec3WQBxv+2BrTERV28UXQu9LO6lZ9pYeMk34vjXFLOxo1A4UBA8XTL4njRQZdno/yYaSmWw==}
 
   capture-exit@2.0.0:
     resolution: {integrity: sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g==}
@@ -7523,8 +10235,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
 
-  eslint-plugin-prettier@5.2.2:
-    resolution: {integrity: sha512-1yI3/hf35wmlq66C8yOyrujQnel+v5l1Vop5Cl2I6ylyNTT1JbuUUnV3/41PzwTzcyDp/oF0jWE3HXvcH5AQOQ==}
+  eslint-plugin-prettier@5.2.3:
+    resolution: {integrity: sha512-qJ+y0FfCp/mQYQ/vWQ3s7eUlFEL4PyKfAJxsnYTJ4YT73nsJBWqmEpFryxV9OeUiqmsTsYJ5Y+KDNaeP31wrRw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@types/eslint': '>=8.0.0'
@@ -8125,8 +10837,8 @@ packages:
     resolution: {integrity: sha512-w9UMqWwJxHNOvoNzSJ2oPF5wvYcvP7jUvYzhp67yEhTi17ZDBBC1z9pTdGuzjD+EFIqLSYRweZjqfiPzQ06Ebg==}
     engines: {node: '>= 0.4'}
 
-  get-tsconfig@4.8.1:
-    resolution: {integrity: sha512-k9PN+cFBmaLWtVz29SkUoqU5O0slLuHJXt/2P+tMVFT+phsSGXGkp9t3rQIqdz0e+06EHNGs3oM6ZX1s2zHxRg==}
+  get-tsconfig@4.9.0:
+    resolution: {integrity: sha512-52n24W52sIueosRe0XZ8Ex5Yle+WbhfCKnV/gWXpbVR8FXNTfqdKEKUSypKso66VRHTvvcQxL44UTZbJRlCTnw==}
 
   get-uri@3.0.2:
     resolution: {integrity: sha512-+5s0SJbGoyiJTZZ2JTpFPLMPSch72KEqGOTvQsBqg0RBWvwhWUSYZFAtz3TPW0GXJuLBJPts1E241iHg+VRfhg==}
@@ -8707,8 +11419,8 @@ packages:
     resolution: {integrity: sha512-RgPGwue0mJtoX2Ax8EmMzJzttxjnva7gx0Q7mKJ4oALrTZvtmCeAw5Msz2PcjW4dtCh/h7vN/8GJCxZO1uv+OA==}
     deprecated: We've written a new parser that's 6x faster and is backwards compatible. Please use @formatjs/icu-messageformat-parser
 
-  intl-messageformat@10.7.12:
-    resolution: {integrity: sha512-4HBsPDJ61jZwNikauvm0mcLvs1AfCBbihiqOX2AGs1MX7SA1H0SNKJRSWxpZpToGoNzvoYLsJJ2pURkbEDg+Dw==}
+  intl-messageformat@10.7.14:
+    resolution: {integrity: sha512-mMGnE4E1otdEutV5vLUdCxRJygHB5ozUBxsPB5qhitewssrS/qGruq9bmvIRkkGsNeK5ZWLfYRld18UHGTIifQ==}
 
   intl-messageformat@7.8.4:
     resolution: {integrity: sha512-yS0cLESCKCYjseCOGXuV4pxJm/buTfyCJ1nzQjryHmSehlptbZbn9fnlk1I9peLopZGGbjj46yHHiTAEZ1qOTA==}
@@ -10122,8 +12834,8 @@ packages:
   micromark-extension-gfm-strikethrough@2.1.0:
     resolution: {integrity: sha512-ADVjpOOkjz1hhkZLlBiYA9cR2Anf8F4HqZUO6e5eDcPQd0Txw5fxLzzxnEkSkfnD0wziSGiv7sYhk/ktvbf1uw==}
 
-  micromark-extension-gfm-table@2.1.0:
-    resolution: {integrity: sha512-Ub2ncQv+fwD70/l4ou27b4YzfNaCJOvyX4HxXU15m7mpYY+rjuWzsLIPZHJL253Z643RpbcP1oeIJlQ/SKW67g==}
+  micromark-extension-gfm-table@2.1.1:
+    resolution: {integrity: sha512-t2OU/dXXioARrC6yWfJ4hqB7rct14e8f7m0cbI5hUmDyyIlwv5vEtooptH8INkbLzOatzKuVbQmAYcbWoyz6Dg==}
 
   micromark-extension-gfm-tagfilter@2.0.0:
     resolution: {integrity: sha512-xHlTOmuCSotIA8TW1mDIM6X2O1SiX5P9IuDtqGonFhEK0qgRI4yeC6vMxEV2dgyr2TiD+2PQ10o+cOhdVAcwfg==}
@@ -12373,8 +15085,8 @@ packages:
     deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
-  rollup@4.30.1:
-    resolution: {integrity: sha512-mlJ4glW020fPuLi7DkM/lN97mYEZGWeqBnrljzN0gs7GLctqX3lNWxKQ7Gl712UAX+6fog/L3jh4gb7R6aVi3w==}
+  rollup@4.31.0:
+    resolution: {integrity: sha512-9cCE8P4rZLx9+PjoyqHLs31V9a9Vpvfo4qNcs6JCiGWYhw2gijSetFbH6SSy1whnkgcefnUwr8sad7tgqsGvnw==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -13362,11 +16074,11 @@ packages:
     resolution: {integrity: sha512-7MUlYyGJ6rSitEZ3r1Q1QNV8uSIzapS8SmmhSusBuIc7uIxPPwsKllEP0GRp1NS6Ik6F+fRZvnjDWm3ecv2hDw==}
     hasBin: true
 
-  tldts-core@6.1.72:
-    resolution: {integrity: sha512-FW3H9aCaGTJ8l8RVCR3EX8GxsxDbQXuwetwwgXA2chYdsX+NY1ytCBl61narjjehWmCw92tc1AxlcY3668CU8g==}
+  tldts-core@6.1.73:
+    resolution: {integrity: sha512-k1g5eX87vxu3g//6XMn62y4qjayu4cYby/PF7Ksnh4F4uUK1Z1ze/mJ4a+y5OjdJ+cXRp+YTInZhH+FGdUWy1w==}
 
-  tldts@6.1.72:
-    resolution: {integrity: sha512-QNtgIqSUb9o2CoUjX9T5TwaIvUUJFU1+12PJkgt42DFV2yf9J6549yTF2uGloQsJ/JOC8X+gIB81ind97hRiIQ==}
+  tldts@6.1.73:
+    resolution: {integrity: sha512-/h4bVmuEMm57c2uCiAf1Q9mlQk7cA22m+1Bu0K92vUUtTVT9D4mOFWD9r4WQuTULcG9eeZtNKhLl0Il1LdKGog==}
     hasBin: true
 
   tmp@0.0.33:
@@ -13944,8 +16656,8 @@ packages:
       vite:
         optional: true
 
-  vite@5.4.11:
-    resolution: {integrity: sha512-c7jFQRklXua0mTzneGW9QVyxFjUgwcihC4bXEtujIo2ouWCe1Ajt/amn2PCxYnhYfd5k09JX3SB7OYWFKYqj8Q==}
+  vite@5.4.12:
+    resolution: {integrity: sha512-KwUaKB27TvWwDJr1GjjWthLMATbGEbeWYZIbGZ5qFIsgPP3vWzLu4cVooqhm5/Z2SPDUMjyPVjTztm5tYKwQxA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -15542,7 +18254,7 @@ snapshots:
       react: 18.2.0
       use-elapsed-time: 3.0.2(react@18.2.0)
 
-  '@eeacms/volto-accordion-block@11.0.3':
+  '@eeacms/volto-accordion-block@10.4.6':
     dependencies:
       '@eeacms/volto-widget-theme-picker': 2.0.0
 
@@ -15853,7 +18565,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@formatjs/icu-messageformat-parser@2.10.0':
+  '@formatjs/icu-messageformat-parser@2.11.0':
     dependencies:
       '@formatjs/ecma402-abstract': 2.3.2
       '@formatjs/icu-skeleton-parser': 1.8.12
@@ -15942,7 +18654,7 @@ snapshots:
   '@internationalized/message@3.1.6':
     dependencies:
       '@swc/helpers': 0.5.15
-      intl-messageformat: 10.7.12
+      intl-messageformat: 10.7.14
 
   '@internationalized/number@3.6.0':
     dependencies:
@@ -16133,7 +18845,11 @@ snapshots:
       jest-runner: 26.6.3
       jest-runtime: 26.6.3
     transitivePeerDependencies:
+      - bufferutil
+      - canvas
       - supports-color
+      - ts-node
+      - utf-8-validate
 
   '@jest/transform@26.6.2':
     dependencies:
@@ -16205,11 +18921,11 @@ snapshots:
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.4.2(typescript@5.7.3)(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.4.2(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
     dependencies:
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.7.3)
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
     optionalDependencies:
       typescript: 5.7.3
 
@@ -16266,9 +18982,9 @@ snapshots:
 
   '@kitconcept/volto-introduction-block@1.0.0': {}
 
-  '@kitconcept/volto-light-theme@6.0.0-alpha.10(5jt5bhyfz2g5vgs4tvafmn52uy)':
+  '@kitconcept/volto-light-theme@6.0.0-alpha.10(x3faclxeypnv7dtakut5ur4gvy)':
     dependencies:
-      '@eeacms/volto-accordion-block': 11.0.3
+      '@eeacms/volto-accordion-block': 10.4.6
       '@kitconcept/volto-button-block': 3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)
       '@kitconcept/volto-dsgvo-banner': 2.3.2
       '@kitconcept/volto-heading-block': 2.4.0(react@18.2.0)
@@ -18161,69 +20877,69 @@ snapshots:
       immutable: 4.3.7
       redux: 4.2.1
 
-  '@rollup/pluginutils@5.1.4(rollup@4.30.1)':
+  '@rollup/pluginutils@5.1.4(rollup@4.31.0)':
     dependencies:
       '@types/estree': 1.0.6
       estree-walker: 2.0.2
       picomatch: 4.0.2
     optionalDependencies:
-      rollup: 4.30.1
+      rollup: 4.31.0
 
-  '@rollup/rollup-android-arm-eabi@4.30.1':
+  '@rollup/rollup-android-arm-eabi@4.31.0':
     optional: true
 
-  '@rollup/rollup-android-arm64@4.30.1':
+  '@rollup/rollup-android-arm64@4.31.0':
     optional: true
 
-  '@rollup/rollup-darwin-arm64@4.30.1':
+  '@rollup/rollup-darwin-arm64@4.31.0':
     optional: true
 
-  '@rollup/rollup-darwin-x64@4.30.1':
+  '@rollup/rollup-darwin-x64@4.31.0':
     optional: true
 
-  '@rollup/rollup-freebsd-arm64@4.30.1':
+  '@rollup/rollup-freebsd-arm64@4.31.0':
     optional: true
 
-  '@rollup/rollup-freebsd-x64@4.30.1':
+  '@rollup/rollup-freebsd-x64@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-arm-gnueabihf@4.30.1':
+  '@rollup/rollup-linux-arm-gnueabihf@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-arm-musleabihf@4.30.1':
+  '@rollup/rollup-linux-arm-musleabihf@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-arm64-gnu@4.30.1':
+  '@rollup/rollup-linux-arm64-gnu@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-arm64-musl@4.30.1':
+  '@rollup/rollup-linux-arm64-musl@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-loongarch64-gnu@4.30.1':
+  '@rollup/rollup-linux-loongarch64-gnu@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-powerpc64le-gnu@4.30.1':
+  '@rollup/rollup-linux-powerpc64le-gnu@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-riscv64-gnu@4.30.1':
+  '@rollup/rollup-linux-riscv64-gnu@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-s390x-gnu@4.30.1':
+  '@rollup/rollup-linux-s390x-gnu@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-x64-gnu@4.30.1':
+  '@rollup/rollup-linux-x64-gnu@4.31.0':
     optional: true
 
-  '@rollup/rollup-linux-x64-musl@4.30.1':
+  '@rollup/rollup-linux-x64-musl@4.31.0':
     optional: true
 
-  '@rollup/rollup-win32-arm64-msvc@4.30.1':
+  '@rollup/rollup-win32-arm64-msvc@4.31.0':
     optional: true
 
-  '@rollup/rollup-win32-ia32-msvc@4.30.1':
+  '@rollup/rollup-win32-ia32-msvc@4.31.0':
     optional: true
 
-  '@rollup/rollup-win32-x64-msvc@4.30.1':
+  '@rollup/rollup-win32-x64-msvc@4.31.0':
     optional: true
 
   '@rtsao/scc@1.1.0': {}
@@ -18466,13 +21182,13 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  '@storybook/builder-vite@8.5.0(storybook@8.5.0(prettier@3.2.5))(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
+  '@storybook/builder-vite@8.5.0(storybook@8.5.0(prettier@3.2.5))(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
     dependencies:
       '@storybook/csf-plugin': 8.5.0(storybook@8.5.0(prettier@3.2.5))
       browser-assert: 1.2.1
       storybook: 8.5.0(prettier@3.2.5)
       ts-dedent: 2.2.0
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
 
   '@storybook/builder-webpack5@8.5.0(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)':
     dependencies:
@@ -18619,11 +21335,11 @@ snapshots:
       react-dom: 18.2.0(react@18.2.0)
       storybook: 8.5.0(prettier@3.2.5)
 
-  '@storybook/react-vite@8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.30.1)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
+  '@storybook/react-vite@8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.31.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.4.2(typescript@5.7.3)(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
-      '@rollup/pluginutils': 5.1.4(rollup@4.30.1)
-      '@storybook/builder-vite': 8.5.0(storybook@8.5.0(prettier@3.2.5))(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.4.2(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@rollup/pluginutils': 5.1.4(rollup@4.31.0)
+      '@storybook/builder-vite': 8.5.0(storybook@8.5.0(prettier@3.2.5))(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
       '@storybook/react': 8.5.0(@storybook/test@8.5.0(storybook@8.5.0(prettier@3.2.5)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.5.0(prettier@3.2.5))(typescript@5.7.3)
       find-up: 5.0.0
       magic-string: 0.30.17
@@ -18633,7 +21349,7 @@ snapshots:
       resolve: 1.22.10
       storybook: 8.5.0(prettier@3.2.5)
       tsconfig-paths: 4.2.0
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
     optionalDependencies:
       '@storybook/test': 8.5.0(storybook@8.5.0(prettier@3.2.5))
     transitivePeerDependencies:
@@ -18703,11 +21419,11 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@tanstack/query-core@5.64.1': {}
+  '@tanstack/query-core@5.64.2': {}
 
-  '@tanstack/react-query@5.64.1(react@18.2.0)':
+  '@tanstack/react-query@5.64.2(react@18.2.0)':
     dependencies:
-      '@tanstack/query-core': 5.64.1
+      '@tanstack/query-core': 5.64.2
       react: 18.2.0
 
   '@testing-library/cypress@10.0.1(cypress@13.13.2)':
@@ -19382,14 +22098,14 @@ snapshots:
 
   '@ungap/structured-clone@1.2.1': {}
 
-  '@vitejs/plugin-react@4.3.4(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
+  '@vitejs/plugin-react@4.3.4(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.0)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.0)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -19445,13 +22161,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.8(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
+  '@vitest/mocker@2.1.8(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))':
     dependencies:
       '@vitest/spy': 2.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
 
   '@vitest/pretty-format@2.0.5':
     dependencies:
@@ -19984,7 +22700,7 @@ snapshots:
   autoprefixer@10.4.8(postcss@8.4.31):
     dependencies:
       browserslist: 4.24.4
-      caniuse-lite: 1.0.30001692
+      caniuse-lite: 1.0.30001695
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -20476,14 +23192,14 @@ snapshots:
 
   browserslist@4.14.2:
     dependencies:
-      caniuse-lite: 1.0.30001692
+      caniuse-lite: 1.0.30001695
       electron-to-chromium: 1.5.83
       escalade: 3.2.0
       node-releases: 1.1.77
 
   browserslist@4.24.4:
     dependencies:
-      caniuse-lite: 1.0.30001692
+      caniuse-lite: 1.0.30001695
       electron-to-chromium: 1.5.83
       node-releases: 2.0.19
       update-browserslist-db: 1.1.2(browserslist@4.24.4)
@@ -20714,11 +23430,11 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.24.4
-      caniuse-lite: 1.0.30001692
+      caniuse-lite: 1.0.30001695
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
-  caniuse-lite@1.0.30001692: {}
+  caniuse-lite@1.0.30001695: {}
 
   capture-exit@2.0.0:
     dependencies:
@@ -22255,7 +24971,7 @@ snapshots:
       enhanced-resolve: 5.18.0
       eslint: 8.57.1
       fast-glob: 3.3.3
-      get-tsconfig: 4.8.1
+      get-tsconfig: 4.9.0
       is-bun-module: 1.3.0
       is-glob: 4.0.3
       stable-hash: 0.0.4
@@ -22382,7 +25098,7 @@ snapshots:
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-prettier@5.2.2(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.2.5):
+  eslint-plugin-prettier@5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.2.5):
     dependencies:
       eslint: 8.57.1
       prettier: 3.2.5
@@ -23183,7 +25899,7 @@ snapshots:
       es-errors: 1.3.0
       get-intrinsic: 1.2.7
 
-  get-tsconfig@4.8.1:
+  get-tsconfig@4.9.0:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
@@ -23914,11 +26630,11 @@ snapshots:
     dependencies:
       '@formatjs/intl-unified-numberformat': 3.3.7
 
-  intl-messageformat@10.7.12:
+  intl-messageformat@10.7.14:
     dependencies:
       '@formatjs/ecma402-abstract': 2.3.2
       '@formatjs/fast-memoize': 2.2.6
-      '@formatjs/icu-messageformat-parser': 2.10.0
+      '@formatjs/icu-messageformat-parser': 2.11.0
       tslib: 2.8.1
 
   intl-messageformat@7.8.4:
@@ -25713,7 +28429,7 @@ snapshots:
       micromark-util-symbol: 2.0.1
       micromark-util-types: 2.0.1
 
-  micromark-extension-gfm-table@2.1.0:
+  micromark-extension-gfm-table@2.1.1:
     dependencies:
       devlop: 1.1.0
       micromark-factory-space: 2.0.1
@@ -25738,7 +28454,7 @@ snapshots:
       micromark-extension-gfm-autolink-literal: 2.1.0
       micromark-extension-gfm-footnote: 2.1.0
       micromark-extension-gfm-strikethrough: 2.1.0
-      micromark-extension-gfm-table: 2.1.0
+      micromark-extension-gfm-table: 2.1.1
       micromark-extension-gfm-tagfilter: 2.0.0
       micromark-extension-gfm-task-list-item: 2.1.0
       micromark-util-combine-extensions: 2.0.1
@@ -28842,29 +31558,29 @@ snapshots:
     dependencies:
       glob: 7.1.6
 
-  rollup@4.30.1:
+  rollup@4.31.0:
     dependencies:
       '@types/estree': 1.0.6
     optionalDependencies:
-      '@rollup/rollup-android-arm-eabi': 4.30.1
-      '@rollup/rollup-android-arm64': 4.30.1
-      '@rollup/rollup-darwin-arm64': 4.30.1
-      '@rollup/rollup-darwin-x64': 4.30.1
-      '@rollup/rollup-freebsd-arm64': 4.30.1
-      '@rollup/rollup-freebsd-x64': 4.30.1
-      '@rollup/rollup-linux-arm-gnueabihf': 4.30.1
-      '@rollup/rollup-linux-arm-musleabihf': 4.30.1
-      '@rollup/rollup-linux-arm64-gnu': 4.30.1
-      '@rollup/rollup-linux-arm64-musl': 4.30.1
-      '@rollup/rollup-linux-loongarch64-gnu': 4.30.1
-      '@rollup/rollup-linux-powerpc64le-gnu': 4.30.1
-      '@rollup/rollup-linux-riscv64-gnu': 4.30.1
-      '@rollup/rollup-linux-s390x-gnu': 4.30.1
-      '@rollup/rollup-linux-x64-gnu': 4.30.1
-      '@rollup/rollup-linux-x64-musl': 4.30.1
-      '@rollup/rollup-win32-arm64-msvc': 4.30.1
-      '@rollup/rollup-win32-ia32-msvc': 4.30.1
-      '@rollup/rollup-win32-x64-msvc': 4.30.1
+      '@rollup/rollup-android-arm-eabi': 4.31.0
+      '@rollup/rollup-android-arm64': 4.31.0
+      '@rollup/rollup-darwin-arm64': 4.31.0
+      '@rollup/rollup-darwin-x64': 4.31.0
+      '@rollup/rollup-freebsd-arm64': 4.31.0
+      '@rollup/rollup-freebsd-x64': 4.31.0
+      '@rollup/rollup-linux-arm-gnueabihf': 4.31.0
+      '@rollup/rollup-linux-arm-musleabihf': 4.31.0
+      '@rollup/rollup-linux-arm64-gnu': 4.31.0
+      '@rollup/rollup-linux-arm64-musl': 4.31.0
+      '@rollup/rollup-linux-loongarch64-gnu': 4.31.0
+      '@rollup/rollup-linux-powerpc64le-gnu': 4.31.0
+      '@rollup/rollup-linux-riscv64-gnu': 4.31.0
+      '@rollup/rollup-linux-s390x-gnu': 4.31.0
+      '@rollup/rollup-linux-x64-gnu': 4.31.0
+      '@rollup/rollup-linux-x64-musl': 4.31.0
+      '@rollup/rollup-win32-arm64-msvc': 4.31.0
+      '@rollup/rollup-win32-ia32-msvc': 4.31.0
+      '@rollup/rollup-win32-x64-msvc': 4.31.0
       fsevents: 2.3.3
 
   rrule@2.7.1:
@@ -30044,11 +32760,11 @@ snapshots:
 
   tlds@1.203.1: {}
 
-  tldts-core@6.1.72: {}
+  tldts-core@6.1.73: {}
 
-  tldts@6.1.72:
+  tldts@6.1.73:
     dependencies:
-      tldts-core: 6.1.72
+      tldts-core: 6.1.73
 
   tmp@0.0.33:
     dependencies:
@@ -30110,7 +32826,7 @@ snapshots:
 
   tough-cookie@5.1.0:
     dependencies:
-      tldts: 6.1.72
+      tldts: 6.1.73
 
   tr46@0.0.3: {}
 
@@ -30199,7 +32915,7 @@ snapshots:
       picocolors: 1.1.1
       postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.1)(yaml@2.7.0)
       resolve-from: 5.0.0
-      rollup: 4.30.1
+      rollup: 4.31.0
       source-map: 0.8.0-beta.0
       sucrase: 3.35.0
       tinyexec: 0.3.2
@@ -30651,7 +33367,7 @@ snapshots:
       debug: 4.4.0
       es-module-lexer: 1.6.0
       pathe: 1.1.2
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -30663,10 +33379,10 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-dts@3.9.1(@types/node@20.17.14)(rollup@4.30.1)(typescript@5.7.3)(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)):
+  vite-plugin-dts@3.9.1(@types/node@20.17.14)(rollup@4.31.0)(typescript@5.7.3)(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)):
     dependencies:
       '@microsoft/api-extractor': 7.43.0(@types/node@20.17.14)
-      '@rollup/pluginutils': 5.1.4(rollup@4.30.1)
+      '@rollup/pluginutils': 5.1.4(rollup@4.31.0)
       '@vue/language-core': 1.8.27(typescript@5.7.3)
       debug: 4.3.4(supports-color@8.1.1)
       kolorist: 1.8.0
@@ -30674,17 +33390,17 @@ snapshots:
       typescript: 5.7.3
       vue-tsc: 1.8.27(typescript@5.7.3)
     optionalDependencies:
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
       - supports-color
 
-  vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0):
+  vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.1
-      rollup: 4.30.1
+      rollup: 4.31.0
     optionalDependencies:
       '@types/node': 20.17.14
       fsevents: 2.3.3
@@ -30706,7 +33422,7 @@ snapshots:
   vitest@2.1.8(@types/node@20.17.14)(jsdom@16.7.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0):
     dependencies:
       '@vitest/expect': 2.1.8
-      '@vitest/mocker': 2.1.8(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@vitest/mocker': 2.1.8(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
       '@vitest/pretty-format': 2.1.8
       '@vitest/runner': 2.1.8
       '@vitest/snapshot': 2.1.8
@@ -30722,7 +33438,7 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
       vite-node: 2.1.8(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
@@ -30743,7 +33459,7 @@ snapshots:
   vitest@2.1.8(@types/node@20.17.14)(jsdom@21.1.2)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0):
     dependencies:
       '@vitest/expect': 2.1.8
-      '@vitest/mocker': 2.1.8(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@vitest/mocker': 2.1.8(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
       '@vitest/pretty-format': 2.1.8
       '@vitest/runner': 2.1.8
       '@vitest/snapshot': 2.1.8
@@ -30759,7 +33475,7 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
       vite-node: 2.1.8(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
@@ -30779,7 +33495,7 @@ snapshots:
   vitest@2.1.8(@types/node@20.17.14)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0):
     dependencies:
       '@vitest/expect': 2.1.8
-      '@vitest/mocker': 2.1.8(vite@5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
+      '@vitest/mocker': 2.1.8(vite@5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0))
       '@vitest/pretty-format': 2.1.8
       '@vitest/runner': 2.1.8
       '@vitest/snapshot': 2.1.8
@@ -30795,7 +33511,7 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
-      vite: 5.4.11(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
+      vite: 5.4.12(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
       vite-node: 2.1.8(@types/node@20.17.14)(less@3.11.1)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
