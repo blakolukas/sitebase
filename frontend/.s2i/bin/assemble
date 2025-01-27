@@ -82,7 +82,15 @@ fi
 handle_frontend_addons() {
         echo "Processing FRONTEND_ADDONS... Updating addons in volto.config.js"
         addons=$(echo "$FRONTEND_ADDONS" | sed "s|[][']||g") # Remove brackets and quotes
-        sed -i "/^const addons = /c\const addons = [$addons];" volto.config.js
+		sed -i "/^const addons = \[/,/];/c\const addons = [$addons];" volto.config.js
+		# Validate volto.config.js using Node.js
+		if ! node --check volto.config.js; then
+			echo "Error: volto.config.js contains syntax errors."
+			exit 1  # Exit with a non-zero status to signal failure
+		fi
+
+		# Proceed with other build steps if validation passes
+		echo "volto.config.js is valid. Continuing with the build process..."
 }
 
 # Function to handle SET_THEME
@@ -222,6 +230,7 @@ else
 	NODE_ENV=development make install
 
 	echo "---> Executing pnpm build"
+	
 	make build
 	
 	# set permissions for any installed artifacts
