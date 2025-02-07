@@ -194,7 +194,7 @@ check_custom_installation_configurations() {
         handle_mrs_developer
     fi
 	
-	if [ -n "$ADD_PNPM_INSTALL_COMMAND"]; then
+	if [ -n "$ADD_PNPM_INSTALL_COMMAND" ]; then
 		handle_pnpm_install_command
 	fi
 	
