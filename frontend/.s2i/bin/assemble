@@ -160,17 +160,19 @@ handle_mrs_developer() {
 }
 
 handle_pnpm_install_command() {
+	# This method is functional but depracated. Cant run before build deps...
+	# How to use: ADD_PNPM_INSTALL_COMMAND='["pnpm add @eeacms/volto-eea-website-theme --filter volto-procergs-siteplone","pnpm add other-package --filter other"]'
     echo "Processing ADD_PNPM_INSTALL_COMMAND... executing pnpm install manually"
 
-    # Remove os colchetes externos e espaços extras
+    # Remove brackets and extra spaces
     commands=$(echo "$ADD_PNPM_INSTALL_COMMAND" | sed -E 's/^\[\s*|\s*\]$//g')
 
-    # Substitui `","` por quebras de linha manualmente
+    # Replace `","` for line breaks
     commands=$(echo "$commands" | sed 's/","/\n/g')
 
-    # Lê cada linha como um comando separado
+    # Read each line as a separate command
     while IFS= read -r command; do
-        # Remove aspas duplas extras no início e fim de cada comando
+        # Remove extra double quotes at the beginning and end of each command
         command=$(echo "$command" | sed -E 's/^"|"$//g')
         echo "Executing: $command"
         eval "$command"
@@ -212,6 +214,10 @@ check_custom_installation_configurations() {
         handle_mrs_developer
     fi
 	
+	if [ -n "$ADD_PNPM_INSTALL_COMMAND" ]; then
+		handle_pnpm_install_command
+	fi
+	
 	echo "Completed custom installation check"
 }
 
@@ -246,18 +252,7 @@ else
 	check_custom_installation_configurations
 
 	echo "---> Executing development installation process (build command won't work without this)"
-	# NODE_ENV=development make install
-	
-	NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https
-	NODE_ENV=development pnpm i
-	
-	echo "---> Extra Custom Steps... "
-	
-	if [ -n "$ADD_PNPM_INSTALL_COMMAND" ]; then
-		handle_pnpm_install_command
-	fi
-	
-	NODE_ENV=development make build-deps
+	NODE_ENV=development make install
 
 	echo "---> Executing pnpm build"
 	
