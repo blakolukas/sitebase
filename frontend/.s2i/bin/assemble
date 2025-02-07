@@ -194,8 +194,29 @@ check_custom_installation_configurations() {
         handle_mrs_developer
     fi
 	
+	if [ -n "$ADD_PNPM_INSTALL_COMMAND"]; then
+		handle_pnpm_install_command
+	fi
+	
 	echo "Completed custom installation check"
 }
+
+handle_pnpm_install_command() {
+    echo "Processing ADD_PNPM_INSTALL_COMMAND... executing pnpm install manually"
+
+    # Remove os colchetes externos e aspas duplas ao redor dos comandos
+    commands=$(echo "$ADD_PNPM_INSTALL_COMMAND" | sed -E 's/^\[\s*|\s*\]$//g' | sed -E 's/^"|"$//g')
+
+    # Substitui `","` por `\n` para garantir que cada comando fique em uma linha separada
+    IFS=$'\n' read -d '' -r -a command_array < <(echo "$commands" | sed 's/","/\n/g')
+
+    for command in "${command_array[@]}"; do
+        echo "Executing: $command"
+        eval "$command"
+    done
+}
+
+
 
 if [ "$NODE_ENV" != "production" ]; then
 	echo "Starting custom S2I assembling for development"
