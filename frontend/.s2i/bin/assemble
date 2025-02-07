@@ -109,32 +109,38 @@ handle_pnpm_workspace() {
         done
 }
 
-
 # Function to handle ADD_PACKAGE
 # Example Input:
-# export ADD_PACKAGE='{"addon1": "*", "addon2": "*"}'
+# export ADD_PACKAGE='[''"volto-sitedemo": "workspace:*"'']'
 handle_add_package() {
     echo "Processing ADD_PACKAGE... Updating dependencies in package.json"
 
-    # Extract key-value pairs from JSON using sed
-	key_value_pairs=$(echo "$ADD_PACKAGE" | sed -E 's/[{}"]//g' | sed 's/,/ /g')
+    # Remover colchetes e aspas extras da variável ADD_PACKAGE
+    cleaned_packages=$(echo "$ADD_PACKAGE" | sed -E "s/^\[|\]$//g" | sed -E "s/'//g")
 
-	# Convert key-value pairs into the expected format for awk
-	formatted_packages=$(echo "$key_value_pairs" | awk '{for (i=1; i<=NF; i+=2) printf "\"%s\": \"%s\", ", $i, $(i+1)}' | sed 's/, $//')
+    # Criar uma string corretamente formatada para JSON
+    package_entries=""
+    IFS=',' read -ra package_array <<< "$cleaned_packages"
+    for pkg in "${package_array[@]}"; do
+        formatted_pkg=$(echo "$pkg" | sed -E 's/""/"/g' | sed -E 's/^"([^"]+)": "([^"]+)"$/    "\1": "\2"/')
+        package_entries+="$formatted_pkg,\n"
+    done
+    package_entries=${package_entries%,\\n} # Remove a última vírgula e nova linha extra
 
-    # Use awk to insert dependencies into package.json
-	awk -v packages="$formatted_packages" '
-    /"dependencies": {/ {
+    # Modificar o JSON preservando sua estrutura
+    awk -v new_entries="$package_entries" '
+    BEGIN { inside_deps=0 }
+    /"dependencies": {/ { 
+        inside_deps=1;
         print;
-        split(packages, pkgs, ", ");
-        for (i in pkgs) {
-            print "    " pkgs[i] ",";
-        }
         next;
     }
-    1' package.json > package.json.tmp && mv package.json.tmp package.json
-	
-	cat package.json
+    inside_deps && /^[ ]*}/ {
+        printf ",\n%s\n", new_entries; # Adiciona os pacotes com uma vírgula antes
+        inside_deps=0;
+    }
+    { print }
+    ' package.json > package.json.tmp && mv package.json.tmp package.json
 }
 
 # Function to handle ADD_MRSDEVELOPER
