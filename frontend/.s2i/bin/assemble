@@ -204,12 +204,15 @@ check_custom_installation_configurations() {
 handle_pnpm_install_command() {
     echo "Processing ADD_PNPM_INSTALL_COMMAND... executing pnpm install manually"
 
+	echo "before commands sed.."
     # Remove os colchetes externos e aspas duplas ao redor dos comandos
     commands=$(echo "$ADD_PNPM_INSTALL_COMMAND" | sed -E 's/^\[\s*|\s*\]$//g' | sed -E 's/^"|"$//g')
 
+	echo "before IFS"
     # Substitui `","` por `\n` para garantir que cada comando fique em uma linha separada
     IFS=$'\n' read -d '' -r -a command_array < <(echo "$commands" | sed 's/","/\n/g')
 
+	echo "before for command.."
     for command in "${command_array[@]}"; do
         echo "Executing: $command"
         eval "$command"
