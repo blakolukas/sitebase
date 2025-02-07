@@ -230,12 +230,6 @@ if [ "$NODE_ENV" != "production" ]; then
 	echo "---> Executing development installation process"
 	make install
 	
-	echo "---> Extra Custom Steps... "
-	
-	if [ -n "$ADD_PNPM_INSTALL_COMMAND" ]; then
-		handle_pnpm_install_command
-	fi
-	
 	# set permissions for any installed artifacts
 	fix-permissions ./
 	
@@ -252,7 +246,18 @@ else
 	check_custom_installation_configurations
 
 	echo "---> Executing development installation process (build command won't work without this)"
-	NODE_ENV=development make install
+	# NODE_ENV=development make install
+	
+	NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https
+	NODE_ENV=development pnpm i
+	
+	echo "---> Extra Custom Steps... "
+	
+	if [ -n "$ADD_PNPM_INSTALL_COMMAND" ]; then
+		handle_pnpm_install_command
+	fi
+	
+	NODE_ENV=development make build-deps
 
 	echo "---> Executing pnpm build"
 	
