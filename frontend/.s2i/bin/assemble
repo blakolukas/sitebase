@@ -111,26 +111,36 @@ handle_pnpm_workspace() {
 
 # Function to handle ADD_PACKAGE
 # Example Input:
-# export ADD_PACKAGE=['"volto-sitedemo": "workspace:*"']
+# export ADD_PACKAGE='[''"volto-sitedemo": "workspace:*"'']'
 handle_add_package() {
-        echo "Processing ADD_PACKAGE... Updating dependencies in package.json"
-		
-        # TODO: This method is deprecated... Will update in a later date (when moving to "artifacts")
-		
-        packages=$(echo "$ADD_PACKAGE" | sed "s|[][']||g") # Remove brackets and quotes
-        IFS=',' read -ra package_array <<< "$packages"
+    echo "Processing ADD_PACKAGE... Updating dependencies in package.json"
 
-        # Find the dependencies block and add packages
-        awk -v packages="${package_array[*]}" '
-        BEGIN {split(packages, pkgs, " ")}
-        /"dependencies": {/ {
-            print; 
-            for (pkg in pkgs) {
-                print "    " pkgs[pkg] ",";
-            }
-            next
-        } 
-        1' package.json > package.json.tmp && mv package.json.tmp package.json
+    # Remover colchetes e aspas extras da variável ADD_PACKAGE
+    cleaned_packages=$(echo "$ADD_PACKAGE" | sed -E "s/^\[|\]$//g" | sed -E "s/'//g")
+
+    # Criar uma string corretamente formatada para JSON
+    package_entries=""
+    IFS=',' read -ra package_array <<< "$cleaned_packages"
+    for pkg in "${package_array[@]}"; do
+        formatted_pkg=$(echo "$pkg" | sed -E 's/""/"/g' | sed -E 's/^"([^"]+)": "([^"]+)"$/    "\1": "\2"/')
+        package_entries+="$formatted_pkg,\n"
+    done
+    package_entries=${package_entries%,\\n} # Remove a última vírgula e nova linha extra
+
+    # Modificar o JSON preservando sua estrutura
+    awk -v new_entries="$package_entries" '
+    BEGIN { inside_deps=0 }
+    /"dependencies": {/ { 
+        inside_deps=1;
+        print;
+        next;
+    }
+    inside_deps && /^[ ]*}/ {
+        printf ",\n%s\n", new_entries; # Adiciona os pacotes com uma vírgula antes
+        inside_deps=0;
+    }
+    { print }
+    ' package.json > package.json.tmp && mv package.json.tmp package.json
 }
 
 # Function to handle ADD_MRSDEVELOPER
