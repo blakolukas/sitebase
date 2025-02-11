@@ -24,8 +24,8 @@ function add_database_config() {
     # Append the required configuration to instance.yaml
     cat <<EOF >> ./instance.yaml
 
-   db_storage: relstorage
-   db_relstorage_postgresql_dsn: ${RELSTORAGE_DSN}
+    db_storage: relstorage
+    db_relstorage_postgresql_dsn: ${RELSTORAGE_DSN}
 EOF
 
     echo "Configuration added to instance.yaml"
