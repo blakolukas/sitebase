@@ -22,7 +22,7 @@ function add_database_config() {
     echo "Processing $RELSTORAGE_DSN... Updating instance.yaml"
     
     # Append the required configuration to instance.yaml
-    cat <<EOF >> ./backend/instance.yaml
+    cat <<EOF >> ./instance.yaml
 
    db_storage: relstorage
    db_relstorage_postgresql_dsn: ${RELSTORAGE_DSN}
