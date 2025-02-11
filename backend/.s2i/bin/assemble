@@ -17,6 +17,20 @@ function update_requirements_txt() {
 	done
 }
 
+# Add database config to instance.yaml
+function add_database_config() {
+    echo "Processing $RELSTORAGE_DSN... Updating instance.yaml"
+    
+    # Append the required configuration to instance.yaml
+    cat <<EOF >> ./backend/instance.yaml
+
+   db_storage: relstorage
+   db_relstorage_postgresql_dsn: ${RELSTORAGE_DSN}
+EOF
+
+    echo "Configuration added to instance.yaml"
+}
+
 echo "Default S2I assemble script will begin"
 
 /usr/libexec/s2i/assemble
@@ -36,6 +50,13 @@ if [ $rc -eq 0 ]; then
     fi
 	echo "Installation requirements check complete"
 	
+	echo "Checking database configuration..."
+	
+	if [ -n "$RELSTORAGE_DSN" ]; then
+        add_database_config
+    fi
+	
+	echo "Executing make install..."
 	make install
 	# TODO: Fix default S2I pip install. S2I already runs the pip install but have been disabled with DISABLE_SETUP_PY_PROCESSING and DISABLE_PYPROJECT_TOML_PROCESSING.
 	# Pip install on requirements.txt made the buildout command available. This is the missing step from the make command
