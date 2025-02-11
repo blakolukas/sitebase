@@ -56,6 +56,8 @@ setup(
         "plone.restapi",
         "plone.volto",
         "plone.exportimport",
+        "relstorage",
+        "psycopg2-binary",
     ],
     extras_require={
         "test": [
