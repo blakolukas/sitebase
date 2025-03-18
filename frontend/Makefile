@@ -37,7 +37,7 @@ help: ## Show this help
 .PHONY: install
 install: ## Installs the add-on in a development environment
 	pnpm dlx mrs-developer missdev --no-config --fetch-https
-	pnpm i
+	pnpm install --prefer-offline --network-concurrency 1
 	make build-deps
 
 .PHONY: start
