@@ -274,7 +274,7 @@ else
 	cat /sys/fs/cgroup/pids.max
 	
 	echo "---> DEBUG INFO - Installing STRACE to troubleshoot SIGABORT"
-	yum install -y strace
+	microdnf install -y strace
 
 	
 	echo "---> Executing development installation process (build command won't work without this)"
