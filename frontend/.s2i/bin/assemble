@@ -261,6 +261,12 @@ else
 	
 	check_custom_installation_configurations
 	
+	echo "---> DEBUG INFO - Max user process and all limits:"
+	ulimit -u  # Check max user processes
+	ulimit -a  # Show all limits
+	echo "---> DEBUG INFO - PID limit from sys:"
+	cat /sys/fs/cgroup/pids.max
+	
 	echo "---> Executing development installation process (build command won't work without this)"
 	# NODE_ENV=development make -j1 --debug=j install
 	echo "--->---> Calling command: NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https"
