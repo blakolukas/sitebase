@@ -265,8 +265,8 @@ else
 	# NODE_ENV=development make -j1 --debug=j install
 	echo "--->---> Calling command: NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https"
 	NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https
-	echo "--->---> Calling command: NODE_ENV=development NODE_ENV=development pnpm i"
-	NODE_ENV=development pnpm i
+	echo "--->---> Calling command: NODE_ENV=development pnpm i"
+	NODE_ENV=development pnpm i --loglevel debug
 	echo "--->---> Calling command: NODE_ENV=development make build-deps"
 	NODE_ENV=development make build-deps
 
