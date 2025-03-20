@@ -273,6 +273,7 @@ else
 	NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https
 	echo "--->---> Calling command: NODE_ENV=development pnpm i"
 	NODE_ENV=development pnpm i --loglevel debug
+	NODE_ENV=development PNPM_WORKERS=2 pnpm i --network-concurrency=1 --loglevel debug
 	echo "--->---> Calling command: NODE_ENV=development make build-deps"
 	NODE_ENV=development make build-deps
 
