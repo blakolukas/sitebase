@@ -4,7 +4,6 @@
     "package": "@plone/volto",
     "url": "git@github.com:plone/volto.git",
     "https": "https://github.com/plone/volto.git",
-    "tag": "18.1.2",
-    "filterBlobs": true
+    "tag": "18.1.2"
   }
 }
