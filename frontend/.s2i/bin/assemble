@@ -294,8 +294,8 @@ else
 	# Add the local binary to your PATH
 	export PATH=/opt/app-root/src/strace-5.18/src:$PATH
 
+	cd ..
 
-	
 	echo "---> Executing development installation process (build command won't work without this)"
 	# NODE_ENV=development make install
 	# NODE_ENV=development make -j1 --debug=j install
