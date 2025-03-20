@@ -273,20 +273,26 @@ else
 	echo "---> DEBUG INFO - PID limit from sys cgroup (cat /sys/fs/cgroup/pids.max):"
 	cat /sys/fs/cgroup/pids.max
 	
+	echo "---> DEBUG INFO - Installing STRACE to troubleshoot SIGABORT"
+	dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+	dnf upgrade
+	yum install strace
+
+	
 	echo "---> Executing development installation process (build command won't work without this)"
 	# NODE_ENV=development make install
-	NODE_ENV=development make -j1 --debug=j install
-	#echo "--->---> Calling command: NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https"
-	#NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https
-	#echo "--->---> Calling command with TRACE: NODE_ENV=development pnpm i"
+	# NODE_ENV=development make -j1 --debug=j install
+	echo "--->---> Calling command: NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https"
+	NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https
+	echo "--->---> Calling command with TRACE: NODE_ENV=development pnpm i"
 	# NODE_ENV=development PNPM_WORKERS=2 pnpm i --network-concurrency=1 --loglevel debug
-	# strace -f pnpm i --network-concurrency=1 --loglevel debug
+	NODE_ENV=development strace -f pnpm i --network-concurrency=1 --loglevel debug
 	#export GOMAXPROCS=1
 	#export NODE_OPTIONS="--max-old-space-size=2048"
 	#NODE_ENV=development pnpm i --network-concurrency=1 --loglevel trace
 	
-	#echo "--->---> Calling command: NODE_ENV=development make build-deps"
-	#NODE_ENV=development make build-deps
+	echo "--->---> Calling command: NODE_ENV=development make build-deps"
+	NODE_ENV=development make build-deps
 
 	echo "---> Executing pnpm build"
 	make build
