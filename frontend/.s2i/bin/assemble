@@ -243,6 +243,8 @@ if [ "$NODE_ENV" != "production" ]; then
 	
 	check_custom_installation_configurations
 	
+	make -j1
+	
 	echo "---> Executing development installation process"
 	make install
 	
@@ -260,6 +262,8 @@ else
 	npm install -g pnpm
 	
 	check_custom_installation_configurations
+	
+	make -j1
 
 	echo "---> Executing development installation process (build command won't work without this)"
 	NODE_ENV=development make install
