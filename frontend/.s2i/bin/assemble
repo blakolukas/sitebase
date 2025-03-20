@@ -274,9 +274,7 @@ else
 	cat /sys/fs/cgroup/pids.max
 	
 	echo "---> DEBUG INFO - Installing STRACE to troubleshoot SIGABORT"
-	dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-	dnf upgrade
-	yum install strace
+	yum install -y strace
 
 	
 	echo "---> Executing development installation process (build command won't work without this)"
