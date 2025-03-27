@@ -304,7 +304,7 @@ else
 	echo "--->---> Calling command with TRACE: NODE_ENV=development pnpm i"
 	# NODE_ENV=development PNPM_WORKERS=2 pnpm i --network-concurrency=1 --loglevel debug
 	# NODE_ENV=development strace -f pnpm i --network-concurrency=1 --loglevel debug
-	PNPM_WORKSPACE_CONCURRENCY=1 PNPM_CHILD_CONCURRENCY=1 PNPM_FETCH_CONCURRENCY=1 NODE_ENV=development pnpm i --network-concurrency=1 --workspace-concurrency=1 --loglevel debug
+	PNPM_WORKSPACE_CONCURRENCY=1 PNPM_CHILD_CONCURRENCY=1 PNPM_FETCH_CONCURRENCY=1 NODE_ENV=development pnpm i --network-concurrency=1 --loglevel debug
 	#export GOMAXPROCS=1
 	#export NODE_OPTIONS="--max-old-space-size=2048"
 	#NODE_ENV=development pnpm i --network-concurrency=1 --loglevel trace
