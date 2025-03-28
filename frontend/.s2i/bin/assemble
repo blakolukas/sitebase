@@ -257,60 +257,60 @@ else
 	echo "Starting custom S2I assembling for Production"
 	
 	echo "---> Installing pnpm"
-	npm install -g pnpm
+	npm install -g pnpm@9.1.1
 	
 	check_custom_installation_configurations
 	
-	echo "---> DEBUG INFO - Max user process and all limits (ulimit -u):"
-	ulimit -u  # Check max user processes
+	# echo "---> DEBUG INFO - Max user process and all limits (ulimit -u):"
+	# ulimit -u  # Check max user processes
 	
-	echo "---> DEBUG INFO - All limits (ulimit -a):"
-	ulimit -a  # Show all limits
+	# echo "---> DEBUG INFO - All limits (ulimit -a):"
+	# ulimit -a  # Show all limits
 	
-	echo "---> DEBUG INFO - Max open files (ulimit -n):"
-	ulimit -n  # Check max open files
+	# echo "---> DEBUG INFO - Max open files (ulimit -n):"
+	# ulimit -n  # Check max open files
 
-	echo "---> DEBUG INFO - PID limit from sys cgroup (cat /sys/fs/cgroup/pids.max):"
-	cat /sys/fs/cgroup/pids.max
+	# echo "---> DEBUG INFO - PID limit from sys cgroup (cat /sys/fs/cgroup/pids.max):"
+	# cat /sys/fs/cgroup/pids.max
 	
-	echo "---> DEBUG INFO - Installing STRACE and prerequisites manually from source to troubleshoot SIGABORT"
+	# echo "---> DEBUG INFO - Installing STRACE and prerequisites manually from source to troubleshoot SIGABORT"
 	# Download and compile strace inside your S2I script
-	curl -O http://ftp.gnu.org/gnu/diffutils/diffutils-3.8.tar.xz
-	tar -xf diffutils-3.8.tar.xz
-	cd diffutils-3.8
-	./configure
-	make
-	export PATH=/opt/app-root/src/diffutils-3.8/src:$PATH
+	# curl -O http://ftp.gnu.org/gnu/diffutils/diffutils-3.8.tar.xz
+	# tar -xf diffutils-3.8.tar.xz
+	# cd diffutils-3.8
+	# ./configure
+	# make
+	# export PATH=/opt/app-root/src/diffutils-3.8/src:$PATH
 	
-	cd ..
+	# cd ..
 	
-	curl -L https://github.com/strace/strace/releases/download/v5.18/strace-5.18.tar.xz -o strace.tar.xz
-	tar -xf strace.tar.xz
-	cd strace-5.18
-	./configure
-	make
+	# curl -L https://github.com/strace/strace/releases/download/v5.18/strace-5.18.tar.xz -o strace.tar.xz
+	# tar -xf strace.tar.xz
+	# cd strace-5.18
+	# ./configure
+	# make
 	# make install
 
 	# Add the local binary to your PATH
-	export PATH=/opt/app-root/src/strace-5.18/src:$PATH
+	# export PATH=/opt/app-root/src/strace-5.18/src:$PATH
 
-	cd ..
+	# cd ..
 
 	echo "---> Executing development installation process (build command won't work without this)"
-	# NODE_ENV=development make install
+	NODE_ENV=development make install
 	# NODE_ENV=development make -j1 --debug=j install
-	echo "--->---> Calling command: NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https"
-	NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https
-	echo "--->---> Calling command with TRACE: NODE_ENV=development pnpm i"
+	#echo "--->---> Calling command: NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https"
+	#NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https
+	#echo "--->---> Calling command with TRACE: NODE_ENV=development pnpm i"
 	# NODE_ENV=development PNPM_WORKERS=2 pnpm i --network-concurrency=1 --loglevel debug
 	# NODE_ENV=development strace -f pnpm i --network-concurrency=1 --loglevel debug
-	PNPM_WORKSPACE_CONCURRENCY=1 PNPM_CHILD_CONCURRENCY=1 PNPM_FETCH_CONCURRENCY=1 NODE_ENV=development pnpm i --network-concurrency=1 --loglevel debug
+	#PNPM_WORKSPACE_CONCURRENCY=1 PNPM_CHILD_CONCURRENCY=1 PNPM_FETCH_CONCURRENCY=1 NODE_ENV=development pnpm i --network-concurrency=1 --loglevel debug
 	#export GOMAXPROCS=1
 	#export NODE_OPTIONS="--max-old-space-size=2048"
 	#NODE_ENV=development pnpm i --network-concurrency=1 --loglevel trace
 	
-	echo "--->---> Calling command: NODE_ENV=development make build-deps"
-	NODE_ENV=development make build-deps
+	#echo "--->---> Calling command: NODE_ENV=development make build-deps"
+	#NODE_ENV=development make build-deps
 
 	echo "---> Executing pnpm build"
 	make build
