@@ -5,3 +5,5 @@ node_modules
 *.mo
 /.idea
 .vscode/
+frontend/.env
+frontend/packages/volto-procergs-siteplone/.env
