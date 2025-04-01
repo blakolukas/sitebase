@@ -13,8 +13,6 @@ const addons = [
   "@kitconcept/volto-dsgvo-banner",
 
   "@eeacms/volto-hero-block",
-
-  "@kitconcept/volto-carousel-block",
   
   "volto-site-componentes",
   "volto-custom-light-theme"
