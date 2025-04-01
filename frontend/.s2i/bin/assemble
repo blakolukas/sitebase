@@ -111,7 +111,7 @@ handle_pnpm_workspace() {
 
 # Function to handle ADD_PACKAGE
 # Example Input:
-# export ADD_PACKAGE=['"volto-sitedemo": "workspace:*"']
+# export ADD_PACKAGE=['"volto-site-componentes": "workspace:*"']
 handle_add_package() {
         echo "Processing ADD_PACKAGE... Updating dependencies in package.json"
 		

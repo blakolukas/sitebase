@@ -16,5 +16,5 @@ yarn.lock
 
 # Dev packages
 packages/volto-dsgvo-banner
-packages/volto-sitedemo
-packages/volto-demo-tema
+packages/volto-site-componentes
+packages/volto-custom-light-theme

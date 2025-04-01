@@ -16,8 +16,8 @@ const addons = [
 
   "@kitconcept/volto-carousel-block",
   
-  "volto-sitedemo",
-  "volto-demo-tema"
+  "volto-site-componentes",
+  "volto-custom-light-theme"
 ];
 const theme = '@kitconcept/volto-light-theme';
 
