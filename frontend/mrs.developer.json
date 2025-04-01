@@ -6,17 +6,17 @@
     "https": "https://github.com/plone/volto.git",
     "tag": "18.1.2"
   },
-  "volto-sitedemo": {
-    "url": "git@github.com:PROCERGS/volto-sitedemo.git",
-    "package": "volto-sitedemo",
-    "https": "https://github.com/PROCERGS/volto-sitedemo.git",     
+  "volto-site-componentes": {
+    "url": "git@github.com:PROCERGS/volto-site-componentes.git",
+    "package": "volto-site-componentes",
+    "https": "https://github.com/PROCERGS/volto-site-componentes.git",     
     "branch": "main",     
     "output": "./packages/"
   },   
-  "volto-demo-tema": {     
-    "url": "git@github.com:PROCERGS/volto-demo-tema.git",     
-    "package": "volto-demo-tema",     
-    "https": "https://github.com/PROCERGS/volto-demo-tema.git",     
+  "volto-custom-light-theme": {     
+    "url": "git@github.com:PROCERGS/volto-custom-light-theme.git",     
+    "package": "volto-custom-light-theme",     
+    "https": "https://github.com/PROCERGS/volto-custom-light-theme.git",     
     "branch": "main",     
     "output": "./packages/"   
   },   
