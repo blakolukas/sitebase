@@ -1426,7 +1426,7 @@ importers:
         version: 0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@18.2.0)
       '@kitconcept/volto-light-theme':
         specifier: 5.0.2
-        version: 5.0.2(@eeacms/volto-accordion-block@10.4.6)(@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-dsgvo-banner@2.3.2)(@kitconcept/volto-heading-block@2.4.0(react@18.2.0))(@kitconcept/volto-highlight-block@4.2.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-introduction-block@1.0.0)(@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5)))(@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.1.2(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.2)(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))
+        version: 5.0.2(@eeacms/volto-accordion-block@10.4.6)(@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0))(@kitconcept/volto-dsgvo-banner@2.3.2)(@kitconcept/volto-heading-block@2.4.0(react@18.2.0))(@kitconcept/volto-highlight-block@4.2.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-introduction-block@1.0.0)(@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5)))(@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.1.2(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.2)(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -16232,11 +16232,12 @@ snapshots:
     dependencies:
       buffer: 6.0.3
 
-  '@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)':
     dependencies:
       classnames: 2.2.6
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      react-intl: 3.12.1(react@18.2.0)
 
   '@kitconcept/volto-dsgvo-banner@2.3.2':
     dependencies:
@@ -16256,15 +16257,15 @@ snapshots:
 
   '@kitconcept/volto-introduction-block@1.0.0': {}
 
-  '@kitconcept/volto-light-theme@5.0.2(@eeacms/volto-accordion-block@10.4.6)(@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-dsgvo-banner@2.3.2)(@kitconcept/volto-heading-block@2.4.0(react@18.2.0))(@kitconcept/volto-highlight-block@4.2.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-introduction-block@1.0.0)(@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5)))(@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.1.2(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.2)(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))':
+  '@kitconcept/volto-light-theme@5.0.2(@eeacms/volto-accordion-block@10.4.6)(@kitconcept/volto-button-block@3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0))(@kitconcept/volto-dsgvo-banner@2.3.2)(@kitconcept/volto-heading-block@2.4.0(react@18.2.0))(@kitconcept/volto-highlight-block@4.2.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@kitconcept/volto-introduction-block@1.0.0)(@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5)))(@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.1.2(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.2)(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))':
     dependencies:
       '@eeacms/volto-accordion-block': 10.4.6
-      '@kitconcept/volto-button-block': 3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@kitconcept/volto-button-block': 3.0.3(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)
       '@kitconcept/volto-dsgvo-banner': 2.3.2
       '@kitconcept/volto-heading-block': 2.4.0(react@18.2.0)
       '@kitconcept/volto-highlight-block': 4.2.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@kitconcept/volto-introduction-block': 1.0.0
-      '@kitconcept/volto-separator-block': 4.1.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))
+      '@kitconcept/volto-separator-block': 4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))
       '@kitconcept/volto-slider-block': 6.3.1(@plone/volto@18.1.2(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.2.12)(@types/react@18.2.27)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.2)(react@18.2.0)
       '@plone/components': 2.2.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))
     transitivePeerDependencies:
@@ -16272,11 +16273,12 @@ snapshots:
       - react-dom
       - storybook
 
-  '@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))':
+  '@kitconcept/volto-separator-block@4.1.2(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))':
     dependencies:
       '@plone/components': 2.0.0-alpha.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.11(prettier@3.2.5))
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      react-intl: 3.12.1(react@18.2.0)
     transitivePeerDependencies:
       - storybook
 
