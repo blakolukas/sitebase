@@ -63,6 +63,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
+        shell: bash
         run: make install
 
       - name: Linting
