@@ -1,6 +1,6 @@
 default_context:
     initial_user_password: 'admin'
-    zcml_package_includes: 'procergs.siteplone'
+    zcml_package_includes: 'procergs.sitebase'
 
     wsgi_listen: '0.0.0.0:8080'
     cors_enabled: 'true'

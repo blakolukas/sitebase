@@ -1,6 +1,6 @@
 ---
 project_folders:
-  - path: "/srv/siteplone/data"
+  - path: "/srv/sitebase/data"
     owner: 999
     group: 999
     mode: "0750"

@@ -1,4 +1,4 @@
-# procergs.siteplone
+# procergs.sitebase
 
 Projeto para site base
 
@@ -8,10 +8,10 @@ TODO: List our awesome features
 
 ## Installation
 
-Install procergs.siteplone with `pip`:
+Install procergs.sitebase with `pip`:
 
 ```shell
-pip install procergs.siteplone
+pip install procergs.sitebase
 ```
 
 And to create the Plone site:
@@ -50,8 +50,8 @@ See also the documentation of [Mockup and Patternslib](https://6.docs.plone.org/
 
 ## Contribute
 
-- [Issue Tracker](https://github.com/PROCERGS/procergs.siteplone/issues)
-- [Source Code](https://github.com/PROCERGS/procergs.siteplone/)
+- [Issue Tracker](https://github.com/PROCERGS/procergs.sitebase/issues)
+- [Source Code](https://github.com/PROCERGS/procergs.sitebase/)
 
 ## License
 

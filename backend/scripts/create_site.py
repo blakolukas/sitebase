@@ -1,5 +1,5 @@
 from AccessControl.SecurityManagement import newSecurityManager
-from procergs.siteplone.interfaces import IBrowserLayer
+from procergs.sitebase.interfaces import IBrowserLayer
 from Products.CMFPlone.factory import _DEFAULT_PROFILE
 from Products.CMFPlone.factory import addPloneSite
 from Products.GenericSetup.tool import SetupTool
@@ -62,10 +62,10 @@ if site_id not in app.objectIds():
     transaction.commit()
 
     portal_setup: SetupTool = site.portal_setup
-    portal_setup.runAllImportStepsFromProfile("profile-procergs.siteplone:default")
+    portal_setup.runAllImportStepsFromProfile("profile-procergs.sitebase:default")
     transaction.commit()
 
     if EXAMPLE_CONTENT:
-        portal_setup.runAllImportStepsFromProfile("profile-procergs.siteplone:initial")
+        portal_setup.runAllImportStepsFromProfile("profile-procergs.sitebase:initial")
         transaction.commit()
     app._p_jar.sync()

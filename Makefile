@@ -11,8 +11,8 @@ MAKEFLAGS+=--no-builtin-rules
 CURRENT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 GIT_FOLDER=$(CURRENT_DIR)/.git
 
-PROJECT_NAME=siteplone
-STACK_NAME=siteplone-example-com
+PROJECT_NAME=sitebase
+STACK_NAME=sitebase-example-com
 
 VOLTO_VERSION = $(shell cat frontend/mrs.developer.json | python -c "import sys, json; print(json.load(sys.stdin)['core']['tag'])")
 PLONE_VERSION=$(shell cat backend/version.txt)
@@ -128,7 +128,7 @@ build-images:  ## Build docker images
 stack-start:  ## Local Stack: Start Services
 	@echo "Start local Docker stack"
 	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) docker compose -f docker-compose.yml up -d --build
-	@echo "Now visit: http://siteplone.localhost"
+	@echo "Now visit: http://sitebase.localhost"
 
 .PHONY: start-stack
 stack-create-site:  ## Local Stack: Create a new site
@@ -172,12 +172,12 @@ acceptance-test:
 .PHONY: acceptance-frontend-image-build
 acceptance-frontend-image-build:
 	@echo "Build acceptance frontend image"
-	@docker build frontend -t PROCERGS/siteplone-frontend:acceptance -f frontend/Dockerfile --build-arg VOLTO_VERSION=$(VOLTO_VERSION)
+	@docker build frontend -t PROCERGS/sitebase-frontend:acceptance -f frontend/Dockerfile --build-arg VOLTO_VERSION=$(VOLTO_VERSION)
 
 .PHONY: acceptance-backend-image-build
 acceptance-backend-image-build:
 	@echo "Build acceptance backend image"
-	@docker build backend -t PROCERGS/siteplone-backend:acceptance -f backend/Dockerfile.acceptance --build-arg PLONE_VERSION=$(PLONE_VERSION)
+	@docker build backend -t PROCERGS/sitebase-backend:acceptance -f backend/Dockerfile.acceptance --build-arg PLONE_VERSION=$(PLONE_VERSION)
 
 .PHONY: acceptance-images-build
 acceptance-images-build: ## Build Acceptance frontend/backend images
@@ -187,12 +187,12 @@ acceptance-images-build: ## Build Acceptance frontend/backend images
 .PHONY: acceptance-frontend-container-start
 acceptance-frontend-container-start:
 	@echo "Start acceptance frontend"
-	@docker run --rm -p 3000:3000 --name siteplone-frontend-acceptance --link siteplone-backend-acceptance:backend -e RAZZLE_API_PATH=http://localhost:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d PROCERGS/siteplone-frontend:acceptance
+	@docker run --rm -p 3000:3000 --name sitebase-frontend-acceptance --link sitebase-backend-acceptance:backend -e RAZZLE_API_PATH=http://localhost:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d PROCERGS/sitebase-frontend:acceptance
 
 .PHONY: acceptance-backend-container-start
 acceptance-backend-container-start:
 	@echo "Start acceptance backend"
-	@docker run --rm -p 55001:55001 --name siteplone-backend-acceptance -d PROCERGS/siteplone-backend:acceptance
+	@docker run --rm -p 55001:55001 --name sitebase-backend-acceptance -d PROCERGS/sitebase-backend:acceptance
 
 .PHONY: acceptance-containers-start
 acceptance-containers-start: ## Start Acceptance containers
@@ -202,8 +202,8 @@ acceptance-containers-start: ## Start Acceptance containers
 .PHONY: acceptance-containers-stop
 acceptance-containers-stop: ## Stop Acceptance containers
 	@echo "Stop acceptance containers"
-	@docker stop siteplone-frontend-acceptance
-	@docker stop siteplone-backend-acceptance
+	@docker stop sitebase-frontend-acceptance
+	@docker stop sitebase-backend-acceptance
 
 .PHONY: ci-acceptance-test
 ci-acceptance-test:

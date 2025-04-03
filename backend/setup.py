@@ -1,4 +1,4 @@
-"""Installer for the procergs.siteplone package."""
+"""Installer for the procergs.sitebase package."""
 
 from pathlib import Path
 from setuptools import find_packages
@@ -13,7 +13,7 @@ long_description = f"""
 
 
 setup(
-    name="procergs.siteplone",
+    name="procergs.sitebase",
     version="1.0.0a0",
     description="Projeto para site base",
     long_description=long_description,
@@ -36,11 +36,11 @@ setup(
     keywords="Python Plone CMS",
     author="PROCERGS",
     author_email="sites@procergs.rs.gov.br",
-    url="https://github.com/PROCERGS/procergs.siteplone",
+    url="https://github.com/PROCERGS/procergs.sitebase",
     project_urls={
-        "PyPI": "https://pypi.org/project/procergs.siteplone",
-        "Source": "https://github.com/PROCERGS/procergs.siteplone",
-        "Tracker": "https://github.com/PROCERGS/procergs.siteplone/issues",
+        "PyPI": "https://pypi.org/project/procergs.sitebase",
+        "Source": "https://github.com/PROCERGS/procergs.sitebase",
+        "Tracker": "https://github.com/PROCERGS/procergs.sitebase/issues",
     },
     license="GPL version 2",
     packages=find_packages("src", exclude=["ez_setup"]),
@@ -74,6 +74,6 @@ setup(
     [z3c.autoinclude.plugin]
     target = plone
     [console_scripts]
-    update_locale = procergs.siteplone.locales.update:update_locale
+    update_locale = procergs.sitebase.locales.update:update_locale
     """,
 )

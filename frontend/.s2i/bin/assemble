@@ -113,24 +113,34 @@ handle_pnpm_workspace() {
 # Example Input:
 # export ADD_PACKAGE=['"volto-site-componentes": "workspace:*"']
 handle_add_package() {
-        echo "Processing ADD_PACKAGE... Updating dependencies in package.json"
-		
-        # TODO: This method is deprecated... Will update in a later date (when moving to "artifacts")
-		
-        packages=$(echo "$ADD_PACKAGE" | sed "s|[][']||g") # Remove brackets and quotes
-        IFS=',' read -ra package_array <<< "$packages"
+    echo "Processing ADD_PACKAGE... Updating dependencies in package.json"
 
-        # Find the dependencies block and add packages
-        awk -v packages="${package_array[*]}" '
-        BEGIN {split(packages, pkgs, " ")}
-        /"dependencies": {/ {
-            print; 
-            for (pkg in pkgs) {
-                print "    " pkgs[pkg] ",";
-            }
-            next
-        } 
-        1' package.json > package.json.tmp && mv package.json.tmp package.json
+    # Remover colchetes e aspas extras da variável ADD_PACKAGE
+    cleaned_packages=$(echo "$ADD_PACKAGE" | sed -E "s/^\[|\]$//g" | sed -E "s/'//g")
+
+    # Criar uma string corretamente formatada para JSON
+    package_entries=""
+    IFS=',' read -ra package_array <<< "$cleaned_packages"
+    for pkg in "${package_array[@]}"; do
+        formatted_pkg=$(echo "$pkg" | sed -E 's/""/"/g' | sed -E 's/^"([^"]+)": "([^"]+)"$/    "\1": "\2"/')
+        package_entries+="$formatted_pkg,\n"
+    done
+    package_entries=${package_entries%,\\n} # Remove a última vírgula e nova linha extra
+
+    # Modificar o JSON preservando sua estrutura
+    awk -v new_entries="$package_entries" '
+    BEGIN { inside_deps=0 }
+    /"dependencies": {/ { 
+        inside_deps=1;
+        print;
+        next;
+    }
+    inside_deps && /^[ ]*}/ {
+        printf ",\n%s\n", new_entries; # Adiciona os pacotes com uma vírgula antes
+        inside_deps=0;
+    }
+    { print }
+    ' package.json > package.json.tmp && mv package.json.tmp package.json
 }
 
 # Function to handle ADD_MRSDEVELOPER
@@ -157,6 +167,26 @@ handle_mrs_developer() {
 		
 		echo "Below is the final result of MRSDEVELOPER:"
 		cat mrs.developer.json
+}
+
+handle_pnpm_install_command() {
+	# This method is functional but depracated. Cant run before build deps...
+	# How to use: ADD_PNPM_INSTALL_COMMAND='["pnpm add @eeacms/volto-eea-website-theme --filter volto-procergs-sitebase","pnpm add other-package --filter other"]'
+    echo "Processing ADD_PNPM_INSTALL_COMMAND... executing pnpm install manually"
+
+    # Remove brackets and extra spaces
+    commands=$(echo "$ADD_PNPM_INSTALL_COMMAND" | sed -E 's/^\[\s*|\s*\]$//g')
+
+    # Replace `","` for line breaks
+    commands=$(echo "$commands" | sed 's/","/\n/g')
+
+    # Read each line as a separate command
+    while IFS= read -r command; do
+        # Remove extra double quotes at the beginning and end of each command
+        command=$(echo "$command" | sed -E 's/^"|"$//g')
+        echo "Executing: $command"
+        eval "$command"
+    done <<< "$commands"
 }
 
 check_custom_installation_configurations() {
@@ -194,8 +224,13 @@ check_custom_installation_configurations() {
         handle_mrs_developer
     fi
 	
+	if [ -n "$ADD_PNPM_INSTALL_COMMAND" ]; then
+		handle_pnpm_install_command
+	fi
+	
 	echo "Completed custom installation check"
 }
+
 
 if [ "$NODE_ENV" != "production" ]; then
 	echo "Starting custom S2I assembling for development"
@@ -209,7 +244,7 @@ if [ "$NODE_ENV" != "production" ]; then
 	check_custom_installation_configurations
 	
 	echo "---> Executing development installation process"
-	make install
+	make -j1 --debug=j install
 	
 	# set permissions for any installed artifacts
 	fix-permissions ./
@@ -222,15 +257,62 @@ else
 	echo "Starting custom S2I assembling for Production"
 	
 	echo "---> Installing pnpm"
-	npm install -g pnpm
+	npm install -g pnpm@9.1.1
 	
 	check_custom_installation_configurations
+	
+	# echo "---> DEBUG INFO - Max user process and all limits (ulimit -u):"
+	# ulimit -u  # Check max user processes
+	
+	# echo "---> DEBUG INFO - All limits (ulimit -a):"
+	# ulimit -a  # Show all limits
+	
+	# echo "---> DEBUG INFO - Max open files (ulimit -n):"
+	# ulimit -n  # Check max open files
+
+	# echo "---> DEBUG INFO - PID limit from sys cgroup (cat /sys/fs/cgroup/pids.max):"
+	# cat /sys/fs/cgroup/pids.max
+	
+	# echo "---> DEBUG INFO - Installing STRACE and prerequisites manually from source to troubleshoot SIGABORT"
+	# Download and compile strace inside your S2I script
+	# curl -O http://ftp.gnu.org/gnu/diffutils/diffutils-3.8.tar.xz
+	# tar -xf diffutils-3.8.tar.xz
+	# cd diffutils-3.8
+	# ./configure
+	# make
+	# export PATH=/opt/app-root/src/diffutils-3.8/src:$PATH
+	
+	# cd ..
+	
+	# curl -L https://github.com/strace/strace/releases/download/v5.18/strace-5.18.tar.xz -o strace.tar.xz
+	# tar -xf strace.tar.xz
+	# cd strace-5.18
+	# ./configure
+	# make
+	# make install
+
+	# Add the local binary to your PATH
+	# export PATH=/opt/app-root/src/strace-5.18/src:$PATH
+
+	# cd ..
 
 	echo "---> Executing development installation process (build command won't work without this)"
 	NODE_ENV=development make install
+	# NODE_ENV=development make -j1 --debug=j install
+	#echo "--->---> Calling command: NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https"
+	#NODE_ENV=development pnpm dlx mrs-developer missdev --no-config --fetch-https
+	#echo "--->---> Calling command with TRACE: NODE_ENV=development pnpm i"
+	# NODE_ENV=development PNPM_WORKERS=2 pnpm i --network-concurrency=1 --loglevel debug
+	# NODE_ENV=development strace -f pnpm i --network-concurrency=1 --loglevel debug
+	#PNPM_WORKSPACE_CONCURRENCY=1 PNPM_CHILD_CONCURRENCY=1 PNPM_FETCH_CONCURRENCY=1 NODE_ENV=development pnpm i --network-concurrency=1 --loglevel debug
+	#export GOMAXPROCS=1
+	#export NODE_OPTIONS="--max-old-space-size=2048"
+	#NODE_ENV=development pnpm i --network-concurrency=1 --loglevel trace
+	
+	#echo "--->---> Calling command: NODE_ENV=development make build-deps"
+	#NODE_ENV=development make build-deps
 
 	echo "---> Executing pnpm build"
-	
 	make build
 	
 	# set permissions for any installed artifacts

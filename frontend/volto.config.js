@@ -1,7 +1,6 @@
 const addons = [
-  "@plone-collective/volto-authomatic",
-  "volto-procergs-siteplone",
   "@kitconcept/volto-light-theme",
+  '@plone-collective/volto-authomatic',
 
   '@eeacms/volto-accordion-block',
   '@kitconcept/volto-button-block',
@@ -12,10 +11,10 @@ const addons = [
   "@codesyntax/volto-listingadvanced-variation",
   "@kitconcept/volto-dsgvo-banner",
 
-  "@eeacms/volto-hero-block",
-  
   "volto-site-componentes",
-  "volto-custom-light-theme"
+  "volto-custom-light-theme",
+
+  'volto-procergs-sitebase'
 ];
 const theme = '@kitconcept/volto-light-theme';
 

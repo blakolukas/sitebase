@@ -29,8 +29,8 @@ module.exports = {
           ['@plone/volto-slate', `${coreLocation}/packages/volto-slate/src`],
           ['@plone/registry', `${coreLocation}/packages/registry/src`],
           [
-            'volto-procergs-siteplone',
-            './packages/volto-procergs-siteplone/src',
+            'volto-procergs-sitebase',
+            './packages/volto-procergs-sitebase/src',
           ],
           ...addonAliases,
         ],

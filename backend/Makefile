@@ -15,7 +15,7 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-IMAGE_NAME_PREFIX=ghcr.io/PROCERGS/siteplone
+IMAGE_NAME_PREFIX=ghcr.io/PROCERGS/sitebase
 IMAGE_TAG=latest
 
 # Python checks
@@ -36,7 +36,7 @@ endif
 PLONE_SITE_ID=Plone
 BACKEND_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 PLONE_VERSION=$(shell cat $(BACKEND_FOLDER)/version.txt)
-EXAMPLE_CONTENT_FOLDER=${BACKEND_FOLDER}/src/procergs/siteplone/setuphandlers/examplecontent
+EXAMPLE_CONTENT_FOLDER=${BACKEND_FOLDER}/src/procergs/sitebase/setuphandlers/examplecontent
 
 GIT_FOLDER=$(BACKEND_FOLDER)/.git
 VENV_FOLDER=$(BACKEND_FOLDER)/.venv
@@ -137,7 +137,7 @@ build-image:  ## Build Docker Images
 # Acceptance tests
 .PHONY: acceptance-backend-start
 acceptance-backend-start: ## Start backend acceptance server
-	ZSERVER_HOST=0.0.0.0 ZSERVER_PORT=55001 LISTEN_PORT=55001 APPLY_PROFILES="procergs.siteplone:default" CONFIGURE_PACKAGES="plone.restapi,plone.volto,plone.volto.cors,procergs.siteplone" $(BIN_FOLDER)/robot-server plone.app.robotframework.testing.VOLTO_ROBOT_TESTING
+	ZSERVER_HOST=0.0.0.0 ZSERVER_PORT=55001 LISTEN_PORT=55001 APPLY_PROFILES="procergs.sitebase:default" CONFIGURE_PACKAGES="plone.restapi,plone.volto,plone.volto.cors,procergs.sitebase" $(BIN_FOLDER)/robot-server plone.app.robotframework.testing.VOLTO_ROBOT_TESTING
 
 .PHONY: acceptance-image-build
 acceptance-image-build:  ## Build Docker Images
