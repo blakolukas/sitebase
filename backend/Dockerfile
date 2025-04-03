@@ -27,7 +27,7 @@ EOT
 FROM plone/server-prod-config:${PLONE_VERSION}
 
 LABEL maintainer="PROCERGS <sites@procergs.rs.gov.br>" \
-      org.label-schema.name="siteplone-backend" \
+      org.label-schema.name="sitebase-backend" \
       org.label-schema.description="Site Plone backend image." \
       org.label-schema.vendor="PROCERGS"
 

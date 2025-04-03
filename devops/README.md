@@ -43,11 +43,11 @@ Edit the `.env` file to suit your environment. For example:
 ```
 ANSIBLE_REMOTE_PORT=22
 DEPLOY_ENV=prod
-DEPLOY_HOST=siteplone.example.com
+DEPLOY_HOST=sitebase.example.com
 DEPLOY_PORT=22
 DEPLOY_USER=plone
 DOCKER_CONFIG=.docker
-STACK_NAME=siteplone-example-com
+STACK_NAME=sitebase-example-com
 ```
 
 Note: The `.env` file is included in `.gitignore`, ensuring environment-specific configurations aren't pushed to the repository.
@@ -55,7 +55,7 @@ Note: The `.env` file is included in `.gitignore`, ensuring environment-specific
 
 ### Server installation
 
-You need either a Ubuntu or Debian based system for siteplone.example.com, enable SSH, and install a supported version of Python 3 on that system.
+You need either a Ubuntu or Debian based system for sitebase.example.com, enable SSH, and install a supported version of Python 3 on that system.
 
 
 ### Ansible Installation
@@ -74,10 +74,10 @@ Modify `devops/inventory/hosts.yml` with the appropriate connection details:
 ---
 prod:
   hosts:
-    siteplone.example.com:
+    sitebase.example.com:
       ansible_user: root
-      host: siteplone
-      hostname: siteplone.example.com
+      host: sitebase
+      hostname: sitebase.example.com
 ```
 
 ## Server Setup
@@ -108,7 +108,7 @@ make docker-info
 
 ### Stack Deployment
 
-Deploy the stack defined in `devops/stacks/siteplone.example.com.yml` to the remote server with:
+Deploy the stack defined in `devops/stacks/sitebase.example.com.yml` to the remote server with:
 
 ```shell
 make stack-deploy
