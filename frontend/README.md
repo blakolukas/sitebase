@@ -1,11 +1,11 @@
-# Site Plone (volto-procergs-siteplone)
+# Site Plone (volto-procergs-sitebase)
 
 Projeto para site base
 
-[![npm](https://img.shields.io/npm/v/volto-procergs-siteplone)](https://www.npmjs.com/package/volto-procergs-siteplone)
-[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://PROCERGS.github.io/volto-procergs-siteplone/)
-[![Code analysis checks](https://github.com/PROCERGS/volto-procergs-siteplone/actions/workflows/code.yml/badge.svg)](https://github.com/PROCERGS/volto-procergs-siteplone/actions/workflows/code.yml)
-[![Unit tests](https://github.com/PROCERGS/volto-procergs-siteplone/actions/workflows/unit.yml/badge.svg)](https://github.com/PROCERGS/volto-procergs-siteplone/actions/workflows/unit.yml)
+[![npm](https://img.shields.io/npm/v/volto-procergs-sitebase)](https://www.npmjs.com/package/volto-procergs-sitebase)
+[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://PROCERGS.github.io/volto-procergs-sitebase/)
+[![Code analysis checks](https://github.com/PROCERGS/volto-procergs-sitebase/actions/workflows/code.yml/badge.svg)](https://github.com/PROCERGS/volto-procergs-sitebase/actions/workflows/code.yml)
+[![Unit tests](https://github.com/PROCERGS/volto-procergs-sitebase/actions/workflows/unit.yml/badge.svg)](https://github.com/PROCERGS/volto-procergs-sitebase/actions/workflows/unit.yml)
 
 ## Features
 
@@ -22,19 +22,19 @@ Create a new Volto project (you can skip this step if you already have one):
 
 ```
 npm install -g yo @plone/generator-volto
-yo @plone/volto my-volto-project --addon volto-procergs-siteplone
+yo @plone/volto my-volto-project --addon volto-procergs-sitebase
 cd my-volto-project
 ```
 
-Add `volto-procergs-siteplone` to your package.json:
+Add `volto-procergs-sitebase` to your package.json:
 
 ```JSON
 "addons": [
-    "volto-procergs-siteplone"
+    "volto-procergs-sitebase"
 ],
 
 "dependencies": {
-    "volto-procergs-siteplone": "*"
+    "volto-procergs-sitebase": "*"
 }
 ```
 
@@ -52,24 +52,24 @@ yarn start
 
 ### Volto 18 and later
 
-Add `volto-procergs-siteplone` to your `package.json`:
+Add `volto-procergs-sitebase` to your `package.json`:
 
 ```json
 "dependencies": {
-    "volto-procergs-siteplone": "*"
+    "volto-procergs-sitebase": "*"
 }
 ```
 
-Add `volto-procergs-siteplone` to your `volto.config.js`:
+Add `volto-procergs-sitebase` to your `volto.config.js`:
 
 ```javascript
-const addons = ['volto-procergs-siteplone'];
+const addons = ['volto-procergs-sitebase'];
 ```
 
 If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
 
 ```javascript
-const theme = 'volto-procergs-siteplone';
+const theme = 'volto-procergs-sitebase';
 ```
 
 ## Test installation

@@ -171,7 +171,7 @@ handle_mrs_developer() {
 
 handle_pnpm_install_command() {
 	# This method is functional but depracated. Cant run before build deps...
-	# How to use: ADD_PNPM_INSTALL_COMMAND='["pnpm add @eeacms/volto-eea-website-theme --filter volto-procergs-siteplone","pnpm add other-package --filter other"]'
+	# How to use: ADD_PNPM_INSTALL_COMMAND='["pnpm add @eeacms/volto-eea-website-theme --filter volto-procergs-sitebase","pnpm add other-package --filter other"]'
     echo "Processing ADD_PNPM_INSTALL_COMMAND... executing pnpm install manually"
 
     # Remove brackets and extra spaces

@@ -2,7 +2,7 @@
 ARG VOLTO_VERSION
 FROM plone/frontend-builder:${VOLTO_VERSION} AS builder
 
-COPY --chown=node packages/volto-procergs-siteplone /app/packages/volto-procergs-siteplone
+COPY --chown=node packages/volto-procergs-sitebase /app/packages/volto-procergs-sitebase
 COPY --chown=node volto.config.js /app/
 COPY --chown=node package.json /app/package.json.temp
 
@@ -18,7 +18,7 @@ EOT
 FROM plone/frontend-prod-config:${VOLTO_VERSION}
 
 LABEL maintainer="PROCERGS <sites@procergs.rs.gov.br>" \
-      org.label-schema.name="siteplone-frontend" \
+      org.label-schema.name="sitebase-frontend" \
       org.label-schema.description="Project Title frontend image." \
       org.label-schema.vendor="PROCERGS"
 

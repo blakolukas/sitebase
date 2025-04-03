@@ -9,11 +9,11 @@ Welcome to the DevOps operations guide for deploying your project using GitHub A
 ### Step 1: Create a New Environment
 
 1. Visit [GitHub](https://github.com/) and log in with your credentials.
-2. Go to your repository at [PROCERGS/siteplone](https://github.com/PROCERGS/siteplone).
+2. Go to your repository at [PROCERGS/sitebase](https://github.com/PROCERGS/sitebase).
 3. Click on `Settings` at the top-right corner.
 4. In the left sidebar, click on `Environments`.
 5. Press `New environment`.
-6. Name the environment `siteplone.example.com` and hit `Configure environment`.
+6. Name the environment `sitebase.example.com` and hit `Configure environment`.
 
 ### Step 2: Add Environment Secrets 🔒
 
@@ -24,7 +24,7 @@ After setting up the environment, it's time to add secrets. These are sensitive 
 
 | Secret Name | Secret Value | Description |
 |-------------|--------------|-------------|
-| DEPLOY_HOST | siteplone.example.com | The hostname or IP address of your Docker Swarm manager. |
+| DEPLOY_HOST | sitebase.example.com | The hostname or IP address of your Docker Swarm manager. |
 | DEPLOY_PORT | 22 | The SSHD Port. |
 | DEPLOY_USER | plone | The user to connect to the deploy host, with permissions to run Docker commands. |
 | DEPLOY_SSH  | Contents of `devops/etc/keys/plone_prod_deploy_ed25519` | The private SSH key used for connection. The corresponding public key should be in the `~/.ssh/authorized_keys` file of the deployment user. |
@@ -40,7 +40,7 @@ Add the repository variable as follows:
 
 | Name     | Value |
 |----------|-------|
-| LIVE_ENV | siteplone.example.com |
+| LIVE_ENV | sitebase.example.com |
 
 This variable is referenced in the `.github/workflows/manual_deploy.yml` file.
 
@@ -48,14 +48,14 @@ This variable is referenced in the `.github/workflows/manual_deploy.yml` file.
 
 Ensure that both Backend and Frontend tests have been successfully executed:
 
-- [Backend Tests Workflow](https://github.com/PROCERGS/siteplone/actions/workflows/backend.yml)
-- [Frontend Tests Workflow](https://github.com/PROCERGS/siteplone/actions/workflows/frontend.yml)
+- [Backend Tests Workflow](https://github.com/PROCERGS/sitebase/actions/workflows/backend.yml)
+- [Frontend Tests Workflow](https://github.com/PROCERGS/sitebase/actions/workflows/frontend.yml)
 
-Upon successful completion of the tests, Docker images for the Backend (`ghcr.io/PROCERGS/siteplone-backend`) and Frontend (`ghcr.io/PROCERGS/siteplone-frontend`) will be available.
+Upon successful completion of the tests, Docker images for the Backend (`ghcr.io/PROCERGS/sitebase-backend`) and Frontend (`ghcr.io/PROCERGS/sitebase-frontend`) will be available.
 
 ### Initiating Manual Deployment
 
-1. Navigate to [Manual Deployment of siteplone.example.com](https://github.com/PROCERGS/siteplone/actions/workflows/manual-deploy.yml).
+1. Navigate to [Manual Deployment of sitebase.example.com](https://github.com/PROCERGS/sitebase/actions/workflows/manual-deploy.yml).
 2. Click on `Run workflow`.
 3. Select `Branch: main` under **Use workflow from**.
 4. Press `Run workflow`.
@@ -63,7 +63,7 @@ Upon successful completion of the tests, Docker images for the Backend (`ghcr.io
 The workflow will execute the following actions:
 
 - Connect to **DEPLOY_HOST** using **DEPLOY_USER** and **DEPLOY_SSH** key.
-- Initiate a new deployment using the `devops/stacks/siteplone.example.com.yml` stack.
+- Initiate a new deployment using the `devops/stacks/sitebase.example.com.yml` stack.
 - Provide a detailed report of the deployment outcome.
 
 Congratulations! 🎉 You've successfully configured and initiated a manual deployment using GitHub Actions. Monitor the workflow for real-time updates on the deployment process.

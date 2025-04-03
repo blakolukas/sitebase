@@ -1,4 +1,4 @@
-name: Manual Deployment of siteplone.example.com
+name: Manual Deployment of sitebase.example.com
 
 on:
   workflow_dispatch:

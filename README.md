@@ -2,8 +2,8 @@
 
 [![Built with Cookieplone](https://img.shields.io/badge/built%20with-Cookieplone-0083be.svg?logo=cookiecutter)](https://github.com/plone/cookiecutter-plone/)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-[![Backend Tests](https://github.com/PROCERGS/siteplone/actions/workflows/backend.yml/badge.svg)](https://github.com/PROCERGS/siteplone/actions/workflows/backend.yml)
-[![Frontend Tests](https://github.com/PROCERGS/siteplone/actions/workflows/frontend.yml/badge.svg)](https://github.com/PROCERGS/siteplone/actions/workflows/frontend.yml)
+[![Backend Tests](https://github.com/PROCERGS/sitebase/actions/workflows/backend.yml/badge.svg)](https://github.com/PROCERGS/sitebase/actions/workflows/backend.yml)
+[![Frontend Tests](https://github.com/PROCERGS/sitebase/actions/workflows/frontend.yml/badge.svg)](https://github.com/PROCERGS/sitebase/actions/workflows/frontend.yml)
 
 Projeto para site base
 
@@ -23,8 +23,8 @@ Ensure you have the following installed:
 1. Clone the repository:
 
 ```shell
-git clone git@github.com:PROCERGS/siteplone.git
-cd siteplone
+git clone git@github.com:PROCERGS/sitebase.git
+cd sitebase
 ```
 
 2. Install both Backend and Frontend:
@@ -61,7 +61,7 @@ Deploy a local `Docker Compose` environment that includes:
 
 - Docker images for Backend and Frontend 🖼️
 - A stack with a Traefik router and a Postgres database 🗃️
-- Accessible at [http://siteplone.localhost](http://siteplone.localhost) 🌐
+- Accessible at [http://sitebase.localhost](http://sitebase.localhost) 🌐
 
 Execute the following:
 
@@ -76,7 +76,7 @@ And... you're all set! Your Plone site is up and running locally! 🚀
 
 This monorepo consists of three distinct sections: `backend`, `frontend`, and `devops`.
 
-- **backend**: Houses the API and Plone installation, utilizing pip instead of buildout, and includes a policy package named procergs.siteplone.
+- **backend**: Houses the API and Plone installation, utilizing pip instead of buildout, and includes a policy package named procergs.sitebase.
 - **frontend**: Contains the React (Volto) package.
 - **devops**: Encompasses Docker Stack, Ansible playbooks, and Cache settings.
 
