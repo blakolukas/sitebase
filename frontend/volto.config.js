@@ -10,6 +10,7 @@ const addons = [
   '@kitconcept/volto-separator-block',
   "@codesyntax/volto-listingadvanced-variation",
   "@kitconcept/volto-dsgvo-banner",
+  "@kitconcept/volto-carousel-block", 
 
   "volto-site-componentes",
   "volto-custom-light-theme",
