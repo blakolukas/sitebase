@@ -1,3 +1,3 @@
 # Contributors
 
-- PROCERGS [sites@procergs.rs.gov.br]
+- procergs [sites@procergs.rs.gov.br]

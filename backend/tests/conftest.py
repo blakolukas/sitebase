@@ -1,8 +1,10 @@
-from procergs.sitebase.testing import ACCEPTANCE_TESTING
-from procergs.sitebase.testing import FUNCTIONAL_TESTING
-from procergs.sitebase.testing import INTEGRATION_TESTING
 from pytest_plone import fixtures_factory
 
+from procergs.sitebase.testing import (
+    ACCEPTANCE_TESTING,
+    FUNCTIONAL_TESTING,
+    INTEGRATION_TESTING,
+)
 
 pytest_plugins = ["pytest_plone"]
 

@@ -1,15 +1,13 @@
+import os
+
+import transaction
 from AccessControl.SecurityManagement import newSecurityManager
-from procergs.sitebase.interfaces import IBrowserLayer
-from Products.CMFPlone.factory import _DEFAULT_PROFILE
-from Products.CMFPlone.factory import addPloneSite
+from Products.CMFPlone.factory import _DEFAULT_PROFILE, addPloneSite
 from Products.GenericSetup.tool import SetupTool
 from Testing.makerequest import makerequest
-from zope.interface import directlyProvidedBy
-from zope.interface import directlyProvides
+from zope.interface import directlyProvidedBy, directlyProvides
 
-import os
-import transaction
-
+from procergs.sitebase.interfaces import IBrowserLayer
 
 truthy = frozenset(("t", "true", "y", "yes", "on", "1"))
 
@@ -35,7 +33,9 @@ app = makerequest(globals()["app"])
 
 request = app.REQUEST
 
-ifaces = [IBrowserLayer] + list(directlyProvidedBy(request))
+ifaces = [IBrowserLayer]
+for iface in directlyProvidedBy(request):
+    ifaces.append(iface)
 
 directlyProvides(request, *ifaces)
 
@@ -45,8 +45,9 @@ newSecurityManager(None, admin)
 
 site_id = "Plone"
 payload = {
-    "title": "Site Plone",
+    "title": "Sitebase",
     "profile_id": _DEFAULT_PROFILE,
+    "distribution_name": "volto",
     "setup_content": False,
     "default_language": "pt-br",
     "portal_timezone": "UTC",

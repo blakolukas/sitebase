@@ -17,8 +17,6 @@ STACK_NAME=sitebase-example-com
 VOLTO_VERSION = $(shell cat frontend/mrs.developer.json | python -c "import sys, json; print(json.load(sys.stdin)['core']['tag'])")
 PLONE_VERSION=$(shell cat backend/version.txt)
 
-PRE_COMMIT=pipx run --spec 'pre-commit==3.7.1' pre-commit
-
 # We like colors
 # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
 RED=`tput setaf 1`
@@ -84,18 +82,14 @@ backend-test:  ## Test backend codebase
 	@echo "Test backend"
 	$(MAKE) -C "./backend/" test
 
+###########################################
+# Environment
+###########################################
 .PHONY: install
 install:  ## Install
 	@echo "Install Backend & Frontend"
-	if [ -d $(GIT_FOLDER) ]; then $(PRE_COMMIT) install; else echo "$(RED) Not installing pre-commit$(RESET)";fi
 	$(MAKE) backend-install
 	$(MAKE) frontend-install
-
-.PHONY: start
-start:  ## Start
-	@echo "Starting application"
-	$(MAKE) backend-start
-	$(MAKE) frontend-start
 
 .PHONY: clean
 clean:  ## Clean installation
@@ -103,37 +97,61 @@ clean:  ## Clean installation
 	$(MAKE) -C "./backend/" clean
 	$(MAKE) -C "./frontend/" clean
 
-.PHONY: check
-check:  ## Lint and Format codebase
-	@echo "Lint and Format codebase"
-	$(PRE_COMMIT) run -a
+###########################################
+# QA
+###########################################
+.PHONY: format
+format:  ## Format codebase
+	@echo "Format the codebase"
+	$(MAKE) -C "./backend/" format
+	$(MAKE) -C "./frontend/" format
 
+.PHONY: lint
+lint:  ## Format codebase
+	@echo "Lint the codebasecodebase"
+	$(MAKE) -C "./backend/" lint
+	$(MAKE) -C "./frontend/" lint
+
+.PHONY: check
+check:  format lint ## Lint and Format codebase
+
+###########################################
+# i18n
+###########################################
 .PHONY: i18n
 i18n:  ## Update locales
 	@echo "Update locales"
 	$(MAKE) -C "./backend/" i18n
 	$(MAKE) -C "./frontend/" i18n
 
+###########################################
+# Testing
+###########################################
 .PHONY: test
 test:  backend-test frontend-test ## Test codebase
 
+###########################################
+# Container images
+###########################################
 .PHONY: build-images
-build-images:  ## Build docker images
+build-images:  ## Build container images
 	@echo "Build"
 	$(MAKE) -C "./backend/" build-image
 	$(MAKE) -C "./frontend/" build-image
 
-## Docker stack
+###########################################
+# Local Stack
+###########################################
 .PHONY: stack-start
 stack-start:  ## Local Stack: Start Services
 	@echo "Start local Docker stack"
 	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) docker compose -f docker-compose.yml up -d --build
 	@echo "Now visit: http://sitebase.localhost"
 
-.PHONY: start-stack
+.PHONY: stack-create-site
 stack-create-site:  ## Local Stack: Create a new site
 	@echo "Create a new site in the local Docker stack"
-	@docker compose -f docker-compose.yml exec backend ./docker-entrypoint.sh create-site
+	VOLTO_VERSION=$(VOLTO_VERSION) PLONE_VERSION=$(PLONE_VERSION) docker compose -f docker-compose.yml exec backend ./docker-entrypoint.sh create-site
 
 .PHONY: stack-status
 stack-status:  ## Local Stack: Check Status
@@ -152,7 +170,9 @@ stack-rm:  ## Local Stack: Remove Services and Volumes
 	@echo "Remove local volume data"
 	@docker volume rm $(PROJECT_NAME)_vol-site-data
 
-## Acceptance
+###########################################
+# Acceptance
+###########################################
 .PHONY: acceptance-backend-dev-start
 acceptance-backend-dev-start:
 	@echo "Start acceptance backend"
