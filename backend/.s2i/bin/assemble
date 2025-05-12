@@ -58,9 +58,9 @@ if [ $rc -eq 0 ]; then
 	
 	echo "Checking database configuration..."
 	
-	if [ -n "$RELSTORAGE_DSN" ]; then
-        add_database_config
-    fi
+	#if [ -n "$RELSTORAGE_DSN" ]; then
+    #    add_database_config
+    #fi
 	
 	echo "Executing make install..."
 	make install
