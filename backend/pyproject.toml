@@ -29,6 +29,7 @@ dependencies = [
     "plone.volto",
     "relstorage",
     "psycopg2-binary",
+    "collective.volto.formsupport",
 ]
 
 [project.optional-dependencies]

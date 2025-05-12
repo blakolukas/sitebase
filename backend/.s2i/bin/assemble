@@ -29,8 +29,6 @@ EOF
 
 echo "Default S2I assemble script will begin"
 
-cat pyproject.toml
-
 /usr/libexec/s2i/assemble
 rc=$?
 
@@ -81,6 +79,7 @@ if [ $rc -eq 0 ]; then
 	python --version
 
 	echo "End of custom S2I assembling"
+	cat pyproject.toml
 else
     echo "After failed S2I assembling"
 fi
