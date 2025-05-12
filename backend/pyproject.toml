@@ -27,6 +27,8 @@ dependencies = [
     "plone.api",
     "plone.restapi",
     "plone.volto",
+    "relstorage",
+    "psycopg2-binary",
 ]
 
 [project.optional-dependencies]
