@@ -80,9 +80,12 @@ if [ $rc -eq 0 ]; then
 
 	echo "End of custom S2I assembling"
 	cat pyproject.toml
-	python -c 'import relstorage'
+	echo 'debug relstorage'
+	python -c 'import relstorage; print(relstorage.__path__)' 
+	echo 'debug relstorage with source'
 	source .venv/bin/activate
-	python -c 'import relstorage'
+	python -c 'import relstorage; print(relstorage.__path__)' 
+	
 else
     echo "After failed S2I assembling"
 fi
