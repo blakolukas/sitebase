@@ -40,6 +40,8 @@ if [ $rc -eq 0 ]; then
     echo "After successful default S2I assembling"
 	echo "Starting custom S2I assembling"
 	
+	curl -fsSL https://astral.sh/uv/install.sh | sh
+	
 	# Custom S2I assemble for plone.restapi
 	#echo "Manual venv activation"
 	#source .venv/bin/activate
