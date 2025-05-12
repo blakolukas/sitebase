@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "Creating python venv environment"
-python3.9 -m venv . || virtualenv --python=python3.9 .
-echo "Python venv executed and bin folder created"
-
 # Update requirements.txt for additional backend addons
 function update_requirements_txt() {
     echo "Processing ADD_REQUIREMENTS... Updating requirements.txt"
@@ -40,17 +36,25 @@ if [ $rc -eq 0 ]; then
     echo "After successful default S2I assembling"
 	echo "Starting custom S2I assembling"
 	
+	echo "Checking python version:"
+	python --version
+	
+
+	echo "Installing uv..."
 	curl -fsSL https://astral.sh/uv/install.sh | sh
+	echo "uv installed!"
+
 	
 	# Custom S2I assemble for plone.restapi
 	#echo "Manual venv activation"
 	#source .venv/bin/activate
 
-    echo "Checking for custom installation requirements..."	
-	if [ -n "$ADD_REQUIREMENTS" ]; then
-        update_requirements_txt
-    fi
-	echo "Installation requirements check complete"
+    #echo "Checking for custom installation requirements..."	
+	#if [ 
+	#	-n "$ADD_REQUIREMENTS" ]; then
+    #    update_requirements_txt
+    #fi
+	#echo "Installation requirements check complete"
 	
 	echo "Checking database configuration..."
 	
@@ -69,6 +73,9 @@ if [ $rc -eq 0 ]; then
 	
 	# manually set permission to instance-wrapper
 	chmod +x ./instance-wrapper
+
+	echo "Checking python version:"
+	python --version
 
 	echo "End of custom S2I assembling"
 else
