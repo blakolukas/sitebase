@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Creating python venv environment"
+python3.12 -m venv . || virtualenv --python=python3.12 .
+echo "Python venv executed and bin folder created"
+
 # Update requirements.txt for additional backend addons
 function update_requirements_txt() {
     echo "Processing ADD_REQUIREMENTS... Updating requirements.txt"
