@@ -13,8 +13,8 @@ function update_requirements_txt() {
 
 	# Append each requirement to requirements.txt
 	for requirement in $requirements; do
-		echo "$requirement" >> ./requirements.txt
-	done
+		sed -i "\#^\s*dependencies\s*=\s*\[#,\#\]# s#]#    \"$requirement\",\n&#" pyproject.toml
+  	done
 }
 
 # Add database config to instance.yaml
