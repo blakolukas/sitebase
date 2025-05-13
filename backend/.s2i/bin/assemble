@@ -54,8 +54,7 @@ if [ $rc -eq 0 ]; then
 	#source .venv/bin/activate
 
     echo "Checking for custom installation requirements..."	
-	if [ 
-		-n "$ADD_REQUIREMENTS" ]; then
+	if [ -n "$ADD_REQUIREMENTS" ]; then
         update_requirements_txt
     fi
 	echo "Installation requirements check complete"
