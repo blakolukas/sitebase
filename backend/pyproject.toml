@@ -29,6 +29,7 @@ dependencies = [
     "plone.volto",
     "relstorage",
     "psycopg2-binary",
+    "pas.plugins.authomatic",
 ]
 
 [project.optional-dependencies]
