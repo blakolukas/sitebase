@@ -37,8 +37,7 @@ echo "Default S2I assemble script will begin"
 rc=$?
 
 if [ $rc -eq 0 ]; then
-	cat pyproject.toml
-    echo "After successful default S2I assembling"
+	echo "After successful default S2I assembling"
 	echo "Starting custom S2I assembling"
 	
 	echo "Checking python version:"
@@ -61,11 +60,10 @@ if [ $rc -eq 0 ]; then
     #fi
 	#echo "Installation requirements check complete"
 	
-	#echo "Checking database configuration..."
-	
-	#if [ -n "$RELSTORAGE_DSN" ]; then
-    #    add_database_config
-    #fi
+	echo "Checking database configuration..."
+	if [ -n "$RELSTORAGE_DSN" ]; then
+        add_database_config
+    fi
 	
 	echo "Executing make install..."
 	make install
@@ -82,11 +80,7 @@ if [ $rc -eq 0 ]; then
 	echo "Checking python version:"
 	python --version
 
-	echo "End of custom S2I assembling"
-	cat pyproject.toml
-	echo 'debug relstorage'
-	python -c 'import relstorage; print(relstorage.__path__)'  
-	
+	echo "End of custom S2I assembling" 
 else
     echo "After failed S2I assembling"
 fi
