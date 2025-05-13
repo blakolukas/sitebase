@@ -1,4 +1,4 @@
-procergs.sitebase Copyright 2023, PROCERGS
+procergs.sitebase Copyright 2025, procergs
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2
