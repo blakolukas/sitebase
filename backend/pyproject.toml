@@ -30,6 +30,7 @@ dependencies = [
     "relstorage",
     "psycopg2-binary",
     "collective.volto.formsupport",
+    "pas.plugins.authomatic",
 ]
 
 [project.optional-dependencies]
