@@ -53,12 +53,12 @@ if [ $rc -eq 0 ]; then
 	#echo "Manual venv activation"
 	#source .venv/bin/activate
 
-    #echo "Checking for custom installation requirements..."	
-	#if [ 
-	#	-n "$ADD_REQUIREMENTS" ]; then
-    #    update_requirements_txt
-    #fi
-	#echo "Installation requirements check complete"
+    echo "Checking for custom installation requirements..."	
+	if [ 
+		-n "$ADD_REQUIREMENTS" ]; then
+        update_requirements_txt
+    fi
+	echo "Installation requirements check complete"
 	
 	echo "Checking database configuration..."
 	if [ -n "$RELSTORAGE_DSN" ]; then
