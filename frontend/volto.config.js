@@ -12,6 +12,8 @@ const addons = [
   "@kitconcept/volto-dsgvo-banner",
   "@kitconcept/volto-carousel-block", 
 
+  "volto-form-block",
+
   "volto-site-componentes",
   "volto-custom-light-theme",
 
