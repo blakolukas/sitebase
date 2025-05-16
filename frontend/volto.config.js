@@ -8,7 +8,6 @@ const addons = [
   '@kitconcept/volto-highlight-block',
   '@kitconcept/volto-introduction-block',
   '@kitconcept/volto-separator-block',
-  "@codesyntax/volto-listingadvanced-variation",
   "@kitconcept/volto-dsgvo-banner",
   "@kitconcept/volto-carousel-block", 
 
