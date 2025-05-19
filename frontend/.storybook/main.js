@@ -91,6 +91,18 @@ module.exports = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
+    // Adiciona o loader Babel para processar JSX(no caso necessário para transcrição do preview.jsx na build do storybook)
+    config.module.rules.push({
+      test: /\.(js|jsx|ts|tsx)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+        },
+      },
+    });
+
     // Make whatever fine-grained changes you need
     let baseConfig;
     baseConfig = await createConfig(
@@ -164,11 +176,13 @@ module.exports = {
       // If input is in an addon, DON'T exclude it
       !addonPaths.some((p) => input.includes(p));
 
-    resultConfig.module.rules[13].include = [
-      /preview\.jsx/,
-      ...resultConfig.module.rules[13].include,
-      ...addonPaths,
-    ];
+      resultConfig.module.rules[13].include = [
+        /preview\.jsx/,
+        ...(Array.isArray(resultConfig.module.rules[13].include)
+          ? resultConfig.module.rules[13].include
+          : [resultConfig.module.rules[13].include].filter(Boolean)), // Garante que seja um array para evitar erro de include não definido
+        ...addonPaths,
+      ];
 
     const addonExtenders = registry.getAddonExtenders().map((m) => require(m));
 
