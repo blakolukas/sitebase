@@ -4,4 +4,4 @@ packages:
   - 'packages/volto-procergs-sitebase'
   - 'packages/volto-custom-light-theme/packages/volto-custom-light-theme'
   - 'packages/volto-site-componentes/packages/volto-site-componentes'
-  - 'packages/volto-dsgvo-banner/packages/volto-dsgvo-banner'
+  - 'packages/volto-dsgvo-banner'
