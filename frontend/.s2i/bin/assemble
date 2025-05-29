@@ -105,6 +105,7 @@ handle_pnpm_workspace() {
         workspaces=$(echo "$ADD_PNPM_WORKSPACE" | sed "s|[][']||g") # Remove brackets and quotes
         IFS=',' read -ra workspace_array <<< "$workspaces"
         for workspace in "${workspace_array[@]}"; do
+			workspace=$(echo "$workspace" | xargs)
             echo "  - '$workspace'" >> pnpm-workspace.yaml
         done
 }
