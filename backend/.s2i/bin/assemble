@@ -26,6 +26,7 @@ function add_database_config() {
 
     db_storage: relstorage
     db_relstorage_postgresql_dsn: ${RELSTORAGE_DSN}
+	db_blob_mode: cache
 EOF
 
     echo "Configuration added to instance.yaml"
