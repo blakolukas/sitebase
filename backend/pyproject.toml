@@ -30,6 +30,7 @@ dependencies = [
     "relstorage",
     "psycopg2-binary",
     "pas.plugins.authomatic",
+    "procergs.site.componentes@git+https://github.com/PROCERGS/procergs.site.componentes",
 ]
 
 [project.optional-dependencies]
